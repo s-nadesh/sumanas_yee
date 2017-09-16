@@ -47,6 +47,9 @@ return [
         'comment' => [
             'class' => 'yeesoft\comment\CommentModule',
         ],
+        'block' => [
+            'class' => 'yeesoft\block\BlockModule',
+        ],
     ],
     'components' => [
         'request' => [

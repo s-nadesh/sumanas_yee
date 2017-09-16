@@ -23,14 +23,26 @@ ThemeAsset::register($this);
     </head>
     <body class="innerpage">
         <?php $this->beginBody() ?>
+        <!-- Header Start-->
         <?php echo $this->render('@frontend/views/includes/header'); ?>
+        <!-- Header End-->
+
+        <!-- Menu Start-->
         <?php echo $this->render('@frontend/views/includes/menu'); ?>
+        <!-- Menu End-->
+
+        <!-- Page Wrapper Start -->
         <div class="innerpage">
             <?= $content ?>
+
+            <!-- Footer Start -->
             <div class="section section10" id="section10">
                 <?php echo $this->render('@frontend/views/includes/footer'); ?>
             </div>
+            <!-- Footer End -->
         </div>
+        <!-- Page Wrapper End -->
+
         <div class="drawermenu-overlay"></div>
         <?php $this->endBody() ?>
     </body>
