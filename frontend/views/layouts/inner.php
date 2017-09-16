@@ -21,28 +21,16 @@ ThemeAsset::register($this);
         <?= $this->renderMetaTags() ?>
         <?php $this->head() ?>
     </head>
-    <body id="main">
+    <body class="innerpage">
         <?php $this->beginBody() ?>
-        <!-- Header Start-->
         <?php echo $this->render('@frontend/views/includes/header'); ?>
-        <!-- Header End-->
-
-        <!-- Menu Start-->
         <?php echo $this->render('@frontend/views/includes/menu'); ?>
-        <!-- Menu End-->
-
-        <!-- Home Page Wrapper Start -->
-        <div id="fullpage">
+        <div class="innerpage">
             <?= $content ?>
-
-            <!-- Footer Start -->
-            <div class="inner-footer section section10" id="section10">
+            <div class="section section10" id="section10">
                 <?php echo $this->render('@frontend/views/includes/footer'); ?>
             </div>
-            <!-- Footer End -->
         </div>
-        <!-- Home Page Wrapper End -->
-
         <div class="drawermenu-overlay"></div>
         <?php $this->endBody() ?>
     </body>

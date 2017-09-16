@@ -13,15 +13,15 @@ use yii\data\Pagination;
 /**
  * Site controller
  */
-class SiteController extends \yeesoft\controllers\BaseController
-{
+class SiteController extends \yeesoft\controllers\BaseController {
+
     public $freeAccess = true;
+    
 
     /**
      * @inheritdoc
      */
-    public function actions()
-    {
+    public function actions() {
         return [
             'error' => [
                 'class' => 'yii\web\ErrorAction',
@@ -38,8 +38,7 @@ class SiteController extends \yeesoft\controllers\BaseController
      *
      * @return mixed
      */
-    public function actionIndex($slug = 'index')
-    {
+    public function actionIndex($slug = 'index') {
         // display home page
         if (empty($slug) || $slug == 'index') {
             return $this->render('index');
@@ -49,19 +48,19 @@ class SiteController extends \yeesoft\controllers\BaseController
         try {
             return $this->runAction($slug);
         } catch (\yii\base\InvalidRouteException $ex) {
-
+            
         }
 
         //try to display static page from datebase
         $page = Page::getDb()->cache(function ($db) use ($slug) {
             return Page::findOne(['slug' => $slug, 'status' => Page::STATUS_PUBLISHED]);
-        }, 3600);
-
+        }, -1);
+        $page->title = '';
         if ($page) {
             $pageAction = new PageAction($slug, $this, [
-                'slug'   => $slug,
-                'page'   => $page,
-                'view'   => $page->view,
+                'slug' => $slug,
+                'page' => $page,
+                'view' => $page->view,
                 'layout' => $page->layout,
             ]);
 
@@ -75,9 +74,9 @@ class SiteController extends \yeesoft\controllers\BaseController
 
         if ($post) {
             $postAction = new PostAction($slug, $this, [
-                'slug'   => $slug,
-                'post'   => $post,
-                'view'   => $post->view,
+                'slug' => $slug,
+                'post' => $post,
+                'view' => $post->view,
                 'layout' => $post->layout,
             ]);
 
@@ -93,8 +92,8 @@ class SiteController extends \yeesoft\controllers\BaseController
      *
      * @return mixed
      */
-    public function actionContact()
-    {
+    public function actionContact() {
+        $this->layout = "@app/views/layouts/inner";
         $model = new ContactForm();
         if ($model->load(Yii::$app->request->post()) && $model->validate()) {
             if ($model->sendEmail(Yii::$app->params['adminEmail'])) {
@@ -106,7 +105,7 @@ class SiteController extends \yeesoft\controllers\BaseController
             return $this->refresh();
         } else {
             return $this->render('contact', [
-                'model' => $model,
+                        'model' => $model,
             ]);
         }
     }
@@ -116,8 +115,9 @@ class SiteController extends \yeesoft\controllers\BaseController
      *
      * @return mixed
      */
-    public function actionAbout()
-    {
+    public function actionAbout() {
+        $this->layout = "@app/views/layouts/inner";
         return $this->render('about');
     }
+
 }
