@@ -34,6 +34,8 @@ class ThemeAsset extends AssetBundle
         'js/owl.carousel.min.js',
         'js/jquery.es-drawermenu.js',
         'js/metisMenu.js',
+        'js/bootstrapValidator.min.js',
+        'js/function.js',
         'js/jquery.mCustomScrollbar.concat.min.js',
         'js/wow.min.js',
     ];
