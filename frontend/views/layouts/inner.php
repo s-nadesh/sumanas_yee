@@ -5,6 +5,9 @@
 use frontend\assets\AppAsset;
 use frontend\assets\ThemeAsset;
 use yii\helpers\Html;
+use yeesoft\block\models\Block;
+use frontend\actions\PageAction;
+use yeesoft\page\models\Page;
 
 Yii::$app->assetManager->forceCopy = true;
 AppAsset::register($this);
@@ -34,7 +37,6 @@ ThemeAsset::register($this);
         <!-- Page Wrapper Start -->
         <div class="innerpage">
             <?= $content ?>
-
             <!-- Footer Start -->
             <div class="section section10" id="section10">
                 <?php echo $this->render('@frontend/views/includes/footer'); ?>

@@ -39,6 +39,7 @@ return [
             'layoutList' => [
                 'main' => 'Main Layout',
                 'inner' => 'Inner Layout',
+                'inner_get_in_touch' => 'Get In Touch Layout',
             ],
         ],
         'seo' => [
