@@ -101,46 +101,10 @@ $this->title = 'Homepage';
 
             <div class="row">
                 <div class="owl-carousel hover-demo " id="clients-carousel">
-                    <div class="client-cont">
-                        <p> <img src="<?php echo Yii::$app->view->theme->baseUrl ?>/images/client.jpg"  alt=""></p>
-                        <p><a href="#"> Client Name 1 </a></p>
-                        <div class="client-hover">
-                            <p> <img src="<?php echo Yii::$app->view->theme->baseUrl ?>/images/client-logo.png"  alt=""></p>
-                            <p> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla vel turpis vitae mi tincidunt elementum. Praesent sagittis erat quis nibh lobortis aliquet. Aliquam vitae lacinia ipsum. Quisque pellentesque convallis nisl, nec blandit mi lacinia in. </p>
-                        </div>
-                    </div>
-                    <div class="client-cont">
-                        <p> <img src="<?php echo Yii::$app->view->theme->baseUrl ?>/images/client.jpg"  alt=""></p>
-                        <p><a href="#"> Client Name 1 </a></p>
-                        <div class="client-hover">
-                            <p> <img src="<?php echo Yii::$app->view->theme->baseUrl ?>/images/client-logo.png"  alt=""></p>
-                            <p> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla vel turpis vitae mi tincidunt elementum. Praesent sagittis erat quis nibh lobortis aliquet. Aliquam vitae lacinia ipsum. Quisque pellentesque convallis nisl, nec blandit mi lacinia in. </p>
-                        </div>
-                    </div>
-                    <div class="client-cont">
-                        <p> <img src="<?php echo Yii::$app->view->theme->baseUrl ?>/images/client.jpg"  alt=""></p>
-                        <p><a href="#"> Client Name 1 </a></p>
-                        <div class="client-hover">
-                            <p> <img src="<?php echo Yii::$app->view->theme->baseUrl ?>/images/client-logo.png"  alt=""></p>
-                            <p> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla vel turpis vitae mi tincidunt elementum. Praesent sagittis erat quis nibh lobortis aliquet. Aliquam vitae lacinia ipsum. Quisque pellentesque convallis nisl, nec blandit mi lacinia in. </p>
-                        </div>
-                    </div>
-                    <div class="client-cont">
-                        <p> <img src="<?php echo Yii::$app->view->theme->baseUrl ?>/images/client.jpg"  alt=""></p>
-                        <p><a href="#"> Client Name 1 </a></p>
-                        <div class="client-hover">
-                            <p> <img src="<?php echo Yii::$app->view->theme->baseUrl ?>/images/client-logo.png"  alt=""></p>
-                            <p> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla vel turpis vitae mi tincidunt elementum. Praesent sagittis erat quis nibh lobortis aliquet. Aliquam vitae lacinia ipsum. Quisque pellentesque convallis nisl, nec blandit mi lacinia in. </p>
-                        </div>
-                    </div>
-                    <div class="client-cont">
-                        <p> <img src="<?php echo Yii::$app->view->theme->baseUrl ?>/images/client.jpg"  alt=""></p>
-                        <p><a href="#"> Client Name 1 </a></p>
-                    </div>
-                    <div class="client-cont">
-                        <p> <img src="<?php echo Yii::$app->view->theme->baseUrl ?>/images/client.jpg"  alt=""></p>
-                        <p><a href="#"> Client Name 1 </a></p>
-                    </div>
+                    <?php /* @var $post yeesoft\post\models\Post */ ?>
+                    <?php foreach ($posts as $post) : ?>
+                        <?= $this->render('/items/post.php', ['post' => $post, 'page' => 'index']) ?>
+                    <?php endforeach; ?>
                 </div>
             </div>
         </div>

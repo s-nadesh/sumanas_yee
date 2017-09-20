@@ -35,48 +35,45 @@ ThemeAsset::register($this);
         <!-- Menu End-->
 
         <!-- Page Wrapper Start -->
-        <!--<div class="innerpage">-->
-        <?= $content ?>
-        <div class="testimonials-bg">
-            <div class="container-fluid">
-                <div class="row">
-                    <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
-                        <h5> Client Speaks </h5>
-                    </div>
-                    <div class="col-md-8 col-md-offset-2">
-                        <div class="quote"><i class="fa fa-quote-left fa-2x"></i></div>
-                        <div class="carousel slide" id="fade-quote-carousel" data-ride="carousel" data-interval="7000"> 
-                            <!-- Carousel indicators -->
-                            <ol class="carousel-indicators">
-                                <li data-target="#fade-quote-carousel" data-slide-to="0"></li>
-                                <li data-target="#fade-quote-carousel" data-slide-to="1"></li>
-                                <li data-target="#fade-quote-carousel" data-slide-to="2" class="active"></li>
-                                <li data-target="#fade-quote-carousel" data-slide-to="3"></li>
-                                <li data-target="#fade-quote-carousel" data-slide-to="4"></li>
-                            </ol>
-                            <!-- Carousel items -->
-                            <div class="carousel-inner">
-                                <?php
-                                ?>
+        <div class="innerpage">
+            <?= $content ?>
+            <div class="testimonials-bg">
+                <div class="container-fluid">
+                    <div class="row">
+                        <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+                            <h5> Client Speaks </h5>
+                        </div>
+                        <div class="col-md-8 col-md-offset-2">
+                            <div class="quote"><i class="fa fa-quote-left fa-2x"></i></div>
+                            <div class="carousel slide" id="fade-quote-carousel" data-ride="carousel" data-interval="7000"> 
+                                <!-- Carousel indicators -->
+                                <ol class="carousel-indicators">
+                                    <li data-target="#fade-quote-carousel" data-slide-to="0"></li>
+                                    <li data-target="#fade-quote-carousel" data-slide-to="1"></li>
+                                    <li data-target="#fade-quote-carousel" data-slide-to="2" class="active"></li>
+                                    <li data-target="#fade-quote-carousel" data-slide-to="3"></li>
+                                    <li data-target="#fade-quote-carousel" data-slide-to="4"></li>
+                                </ol>
+                                <!-- Carousel items -->
+                                <div class="carousel-inner">
+                                    <?php  ?>
+                                </div>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
-        </div>
-        <?php echo Block::getHtml('get_in_touch'); ?>
-        <!-- Footer Start -->
-        <footer class="inner-footer">
-            <div class="section section10" id="section10">
-                <?php echo $this->render('@frontend/views/includes/footer'); ?>
+                <?php echo Block::getHtml('get_in_touch'); ?>
+                <!-- Footer Start -->
+                <div class="section section10" id="section10">
+                    <?php echo $this->render('@frontend/views/includes/footer'); ?>
+                </div>
+                <!-- Footer End -->
             </div>
-        </footer>
-        <!-- Footer End -->
-        <!--</div>-->
-        <!-- Page Wrapper End -->
+            <!-- Page Wrapper End -->
 
-        <div class="drawermenu-overlay"></div>
-        <?php $this->endBody() ?>
+            <div class="drawermenu-overlay"></div>
+            <?php $this->endBody() ?>
     </body>
 </html>
 <?php $this->endPage() ?>
