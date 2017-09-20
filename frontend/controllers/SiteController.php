@@ -54,8 +54,8 @@ class SiteController extends \yeesoft\controllers\BaseController {
         $page = Page::getDb()->cache(function ($db) use ($slug) {
             return Page::findOne(['slug' => $slug, 'status' => Page::STATUS_PUBLISHED]);
         }, -1);
-        $page->title = '';
         if ($page) {
+            $page->title = '';
             $pageAction = new PageAction($slug, $this, [
                 'slug' => $slug,
                 'page' => $page,
