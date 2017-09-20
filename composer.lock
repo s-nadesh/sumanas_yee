@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "content-hash": "1a05ba74a6e608b97b573590fd9755b8",
+    "content-hash": "4fd56107df6c63f91019e147c4d6e4af",
     "packages": [
         {
             "name": "2amigos/yii2-file-upload-widget",
@@ -1349,6 +1349,42 @@
             ],
             "description": "Authorization Module For Yee CMS",
             "time": "2017-03-01T10:53:02+00:00"
+        },
+        {
+            "name": "yeesoft/yii2-yee-block",
+            "version": "0.1.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/yeesoft/yii2-yee-block.git",
+                "reference": "be1b443a9bb20f71daa77040fc4022d91f20e206"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/yeesoft/yii2-yee-block/zipball/be1b443a9bb20f71daa77040fc4022d91f20e206",
+                "reference": "be1b443a9bb20f71daa77040fc4022d91f20e206",
+                "shasum": ""
+            },
+            "require": {
+                "yeesoft/yii2-yee-core": "~0.1.0"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "yeesoft\\block\\": ""
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "Apache-2.0"
+            ],
+            "authors": [
+                {
+                    "name": "Taras Makitra",
+                    "email": "makitrataras@gmail.com"
+                }
+            ],
+            "description": "HTML Block Module For Yee CMS",
+            "time": "2017-03-01T11:26:18+00:00"
         },
         {
             "name": "yeesoft/yii2-yee-comment",

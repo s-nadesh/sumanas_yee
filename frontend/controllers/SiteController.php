@@ -40,9 +40,23 @@ class SiteController extends \yeesoft\controllers\BaseController {
     public function actionIndex($slug = 'index') {
         // display home page
         if (empty($slug) || $slug == 'index') {
-            return $this->render('index');
-        }
+            $query = Post::find()->where(['status' => Post::STATUS_PUBLISHED]);
+            $countQuery = clone $query;
 
+            $pagination = new Pagination([
+                'totalCount' => $countQuery->count(),
+                'defaultPageSize' => Yii::$app->settings->get('reading.page_size', 10),
+            ]);
+
+            $posts = $query->orderBy('published_at DESC')->offset($pagination->offset)
+                    ->limit($pagination->limit)
+                    ->all();
+
+            return $this->render('index', [
+                        'posts' => $posts,
+                        'pagination' => $pagination,
+            ]);
+        }
         //try to display action from controller
         try {
             return $this->runAction($slug);

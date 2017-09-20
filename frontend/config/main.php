@@ -35,7 +35,7 @@ return [
             'showScriptName' => false,
             'enablePrettyUrl' => true,
             'rules' => array(
-                '<view:(break)>' => 'site/page',
+                '<view:(contact-sumanas)>' => 'site/contact',
                 '<module:auth>/<action:(logout|captcha)>' => '<module>/default/<action>',
                 '<module:auth>/<action:(oauth)>/<authclient:\w+>' => '<module>/default/<action>',
             ),
