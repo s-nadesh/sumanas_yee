@@ -56,26 +56,200 @@ $(document).ready(function () {
     });
 });
 
-//function submitForm() {
-//    // Initiate Variables With Form Content
-//    var datastring = $("#contact_form").serialize();
-//
-//    $.ajax({
-//        type: "POST",
-////        url: "submit-form.php",
-//        data: datastring,
-////                dataType: "json",
-//        success: function (text) {
-//            if (text == "success") {
-//                formSuccess();
-//            }
-//        }
-//    });
-//}
 
-//function formSuccess() {
-//    $("#msgSubmit").removeClass("hide");
-//    setTimeout(function () {
-//        $('#msgSubmit').addClass('hide');
-//    }, 2000);
-//}
+$(document).ready(function () {
+    $('#contact_form1').bootstrapValidator({
+        // To use feedback icons, ensure that you use Bootstrap v3.1.0 or later
+        feedbackIcons: {
+            valid: 'glyphicon glyphicon-ok',
+            invalid: 'glyphicon glyphicon-remove',
+            validating: 'glyphicon glyphicon-refresh'
+        },
+        fields: {
+            'CareersForm[name]': {
+                validators: {
+                    notEmpty: {
+                        message: ' '
+                    }
+                }
+            },
+            'CareersForm[email]': {
+                validators: {
+                    notEmpty: {
+                        message: ' '
+                    },
+                    emailAddress: {
+                        message: ' '
+                    }
+                }
+            },
+            'CareersForm[phone]': {
+                validators: {
+                    notEmpty: {
+                        message: ' '
+                    },
+                }
+            },
+            'CareersForm[source_to_find]': {
+                validators: {
+                    notEmpty: {
+                        message: ' '
+                    }
+                }
+            },
+            'CareersForm[cover_letter]': {
+                validators: {
+                    notEmpty: {
+                        message: ' '
+                    }
+                }
+            },
+            'CareersForm[file]': {
+                validators: {
+                    notEmpty: {
+                        message: ' '
+                    }
+                }
+            },
+        }
+    }).on('submit1', function (e) {
+        if (e.isDefaultPrevented()) {
+            console.log('error');
+        } else {
+            e.preventDefault();
+//            submitForm();
+        }
+    });
+});
+
+
+$(document).ready(function () {
+    $('#contact_form2').bootstrapValidator({
+        // To use feedback icons, ensure that you use Bootstrap v3.1.0 or later
+        feedbackIcons: {
+            valid: 'glyphicon glyphicon-ok',
+            invalid: 'glyphicon glyphicon-remove',
+            validating: 'glyphicon glyphicon-refresh'
+        },
+        fields: {
+            'CareersForm[name]': {
+                validators: {
+                    notEmpty: {
+                        message: ' '
+                    }
+                }
+            },
+            'CareersForm[email]': {
+                validators: {
+                    notEmpty: {
+                        message: ' '
+                    },
+                    emailAddress: {
+                        message: ' '
+                    }
+                }
+            },
+            'CareersForm[phone]': {
+                validators: {
+                    notEmpty: {
+                        message: ' '
+                    },
+                }
+            },
+            'CareersForm[source_to_find]': {
+                validators: {
+                    notEmpty: {
+                        message: ' '
+                    }
+                }
+            },
+            'CareersForm[cover_letter]': {
+                validators: {
+                    notEmpty: {
+                        message: ' '
+                    }
+                }
+            },
+            'CareersForm[file]': {
+                validators: {
+                    notEmpty: {
+                        message: ' '
+                    }
+                }
+            },
+        }
+    }).on('submit2', function (e) {
+        if (e.isDefaultPrevented()) {
+            console.log('error');
+        } else {
+            e.preventDefault();
+//            submitForm();
+        }
+    });
+});
+
+
+$(document).ready(function () {
+    $('#contact_form3').bootstrapValidator({
+        // To use feedback icons, ensure that you use Bootstrap v3.1.0 or later
+        feedbackIcons: {
+            valid: 'glyphicon glyphicon-ok',
+            invalid: 'glyphicon glyphicon-remove',
+            validating: 'glyphicon glyphicon-refresh'
+        },
+        fields: {
+            'CareersForm[name]': {
+                validators: {
+                    notEmpty: {
+                        message: ' '
+                    }
+                }
+            },
+            'CareersForm[email]': {
+                validators: {
+                    notEmpty: {
+                        message: ' '
+                    },
+                    emailAddress: {
+                        message: ' '
+                    }
+                }
+            },
+            'CareersForm[phone]': {
+                validators: {
+                    notEmpty: {
+                        message: ' '
+                    },
+                }
+            },
+            'CareersForm[source_to_find]': {
+                validators: {
+                    notEmpty: {
+                        message: ' '
+                    }
+                }
+            },
+            'CareersForm[cover_letter]': {
+                validators: {
+                    notEmpty: {
+                        message: ' '
+                    }
+                }
+            },
+            'CareersForm[file]': {
+                validators: {
+                    notEmpty: {
+                        message: ' '
+                    }
+                }
+            },
+        }
+    }).on('submit3', function (e) {
+        if (e.isDefaultPrevented()) {
+            console.log('error');
+        } else {
+            e.preventDefault();
+//            submitForm();
+        }
+    });
+});

@@ -1,8 +1,7 @@
 <?php
 
+use yii\bootstrap\ActiveForm;
 use yii\helpers\Html;
-use yii\widgets\ActiveForm;
-use yii\helpers\Url;
 
 /* @var $this yii\web\View */
 /* @var $model common\models\ContactUs */
@@ -33,7 +32,7 @@ $this->title = 'Contact';
                 $form = ActiveForm::begin(['id' => 'contact_form', 'enableAjaxValidation' => false, 'enableClientValidation' => false,
                             'options' => [
                                 'name' => 'myform',
-                                'autocomplete' => 'on',
+                                'autocomplete' => 'off',
 //                                    'validationUrl' => Url::toRoute('contact-us/create')
                             ],
                 ]);

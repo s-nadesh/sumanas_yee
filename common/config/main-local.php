@@ -12,14 +12,16 @@ return [
         ],
         'mailer' => [
             'class' => 'yii\swiftmailer\Mailer',
+            'viewPath' => '@common/mail',
             'transport' => [
                 'class' => 'Swift_SmtpTransport',
                 'host' => 'smtp.gmail.com',
-                'username' => 'roobini1995@gmail.com',
-                'password' => 'crazyloozer',
+                'username' => 'marudhuofficial@gmail.com',
+                'password' => 'ninja12345',
                 'port' => '587',
                 'encryption' => 'tls',
             ],
+            'useFileTransport' => false,
             'htmlLayout' => '@vendor/yeesoft/yii2-yee-auth/views/mail/layouts/html',
             'textLayout' => '@vendor/yeesoft/yii2-yee-auth/views/mail/layouts/text',
         ],

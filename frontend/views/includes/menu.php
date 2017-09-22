@@ -14,7 +14,7 @@ use yii\web\View;
         </a>
     </div>
     <div class="clearfix"></div>
-    <div class="menu-logo"> <a href="index.html"> <img src="<?php echo Yii::$app->view->theme->baseUrl ?>/images/logo2.png" alt=""> </a> </div>
+    <div class="menu-logo"> <a href="<?php echo Yii::$app->homeUrl ?>"> <img src="<?php echo Yii::$app->view->theme->baseUrl ?>/images/logo2.png" alt=""> </a> </div>
     <div id="content-1" class="content">
         <div class="clearfix">
             <aside class="sidebar">

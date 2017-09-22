@@ -9,6 +9,7 @@ use yeesoft\page\models\Page;
 use yeesoft\post\models\Post;
 use Yii;
 use yii\data\Pagination;
+use yii\web\UploadedFile;
 
 /**
  * Site controller
@@ -118,6 +119,29 @@ class SiteController extends \yeesoft\controllers\BaseController {
             return $this->refresh();
         } else {
             return $this->render('contact', [
+                        'model' => $model,
+            ]);
+        }
+    }
+
+    public function actionCareers() {
+        $this->layout = "@app/views/layouts/inner";
+        $model = new \frontend\models\CareersForm();
+        if ($model->load(Yii::$app->request->post())) {
+            $model->file = UploadedFile::getInstance($model, 'file');
+            if ($model->file) {
+                $path = Yii::getAlias('@frontend') . '/web/uploads/';
+                $model->file->saveAs($path . $model->file);
+            }
+            if ($model->sendEmail(Yii::$app->settings->get('general.email'))) {
+                Yii::$app->session->setFlash('success', 'Thank you for contacting us. We will respond to you as soon as possible.');
+            } else {
+                Yii::$app->session->setFlash('error', 'There was an error sending email.');
+            }
+
+            return $this->refresh();
+        } else {
+            return $this->render('careers', [
                         'model' => $model,
             ]);
         }

@@ -9,7 +9,107 @@ $this->title = 'Homepage';
 
 <div class="section " id="section0">
     <div class="section-arrow1"> <a  href="#" class="arrow2 bounce moveDown"> </a> </div>
-    <div class="slider-cont"> <img src="<?php echo Yii::$app->view->theme->baseUrl ?>/images/newslider.png"  alt=""> </div>
+    <div class="col-xs-12 col-sm-12 col-lg-12 col-lg-12">
+
+        <div class="slider-cont1">
+            <div class="corner1"> <img src="<?php echo Yii::$app->view->theme->baseUrl ?>/images/corner1.png" alt=""></div>
+            <div class="corner2"> <img src="<?php echo Yii::$app->view->theme->baseUrl ?>/images/corner2.png" alt=""></div>
+            <div class="corner3"> <img src="<?php echo Yii::$app->view->theme->baseUrl ?>/images/corner3.png" alt=""></div>
+            <div class="corner4"> <img src="<?php echo Yii::$app->view->theme->baseUrl ?>/images/corner4.png" alt=""></div>
+
+            <div class="inner-slider">
+
+                <div id="bootstrap-touch-slider" class="carousel bs-slider fade  control-round indicators-line" data-ride="carousel" data-pause="hover" data-interval="5000" >
+
+
+                    <!-- Indicators -->
+                    <ol class="carousel-indicators">
+                        <li data-target="#bootstrap-touch-slider" data-slide-to="0" class="active"></li>
+                        <li data-target="#bootstrap-touch-slider" data-slide-to="1"></li>
+                        <li data-target="#bootstrap-touch-slider" data-slide-to="2"></li>
+                    </ol>
+
+                    <!-- Wrapper For Slides -->
+                    <div class="carousel-inner" role="listbox"> 
+
+                        <!-- Third Slide -->
+                        <div class="item active"> 
+
+                            <!-- Slide Background --> 
+                            <img src="<?php echo Yii::$app->view->theme->baseUrl ?>/images/slider1.png" alt=""  class="slide-image"/>
+                            <div class="container">
+                                <div class="row"> 
+                                    <!-- Slide Text Layer -->
+                                    <div class="slide1"> <div class="slide-text slide_style_left">
+                                            <h1 data-animation="animated zoomInRight">FOCUS ON<br/>
+                                                FUTURE<br/>
+                                                <span> TECHNOLOGY </span><br/> 
+                                                <img src="<?php echo Yii::$app->view->theme->baseUrl ?>/images/line.jpg"  alt=""></h1>
+                                        </div></div>
+
+                                </div>
+                            </div>
+                        </div>
+                        <!-- End of Slide --> 
+
+                        <!-- Third Slide -->
+                        <div class="item "> 
+
+                            <!-- Slide Background --> 
+                            <img src="<?php echo Yii::$app->view->theme->baseUrl ?>/images/slider2.png" alt=""  class="slide-image"/>
+                            <div class="container">
+                                <div class="row"> 
+                                    <!-- Slide Text Layer -->
+                                    <div class="slide-text slide_style_left">
+                                        <h1 data-animation="animated zoomInRight">One of the  <br> worlds largest
+                                            white lable <br/> 
+
+                                            <span> IT products & services provider </span><br/> 
+                                            <img src="<?php echo Yii::$app->view->theme->baseUrl ?>/images/line.jpg"  alt=""></h1>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- End of Slide --> 
+
+                        <!-- Third Slide -->
+                        <div class="item "> 
+
+                            <!-- Slide Background --> 
+                            <img src="<?php echo Yii::$app->view->theme->baseUrl ?>/images/slider3.png" alt=""  class="slide-image"/>
+                            <div class="container">
+                                <div class="row"> 
+                                    <!-- Slide Text Layer -->
+                                    <div class="slide-text slide_style_left">
+                                        <h1 data-animation="animated zoomInRight">600+ satisfied clients with <br/>  over 2000+ projects & tasks  <br/> 
+                                            <span> successfully completed</span><br/> 
+                                            <img src="<?php echo Yii::$app->view->theme->baseUrl ?>/images/line.jpg"  alt=""></h1>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- End of Slide --> 
+
+                    </div>
+                    <!-- End of Wrapper For Slides --> 
+
+                    <!-- Left Control --> 
+                    <a class="left carousel-control" href="#bootstrap-touch-slider" role="button" data-slide="prev"> <span class="fa fa-angle-left" aria-hidden="true"></span> <span class="sr-only">Previous</span> </a> 
+
+                    <!-- Right Control --> 
+                    <a class="right carousel-control" href="#bootstrap-touch-slider" role="button" data-slide="next"> <span class="fa fa-angle-right" aria-hidden="true"></span> <span class="sr-only">Next</span> </a> </div>
+
+
+            </div>
+
+
+        </div>
+
+    </div>
+
+
+
+
 </div>
 
 <div class="section section1" id="section1">
