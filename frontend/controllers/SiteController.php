@@ -70,7 +70,6 @@ class SiteController extends \yeesoft\controllers\BaseController {
             return Page::findOne(['slug' => $slug, 'status' => Page::STATUS_PUBLISHED]);
         }, -1);
         if ($page) {
-            $page->title = '';
             $pageAction = new PageAction($slug, $this, [
                 'slug' => $slug,
                 'page' => $page,
@@ -145,6 +144,13 @@ class SiteController extends \yeesoft\controllers\BaseController {
                         'model' => $model,
             ]);
         }
+    }
+
+    public function actionPortfolio() {
+        $this->layout = "@app/views/layouts/inner_get_in_touch";
+        return $this->render('portfolio', [
+//                    'model' => $model,
+        ]);
     }
 
     /**

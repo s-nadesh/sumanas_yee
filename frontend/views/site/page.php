@@ -10,7 +10,7 @@ $this->params['breadcrumbs'][] = $page->title;
 ?>
 
     <div class="page">
-        <h1><?= Html::encode($page->title) ?></h1>
+        <!--<h1></h1>-->
         <div><?= $page->content ?></div>
     </div>
 <?php if ($page->comment_status == Page::COMMENT_STATUS_OPEN): ?>

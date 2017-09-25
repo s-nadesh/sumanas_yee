@@ -6,7 +6,7 @@ use yii\helpers\Html;
 /* @var $this yii\web\View */
 /* @var $model common\models\ContactUs */
 /* @var $form yii\widgets\ActiveForm */
-$this->title = 'Contact';
+$this->title = 'Contact-Sumanas';
 ?>
 <div class="inner-page-heading ">
     <div class="container-fluid">

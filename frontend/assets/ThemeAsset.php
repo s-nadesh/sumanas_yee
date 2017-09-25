@@ -23,7 +23,8 @@ class ThemeAsset extends AssetBundle
         'css/owl.theme.default.min.css',
         'css/font-awesome.css',
         'css/metisMenu.min.css',
-        'css/jquery.mCustomScrollbar.css'
+        'css/jquery.mCustomScrollbar.css',
+        'css/cubeportfolio.css',
     ];
     public $js = [
         '//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js',
@@ -38,6 +39,8 @@ class ThemeAsset extends AssetBundle
         'js/function.js',
         'js/jquery.mCustomScrollbar.concat.min.js',
         'js/wow.min.js',
+        'js/jquery.cubeportfolio.min.js',
+        'js/main.js',
     ];
     public $depends = [
 //        'yii\web\YiiAsset',
