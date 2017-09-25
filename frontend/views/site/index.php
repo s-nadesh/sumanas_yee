@@ -1,6 +1,7 @@
 <?php
 
 use yii\widgets\LinkPager;
+use yeesoft\block\models\Block;
 
 /* @var $this yii\web\View */
 
@@ -136,39 +137,17 @@ $this->title = 'Homepage';
         </div>
         <div class="col-xs-12 col-sm-12 col-md-9 col-lg-8 col-lg-offset-1">
             <div class="row">
-                <div class="col-xs-12 col-sm-4 col-lg-4 col-lg-4  sevice-part sevice-part1 ">
-                    <h3> MOBILE App Development </h3>
-                    <p> Find the finest of services in mobile application development, compatible with IOS, Android and windows. All that you wanted is at the tap of your finger</p>
-                    <p> <a href="mobile-app.html" class="readmore1"> Read More... </a> </p>
-                </div>
+                <?php echo Block::getHtml('mobile-app-development', ['link' => 'mobile-app-development','title' => 'Mobile App Development']); ?>
                 <div class="col-xs-12 col-sm-4 col-lg-4 col-lg-4  sevice-part ">
                     <div class="row">
-                        <div class="sevice-part2">
-                            <h3> Web Design </h3>
-                            <p> Your one stop-shop for great website designs, exotic logos, and awesome Graphic Designs. Ask for more and you will get more! </p>
-                            <p> <a href="ui-ux-design.html" class="readmore1"> Read More... </a> </p>
-                        </div>
-                        <div class="sevice-part3">
-                            <h3> Digital
-                                Marketing </h3>
-                            <p> This is the platformthat's makes your business catch the spotlight! We help your brand get the much needed attention and we make sure it is here to stay! </p>
-                            <p> <a href="digital-marketing.html" class="readmore1"> Read More... </a> </p>
-                        </div>
+                        <?php echo Block::getHtml('ui-ux-design', ['link' => 'ui-ux-design','title' => 'UI/UX Design']); ?> 
+                        <?php echo Block::getHtml('digital-marketing', ['link' => 'digital-marketing','title' => 'Digital Marketing']); ?> 
                     </div>
                 </div>
                 <div class="col-xs-12 col-sm-4 col-lg-4 col-lg-4  sevice-part ">
                     <div class="row">
-                        <div class="sevice-part4">
-                            <h3>Web 
-                                Development</h3>
-                            <p> We build custom applications that are tailor-made to fit your requirements. Have an idea? Share it with us and see it come to life with our technical expertise. </p>
-                            <p> <a href="webdevelopment.html" class="readmore1"> Read More... </a> </p>
-                        </div>
-                        <div class="sevice-part5">
-                            <h3> DATA Analytics </h3>
-                            <p> Lorem ipsum dolor sit amet, consectetur adipiscing elit sed do eiusmod incididunt ut labore .Lorem ipsum dolor sit amet, consectetur adipiscing elit sed do eiusmod incididu</p>
-                            <p> <a href="dataanalytics.html" class="readmore1"> Read More... </a> </p>
-                        </div>
+                        <?php echo Block::getHtml('website-development', ['link' => 'website-development','title' => 'Web Development']); ?> 
+                        <?php echo Block::getHtml('dataanalytics', ['link' => 'dataanalytics','title' => 'Data Analytics']); ?> 
                     </div>
                 </div>
             </div>
