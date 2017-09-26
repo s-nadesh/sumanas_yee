@@ -48,6 +48,8 @@ return [
         'comment' => [
             'class' => 'yeesoft\comment\CommentModule',
         ],
+        //custom modules  
+        'clients' => ['class' => 'common\modules\clients\ClientsModule',],
         'block' => [
             'class' => 'yeesoft\block\BlockModule',
         ],

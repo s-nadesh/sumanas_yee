@@ -63,7 +63,7 @@ $this->title = 'Homepage';
                                     <!-- Slide Text Layer -->
                                     <div class="slide-text slide_style_left">
                                         <h1 data-animation="animated zoomInRight">One of the  <br> worlds largest
-                                            white lable <br/> 
+                                            white label <br/> 
 
                                             <span> IT products & services provider </span><br/> 
                                             <img src="<?php echo Yii::$app->view->theme->baseUrl ?>/images/line.jpg"  alt=""></h1>
@@ -137,17 +137,17 @@ $this->title = 'Homepage';
         </div>
         <div class="col-xs-12 col-sm-12 col-md-9 col-lg-8 col-lg-offset-1">
             <div class="row">
-                <?php echo Block::getHtml('mobile-app-development', ['link' => 'mobile-app-development','title' => 'Mobile App Development']); ?>
+                <?php echo Block::getHtml('mobile-app-development'); ?>
                 <div class="col-xs-12 col-sm-4 col-lg-4 col-lg-4  sevice-part ">
                     <div class="row">
-                        <?php echo Block::getHtml('ui-ux-design', ['link' => 'ui-ux-design','title' => 'UI/UX Design']); ?> 
-                        <?php echo Block::getHtml('digital-marketing', ['link' => 'digital-marketing','title' => 'Digital Marketing']); ?> 
+                        <?php echo Block::getHtml('ui-ux-design'); ?> 
+                        <?php echo Block::getHtml('digital-marketing'); ?> 
                     </div>
                 </div>
                 <div class="col-xs-12 col-sm-4 col-lg-4 col-lg-4  sevice-part ">
                     <div class="row">
-                        <?php echo Block::getHtml('website-development', ['link' => 'website-development','title' => 'Web Development']); ?> 
-                        <?php echo Block::getHtml('dataanalytics', ['link' => 'dataanalytics','title' => 'Data Analytics']); ?> 
+                        <?php echo Block::getHtml('website-development'); ?> 
+                        <?php echo Block::getHtml('dataanalytics'); ?> 
                     </div>
                 </div>
             </div>

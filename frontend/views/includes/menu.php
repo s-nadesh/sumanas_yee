@@ -36,14 +36,26 @@ use yii\web\View;
         </div>
     </div>
     <div class="footer-social-link footer-social-link2">
-        <div class="menu-contact"> <i class="fa fa-phone" aria-hidden="true"></i> 0452-4210515 , 9952870443 <br/>
+        <div class="menu-contact"> <i class="fa fa-phone" aria-hidden="true"></i> <?php echo Yii::$app->settings->get('general.mobile') ?>,<?php echo Yii::$app->settings->get('general.alt_phone') ?> <br/>
             <i class="fa fa-envelope-o" aria-hidden="true"></i> <a href="mailto: info@sumanastech.com ">info@sumanastech.com</a></div>
         <ul>
-            <li> <a href="#"> <i class="fa fa-facebook" aria-hidden="true"></i> </a></li>
-            <li> <a href="#"> <i class="fa fa-twitter" aria-hidden="true"></i> </a></li>
-            <li> <a href="#"> <i class="fa fa-linkedin" aria-hidden="true"></i> </a></li>
-            <li> <a href="#"> <i class="fa fa-youtube" aria-hidden="true"></i> </a></li>
-            <li> <a href="#"> <i class="fa fa-pinterest-p" aria-hidden="true"></i> </a></li>
+                <?php if (Yii::$app->settings->get('general.facebook')) { ?> <li>
+                    <a href="<?php echo Yii::$app->settings->get('general.facebook') ?>"> <i class="fa fa-facebook" aria-hidden="true"></i></a> </li>
+            <?php } ?>
+             <?php
+                if (Yii::$app->settings->get('general.twitter')) { 
+                    ?> <li>
+                    <a href="<?php echo Yii::$app->settings->get('general.twitter') ?>"><i class="fa fa-twitter" aria-hidden="true"></i></a> </li>
+            <?php } ?>
+                <?php if (Yii::$app->settings->get('general.linkedin')) { ?> <li>
+                    <a href="<?php echo Yii::$app->settings->get('general.linkedin') ?>"> <i class="fa fa-linkedin" aria-hidden="true"></i></a> </li>
+            <?php } ?>
+                <?php if (Yii::$app->settings->get('general.gplus')) { ?> <li>
+                    <a href="<?php echo Yii::$app->settings->get('general.gplus') ?>"> <i class="fa fa-google-plus" aria-hidden="true"></i></a> </li>
+            <?php } ?>
+                <?php if (Yii::$app->settings->get('general.pinterest')) { ?> <li>
+                    <a href="<?php echo Yii::$app->settings->get('general.pinterest') ?>"> <i class="fa fa-pinterest" aria-hidden="true"></i></a> </li>
+                    <?php } ?>
         </ul>
     </div>
 </div>

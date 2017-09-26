@@ -24,7 +24,7 @@ $footer_platform = Menu::getMenuItems('footer-platform');
                     <?php
                     foreach ($footer as $row) {
                         ?>
-                    <li> <a href="<?php echo $row['url']['0'] ?>"><?php echo $row['label'] ?></a></li>
+                        <li> <a href="<?php echo $row['url']['0'] ?>"><?php echo $row['label'] ?></a></li>
                         <?php
                     }
                     ?>
@@ -35,7 +35,7 @@ $footer_platform = Menu::getMenuItems('footer-platform');
                     <?php
                     foreach ($footer_tech as $tech) {
                         ?>
-                    <li> <a href="<?php echo $tech['url']['0'] ?>"><?php echo $tech['label'] ?></a></li>
+                        <li> <a href="<?php echo $tech['url']['0'] ?>"><?php echo $tech['label'] ?></a></li>
                         <?php
                     }
                     ?>
@@ -50,7 +50,7 @@ $footer_platform = Menu::getMenuItems('footer-platform');
                     <?php
                     foreach ($footer_serv as $serv) {
                         ?>
-                    <li><a href="<?php echo $serv['url']['0'] ?>"><?php echo $serv['label'] ?></a> </li>
+                        <li><a href="<?php echo $serv['url']['0'] ?>"><?php echo $serv['label'] ?></a> </li>
                         <?php
                     }
                     ?>
@@ -61,7 +61,7 @@ $footer_platform = Menu::getMenuItems('footer-platform');
                     <?php
                     foreach ($footer_platform as $plat) {
                         ?>
-                    <li><a href="<?php echo $plat['url']['0'] ?>"><?php echo $plat['label'] ?></a> </li>
+                        <li><a href="<?php echo $plat['url']['0'] ?>"><?php echo $plat['label'] ?></a> </li>
                         <?php
                     }
                     ?>
@@ -71,8 +71,8 @@ $footer_platform = Menu::getMenuItems('footer-platform');
 
             <div class="col-xs-12 col-sm-3 col-md-3 col-lg-3 footer-cont">
                 <p> <span> <i class="fa fa-phone" aria-hidden="true"></i> Phone no </span> </p>
-                <p> +91 98947 25600 <br/>
-                    +91 98947 32541 <br/>
+                <p> <?php echo Yii::$app->settings->get('general.mobile') ?> <br/>
+                    <?php echo Yii::$app->settings->get('general.alt_phone') ?> <br/>
                 </p>
 
                 <p> <span> <i class="fa fa-envelope" aria-hidden="true"></i> Email </span> </p>
@@ -81,10 +81,7 @@ $footer_platform = Menu::getMenuItems('footer-platform');
 
             <div class="col-xs-12 col-sm-3 col-md-3 col-lg-3 footer-cont">
                 <p> <span> <i class="fa fa-map-marker" aria-hidden="true"></i> Address </span> </p>
-                <p> No:01, Gandhiji St,<br/>
-                    Rasi Towers, Near Aparna Enclave,<br/>
-                    Velmurgan Nagar, Bypass Road,<br/>
-                    Madurai – 625010. </p>
+                <p>  <?php echo nl2br(Yii::$app->settings->get('general.address')) ?> </p>
             </div>
 
             <!--            <div class="col-xs-12 col-sm-3 col-md-3 col-lg-3 footer-cont">
@@ -92,9 +89,29 @@ $footer_platform = Menu::getMenuItems('footer-platform');
                         </div>-->
             <div class="col-xs-12 col-sm-3 col-md-3 col-lg-3 footer-cont">
                 <p> <span> <i class="fa fa-bullhorn" aria-hidden="true"></i> Social Media </span> </p>
-                <p> <a href="#"> <i class="fa fa-facebook" aria-hidden="true"></i> - facebook</a> <br/>
-                    <a href="#"><i class="fa fa-twitter" aria-hidden="true"></i>  - twitter</a> <br/>
-                    <a href="#"><i class="fa fa-google-plus" aria-hidden="true"></i> -   google plus</a><br/>
+                <?php if (Yii::$app->settings->get('general.facebook')) { ?>
+                    <p> <a href="<?php echo Yii::$app->settings->get('general.facebook') ?>"> <i class="fa fa-facebook" aria-hidden="true"></i> - facebook</a> <br/> 
+                        <?php
+                    }
+                    if (Yii::$app->settings->get('general.twitter')) {
+                        ?>
+                        <a href="<?php echo Yii::$app->settings->get('general.twitter') ?>"><i class="fa fa-twitter" aria-hidden="true"></i>  - twitter</a> <br/>
+                        <?php
+                    }
+                    if (Yii::$app->settings->get('general.gplus')) {
+                        ?>
+                        <a href="<?php echo Yii::$app->settings->get('general.gplus') ?>"><i class="fa fa-google-plus" aria-hidden="true"></i> -   google plus</a><br/>
+                        <?php
+                    }
+                    if (Yii::$app->settings->get('general.pinterest')) {
+                        ?>
+                        <a href="<?php echo Yii::$app->settings->get('general.pinterest') ?>"><i class="fa fa-pinterest-p" aria-hidden="true"></i> -   Pinterest</a><br/>
+                        <?php
+                    }
+                    if (Yii::$app->settings->get('general.linkedin')) {
+                        ?>
+                        <a href="<?php echo Yii::$app->settings->get('general.linkedin') ?>"><i class="fa fa-linkedin" aria-hidden="true"></i> -   LinkedIn</a><br/>
+                    <?php } ?>
                 </p>
             </div>
         </div>
