@@ -2,6 +2,7 @@
 
 use yii\widgets\LinkPager;
 use yeesoft\block\models\Block;
+use frontend\components\DashboardClientsWidget;
 
 /* @var $this yii\web\View */
 
@@ -180,10 +181,7 @@ $this->title = 'Homepage';
 
             <div class="row">
                 <div class="owl-carousel hover-demo " id="clients-carousel">
-                    <?php /* @var $post yeesoft\post\models\Post */ ?>
-                    <?php foreach ($posts as $post) : ?>
-                        <?= $this->render('/items/post.php', ['post' => $post, 'page' => 'index']) ?>
-                    <?php endforeach; ?>
+                    <?= DashboardClientsWidget::widget(); ?>
                 </div>
             </div>
         </div>
