@@ -2,24 +2,20 @@
 
 namespace frontend\components;
 
-use yii\base\Widget;
-use yii\helpers\Html;
-use yeesoft\post\models\search\PostSearch;
-use yeesoft\post\models\Post;
-use Yii;
+use common\modules\clients\models\Clients;
+use yii\bootstrap\Widget;
 
-class ClientsWidget extends \yii\bootstrap\Widget {
+class ClientsWidget extends Widget {
 
     public $layout = 'layout';
-    public $clients = 'clients';
+//    public $clients = 'clients';
 
     public function run() {
-        $posts = Post::find()
-                ->active()
+        $posts = Clients::find()->where(['visible'=>1])
                 ->all();
         return $this->render($this->layout, [
                     'posts' => $posts,
-                    'clients' => $this->clients,
+//                    'clients' => $this->clients,
         ]);
     }
 

@@ -16,11 +16,18 @@
                         <li data-target="#fade-quote-carousel" data-slide-to="4"></li>
                     </ol>
                     <div class="carousel-inner">
-                        <?php // foreach ($posts as $post) : ?>
-                            <?=
-                            $this->render($clients)
+                        <?php
+                        foreach ($posts as $key => $post) :
+//                            echo $key;
                             ?>
-                        <?php // endforeach; ?>
+                            <div class="item <?php echo ($key == 0) ? 'active' : '' ?>">
+                                <div class="profile-circle"> <img src="<?php echo $post['thumbnail']; ?>" alt="Martine Breton"></div>
+                                <blockquote>
+                                    <p><?= $post['description'] ?></p>
+                                    <p> <strong> <?= $post['title'] ?> </strong></p>
+                                </blockquote>
+                            </div>
+                        <?php endforeach; ?>
                     </div>
                 </div>
             </div>

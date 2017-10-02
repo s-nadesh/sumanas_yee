@@ -12,10 +12,10 @@ use yii\helpers\Html;
     ?>
     <div class="client-cont">
         <p><img src="<?php echo $row['thumbnail']; ?>"></p>
-        <p><?= Html::a($row->title, ["/site/{$row->slug}"]) ?></p>
+        <p><?= Html::a($row->title) ?></p>
 
         <div class="client-hover">
-            <p><strong><?= Html::a($row->title, ["/site/{$row->slug}"]) ?></strong></p>
+            <p><strong><?= $row->title ?></strong></p>
             <p><?= $row->description ?></p>
         </div>
     </div>

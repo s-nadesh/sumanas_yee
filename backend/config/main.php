@@ -50,6 +50,8 @@ return [
         ],
         //custom modules  
         'clients' => ['class' => 'common\modules\clients\ClientsModule',],
+        'works' => ['class' => 'common\modules\works\WorksModule',],
+        'team' => ['class' => 'common\modules\team\TeamModule',],
         'block' => [
             'class' => 'yeesoft\block\BlockModule',
         ],
