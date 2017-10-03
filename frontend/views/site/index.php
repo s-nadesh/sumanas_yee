@@ -1,8 +1,9 @@
 <?php
 
-use yii\widgets\LinkPager;
-use yeesoft\block\models\Block;
 use frontend\components\DashboardClientsWidget;
+use frontend\components\TeamWidget;
+use frontend\components\WorksWidget;
+use yeesoft\block\models\Block;
 
 /* @var $this yii\web\View */
 
@@ -212,18 +213,7 @@ $this->title = 'Homepage';
         <div class="col-xs-12 col-sm-12 col-md-7 col-lg-7">
             <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 owl-theme"> <!-- Set up your HTML -->
                 <div class="owl-carousel hover-demo " id="portfolio">
-                    <div class="project-thumb-cont">
-                        <div class="project-thumb1"> <img src="<?php echo Yii::$app->view->theme->baseUrl ?>/images/project1.jpg"  alt=""> </div>
-                        <div class="project-thumb1"> <img src="<?php echo Yii::$app->view->theme->baseUrl ?>/images/project1.jpg"  alt=""> </div>
-                    </div>
-                    <div class="project-thumb-cont">
-                        <div class="project-thumb1"> <img src="<?php echo Yii::$app->view->theme->baseUrl ?>/images/project1.jpg"  alt=""> </div>
-                        <div class="project-thumb1"> <img src="<?php echo Yii::$app->view->theme->baseUrl ?>/images/project1.jpg"  alt=""> </div>
-                    </div>
-                    <div class="project-thumb-cont">
-                        <div class="project-thumb1"> <img src="<?php echo Yii::$app->view->theme->baseUrl ?>/images/project1.jpg"  alt=""> </div>
-                        <div class="project-thumb1"> <img src="<?php echo Yii::$app->view->theme->baseUrl ?>/images/project1.jpg"  alt=""> </div>
-                    </div>
+                    <?= WorksWidget::widget(); ?>
                 </div>
             </div>
         </div>
@@ -254,110 +244,7 @@ $this->title = 'Homepage';
         <div class="col-xs-12 col-sm-12 col-md-8 col-lg-7">
             <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 owl-theme"> <!-- Set up your HTML -->
                 <div class="owl-carousel hover-demo " id="team">
-                    <div class="team-cont">
-                        <div class="team">
-                            <div class="team-hobby">
-                                <ul>
-                                    <li> Cricket </li>
-                                    <li>Songs</li>
-                                    <li>Burger</li>
-                                    <li>Chicken</li>
-                                </ul>
-                            </div>
-                            <div class="team-name"> MICHEAL SAM <br/>
-                                <span> Tester </span> </div>
-                            <img src="<?php echo Yii::$app->view->theme->baseUrl ?>/images/team1.jpg"  alt=""></div>
-                        <div class="team">
-                            <div class="team-hobby">
-                                <ul>
-                                    <li> Cricket </li>
-                                    <li>Songs</li>
-                                    <li>Burger</li>
-                                    <li>Chicken</li>
-                                </ul>
-                            </div>
-                            <div class="team-name"> MICHEAL SAM <br/>
-                                <span> Tester </span> </div>
-                            <img src="<?php echo Yii::$app->view->theme->baseUrl ?>/images/team1.jpg"  alt=""></div>
-                    </div>
-                    <div class="team-cont">
-                        <div class="team">
-                            <div class="team-hobby">
-                                <ul>
-                                    <li> Cricket </li>
-                                    <li>Songs</li>
-                                    <li>Burger</li>
-                                    <li>Chicken</li>
-                                </ul>
-                            </div>
-                            <div class="team-name"> MICHEAL SAM <br/>
-                                <span> Tester </span> </div>
-                            <img src="<?php echo Yii::$app->view->theme->baseUrl ?>/images/team1.jpg"  alt=""></div>
-                        <div class="team">
-                            <div class="team-hobby">
-                                <ul>
-                                    <li> Cricket </li>
-                                    <li>Songs</li>
-                                    <li>Burger</li>
-                                    <li>Chicken</li>
-                                </ul>
-                            </div>
-                            <div class="team-name"> MICHEAL SAM <br/>
-                                <span> Tester </span> </div>
-                            <img src="<?php echo Yii::$app->view->theme->baseUrl ?>/images/team1.jpg"  alt=""></div>
-                    </div>
-                    <div class="team-cont">
-                        <div class="team">
-                            <div class="team-hobby">
-                                <ul>
-                                    <li> Cricket </li>
-                                    <li>Songs</li>
-                                    <li>Burger</li>
-                                    <li>Chicken</li>
-                                </ul>
-                            </div>
-                            <div class="team-name"> MICHEAL SAM <br/>
-                                <span> Tester </span> </div>
-                            <img src="<?php echo Yii::$app->view->theme->baseUrl ?>/images/team1.jpg"  alt=""></div>
-                        <div class="team">
-                            <div class="team-hobby">
-                                <ul>
-                                    <li> Cricket </li>
-                                    <li>Songs</li>
-                                    <li>Burger</li>
-                                    <li>Chicken</li>
-                                </ul>
-                            </div>
-                            <div class="team-name"> MICHEAL SAM <br/>
-                                <span> Tester </span> </div>
-                            <img src="<?php echo Yii::$app->view->theme->baseUrl ?>/images/team1.jpg"  alt=""></div>
-                    </div>
-                    <div class="team-cont">
-                        <div class="team">
-                            <div class="team-hobby">
-                                <ul>
-                                    <li> Cricket </li>
-                                    <li>Songs</li>
-                                    <li>Burger</li>
-                                    <li>Chicken</li>
-                                </ul>
-                            </div>
-                            <div class="team-name"> MICHEAL SAM <br/>
-                                <span> Tester </span> </div>
-                            <img src="<?php echo Yii::$app->view->theme->baseUrl ?>/images/team1.jpg"  alt=""></div>
-                        <div class="team">
-                            <div class="team-hobby">
-                                <ul>
-                                    <li> Cricket </li>
-                                    <li>Songs</li>
-                                    <li>Burger</li>
-                                    <li>Chicken</li>
-                                </ul>
-                            </div>
-                            <div class="team-name"> MICHEAL SAM <br/>
-                                <span> Tester </span> </div>
-                            <img src="<?php echo Yii::$app->view->theme->baseUrl ?>/images/team1.jpg"  alt=""></div>
-                    </div>
+                    <?= TeamWidget::widget() ?>
                 </div>
             </div>
         </div>
