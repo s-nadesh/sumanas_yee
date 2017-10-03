@@ -52,6 +52,7 @@ return [
         'clients' => ['class' => 'common\modules\clients\ClientsModule',],
         'works' => ['class' => 'common\modules\works\WorksModule',],
         'team' => ['class' => 'common\modules\team\TeamModule',],
+        'portfolio' => ['class' => 'common\modules\portfolio\PortfolioModule',],
         'block' => [
             'class' => 'yeesoft\block\BlockModule',
         ],

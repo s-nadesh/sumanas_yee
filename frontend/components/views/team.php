@@ -23,7 +23,7 @@ foreach ($teams as $key => $team) {
         </div>
         <div class="team-name"> <?php echo $team['title'] ?> <br/>
             <span> <?php echo $team['designation'] ?> </span></div>
-        <img src="<?php echo $team['thumbnail'] ?>" alt="RAJENDRAN"></div>
+        <img src="<?php echo $team['thumbnail'] ?>" alt="<?php echo $team['title'] ?>"></div>
 
     <?php
     if ($key % 2) {
