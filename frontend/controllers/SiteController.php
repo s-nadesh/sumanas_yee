@@ -2,19 +2,26 @@
 
 namespace frontend\controllers;
 
+use common\modules\portfolio\models\Portfolio;
+use common\modules\portfolio\models\PortfolioCategory;
 use frontend\actions\PageAction;
 use frontend\actions\PostAction;
+use frontend\models\CareersForm;
 use frontend\models\ContactForm;
+use yeesoft\controllers\BaseController;
 use yeesoft\page\models\Page;
 use yeesoft\post\models\Post;
 use Yii;
+use yii\base\InvalidRouteException;
 use yii\data\Pagination;
+use yii\web\NotFoundHttpException;
 use yii\web\UploadedFile;
+use const YII_ENV_TEST;
 
 /**
  * Site controller
  */
-class SiteController extends \yeesoft\controllers\BaseController {
+class SiteController extends BaseController {
 
     public $freeAccess = true;
 
@@ -61,7 +68,7 @@ class SiteController extends \yeesoft\controllers\BaseController {
         //try to display action from controller
         try {
             return $this->runAction($slug);
-        } catch (\yii\base\InvalidRouteException $ex) {
+        } catch (InvalidRouteException $ex) {
             
         }
 
@@ -97,7 +104,7 @@ class SiteController extends \yeesoft\controllers\BaseController {
         }
 
         //if nothing suitable was found then throw 404 error
-        throw new \yii\web\NotFoundHttpException('Page not found.');
+        throw new NotFoundHttpException('Page not found.');
     }
 
     /**
@@ -125,7 +132,7 @@ class SiteController extends \yeesoft\controllers\BaseController {
 
     public function actionCareers() {
         $this->layout = "@app/views/layouts/inner";
-        $model = new \frontend\models\CareersForm();
+        $model = new CareersForm();
         if ($model->load(Yii::$app->request->post())) {
             $model->file = UploadedFile::getInstance($model, 'file');
             if ($model->file) {
@@ -148,8 +155,13 @@ class SiteController extends \yeesoft\controllers\BaseController {
 
     public function actionPortfolio() {
         $this->layout = "@app/views/layouts/inner_get_in_touch";
+        $model = PortfolioCategory::find()->where(['visible' => 1])
+                ->all();
+        $portfolio = Portfolio::find()->where(['visible' => 1])
+                ->all();
         return $this->render('portfolio', [
-//                    'model' => $model,
+                    'model' => $model,
+                    'portfolio' => $portfolio,
         ]);
     }
 
