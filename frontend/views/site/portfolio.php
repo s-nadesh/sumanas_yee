@@ -1,3 +1,7 @@
+<?php
+
+use yii\helpers\Url;
+?>
 <div class="inner-page-heading ">
     <div class="container-fluid">
         <div class="row">
@@ -12,77 +16,31 @@
         <div class="row">
 
             <div id="js-filters-awesome-work" class="cbp-l-filters-work">
+                <div data-filter="*" class="cbp-filter-item-active cbp-filter-item">
+                    SHOW ALL
+                </div>
                 <?php
-                foreach ($model as $key => $port) :
+                foreach ($port_category as $port_cat) :
                     ?>
-                    <div class="<?php echo ($key == 0) ? 'cbp-filter-item-active' : '' ?> cbp-filter-item">
-                        <?php echo $port['title']; ?><div class="cbp-filter-counter"></div>
+                    <div data-filter=".<?php echo $port_cat['slug'] ?>" class="cbp-filter-item">
+                        <?php echo $port_cat['title']; ?><div class="cbp-filter-counter"></div>
                     </div>
                 <?php endforeach; ?>
             </div>
 
             <div id="js-grid-awesome-work" class="cbp cbp-l-grid-work">
-                <div class="cbp-item identity">
-                    <?php                        foreach ($portfolio as $row) { ?>
-                    <a href="ajax-awesome-work/project1.html" class="cbp-caption cbp-singlePage" rel="nofollow">
-                        <div class="cbp-caption-defaultWrap">
-                            <img src="<?php echo $row['thumbnail'] ?>" alt="">
-                        </div>
-                        <div class="cbp-caption-activeWrap"></div>
-                    </a>
-                    <a href="ajax-awesome-work/project1.html" class="cbp-l-grid-work-title cbp-singlePage" rel="nofollow"><?php echo $row['title'] ?></a>
-                    <div class="cbp-l-grid-work-desc"><?php echo $row['sub_title'] ?></div>  <?php } ?>
-                </div>
-                <div class="cbp-item web-design logos">
-                    <a href="ajax-awesome-work/project2.html" class="cbp-caption cbp-singlePage" rel="nofollow">
-                        <div class="cbp-caption-defaultWrap">
-                            <img src="http://scriptpie.com/cubeportfolio/img/?i=480x250/d06583" alt="">
-                        </div>
-                        <div class="cbp-caption-activeWrap"></div>
-                    </a>
-                    <a href="ajax-awesome-work/project2.html" class="cbp-l-grid-work-title cbp-singlePage" rel="nofollow">World Clock Widget</a>
-                    <div class="cbp-l-grid-work-desc">Logo / Web Design</div>
-                </div>
-                <div class="cbp-item graphic logos">
-                    <a href="ajax-awesome-work/project3.html" class="cbp-caption cbp-singlePage" rel="nofollow">
-                        <div class="cbp-caption-defaultWrap">
-                            <img src="http://scriptpie.com/cubeportfolio/img/?i=480x250/d2949f" alt="">
-                        </div>
-                        <div class="cbp-caption-activeWrap"></div>
-                    </a>
-                    <a href="ajax-awesome-work/project3.html" class="cbp-l-grid-work-title cbp-singlePage" rel="nofollow">To-Do Dashboard</a>
-                    <div class="cbp-l-grid-work-desc">Graphic / Logo</div>
-                </div>
-                <div class="cbp-item web-design graphic">
-                    <a href="ajax-awesome-work/project4.html" class="cbp-caption cbp-singlePage" rel="nofollow">
-                        <div class="cbp-caption-defaultWrap">
-                            <img src="http://scriptpie.com/cubeportfolio/img/?i=480x250/53acad" alt="">
-                        </div>
-                        <div class="cbp-caption-activeWrap"></div>
-                    </a>
-                    <a href="ajax-awesome-work/project4.html" class="cbp-l-grid-work-title cbp-singlePage" rel="nofollow">Events and More</a>
-                    <div class="cbp-l-grid-work-desc">Web Design / Graphic</div>
-                </div>
-                <div class="cbp-item identity web-design">
-                    <a href="ajax-awesome-work/project5.html" class="cbp-caption cbp-singlePage" rel="nofollow">
-                        <div class="cbp-caption-defaultWrap">
-                            <img src="http://scriptpie.com/cubeportfolio/img/?i=480x250/55dbc9" alt="">
-                        </div>
-                        <div class="cbp-caption-activeWrap"></div>
-                    </a>
-                    <a href="ajax-awesome-work/project5.html" class="cbp-l-grid-work-title cbp-singlePage" rel="nofollow">WhereTO App</a>
-                    <div class="cbp-l-grid-work-desc">Web Design / Identity</div>
-                </div>
-                <div class="cbp-item identity web-design">
-                    <a href="ajax-awesome-work/project6.html" class="cbp-caption cbp-singlePage" rel="nofollow">
-                        <div class="cbp-caption-defaultWrap">
-                            <img src="http://scriptpie.com/cubeportfolio/img/?i=480x250/4d1f59" alt="">
-                        </div>
-                        <div class="cbp-caption-activeWrap"></div>
-                    </a>
-                    <a href="ajax-awesome-work/project6.html" class="cbp-l-grid-work-title cbp-singlePage" rel="nofollow">Ski * Buddy</a>
-                    <div class="cbp-l-grid-work-desc">Identity / Web Design</div>
-                </div>
+                <?php foreach ($portfolio as $port) { ?>
+                    <div class="cbp-item identity">
+                        <a href="<?php echo Url::to($port['portfolio_link']); ?>" class="cbp-caption cbp-singlePage" rel="nofollow">
+                            <div class="cbp-caption-defaultWrap">
+                                <img src="<?php echo $port['thumbnail'] ?>" alt="">
+                            </div>
+                            <div class="cbp-caption-activeWrap"></div>
+                        </a>
+                        <a href="ajax-awesome-work/project1.html" class="cbp-l-grid-work-title cbp-singlePage" rel="nofollow"><?php echo $port['title'] ?></a>
+                        <div class="cbp-l-grid-work-desc"><?php echo $port['sub_title'] ?></div>
+                    </div>
+                <?php } ?>
             </div>
 
             <div id="js-loadMore-awesome-work" class="cbp-l-loadMore-button">

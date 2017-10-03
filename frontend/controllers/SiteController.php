@@ -155,12 +155,12 @@ class SiteController extends BaseController {
 
     public function actionPortfolio() {
         $this->layout = "@app/views/layouts/inner_get_in_touch";
-        $model = PortfolioCategory::find()->where(['visible' => 1])
+        $port_category = PortfolioCategory::find()->where(['visible' => 1])
                 ->all();
         $portfolio = Portfolio::find()->where(['visible' => 1])
                 ->all();
         return $this->render('portfolio', [
-                    'model' => $model,
+                    'port_category' => $port_category,
                     'portfolio' => $portfolio,
         ]);
     }
