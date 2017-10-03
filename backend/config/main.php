@@ -48,13 +48,15 @@ return [
         'comment' => [
             'class' => 'yeesoft\comment\CommentModule',
         ],
-        //custom modules  
-        'clients' => ['class' => 'common\modules\clients\ClientsModule',],
         'works' => ['class' => 'common\modules\works\WorksModule',],
         'team' => ['class' => 'common\modules\team\TeamModule',],
         'portfolio' => ['class' => 'common\modules\portfolio\PortfolioModule',],
         'block' => [
             'class' => 'yeesoft\block\BlockModule',
+        ],
+        //custom modules  
+        'clients' => [
+            'class' => 'common\modules\clients\ClientsModule'
         ],
     ],
     'components' => [
