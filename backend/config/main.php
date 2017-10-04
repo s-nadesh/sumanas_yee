@@ -40,6 +40,7 @@ return [
                 'main' => 'Main Layout',
                 'inner' => 'Inner Layout',
                 'inner_get_in_touch' => 'Get In Touch Layout',
+                'inner_clients_layout' => 'Clients & Get In Touch Layout'
             ],
         ],
         'seo' => [

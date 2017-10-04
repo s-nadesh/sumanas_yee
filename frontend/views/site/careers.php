@@ -1,9 +1,8 @@
 <?php
 
 use yii\bootstrap\ActiveForm;
-use yii\helpers\Html;
 
-$title = "Sumanas Tech Career Opportunities";
+//$title = "Sumanas Tech Career Opportunities";
 ?>
 <div class="inner-page-heading ">
     <div class="container-fluid">
@@ -43,13 +42,6 @@ $title = "Sumanas Tech Career Opportunities";
                 </div>
                 <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12"> <img src="/themes/st_theme/images/join.png" alt="Join us at Sumanas"></div>
             </div>
-        </div>
-    </div>
-    <div class="lets lets1">
-        <div class="container-fluid">
-            <h4> LETS GET STARTED </h4>
-            <p> <span> We help your business grow. We mean it. </span> </p>
-            <p> <a href="contact-sumanas.php" class="btn request-quotebtn"> <i class="fa fa-paper-plane" aria-hidden="true"></i> Get In Touch </a> </p>
         </div>
     </div>
 </div>

@@ -146,7 +146,7 @@ class SiteController extends BaseController {
     }
 
     public function actionCareers() {
-        $this->layout = "@app/views/layouts/inner";
+        $this->layout = "@app/views/layouts/inner_get_in_touch";
         $model = new CareersForm();
         if ($model->load(Yii::$app->request->post())) {
             $model->file = UploadedFile::getInstance($model, 'file');
@@ -169,7 +169,7 @@ class SiteController extends BaseController {
     }
 
     public function actionPortfolio() {
-        $this->layout = "@app/views/layouts/inner_get_in_touch";
+        $this->layout = "@app/views/layouts/inner_clients_layout";
         $port_category = PortfolioCategory::find()->where(['visible' => 1])
                 ->all();
         $portfolio = Portfolio::find()

@@ -1,12 +1,14 @@
 <?php
-/* @var $this View */
+/* @var $this \yii\web\View */
 /* @var $content string */
 
 use frontend\assets\AppAsset;
 use frontend\assets\ThemeAsset;
-use yeesoft\block\models\Block;
 use yii\helpers\Html;
-use yii\web\View;
+use yeesoft\block\models\Block;
+use frontend\actions\PageAction;
+use yeesoft\page\models\Page;
+use frontend\components\ClientsWidget;
 
 Yii::$app->assetManager->forceCopy = true;
 AppAsset::register($this);
@@ -36,17 +38,18 @@ ThemeAsset::register($this);
         <!-- Page Wrapper Start -->
         <div class="innerpage">
             <?= $content ?>
-                <?php echo Block::getHtml('get_in_touch'); ?>
-                <!-- Footer Start -->
-                <div class="section section10" id="section10">
-                    <?php echo $this->render('@frontend/views/includes/footer'); ?>
-                </div>
-                <!-- Footer End -->
+            <?= ClientsWidget::widget(); ?>
+            <?php echo Block::getHtml('get_in_touch'); ?>
+            <!-- Footer Start -->
+            <div class="section section10" id="section10">
+                <?php echo $this->render('@frontend/views/includes/footer'); ?>
             </div>
-            <!-- Page Wrapper End -->
+            <!-- Footer End -->
+        </div>
+        <!-- Page Wrapper End -->
 
-            <div class="drawermenu-overlay"></div>
-            <?php $this->endBody() ?>
+        <div class="drawermenu-overlay"></div>
+        <?php $this->endBody() ?>
     </body>
 </html>
 <?php $this->endPage() ?>

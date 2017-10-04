@@ -1,12 +1,8 @@
 <?php
 
 use yii\bootstrap\ActiveForm;
-use yii\helpers\Html;
 
-/* @var $this yii\web\View */
-/* @var $model common\models\ContactUs */
-/* @var $form yii\widgets\ActiveForm */
-$this->title = 'Contact-Sumanas';
+//$this->title = 'Contact-Sumanas';
 ?>
 <div class="inner-page-heading ">
     <div class="container-fluid">
@@ -63,7 +59,7 @@ $this->title = 'Contact-Sumanas';
                 <div class="form-group">
                     <div class="row">
                         <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 text-center">
-                            <button type="submit" name="contactus" class="btn btn1">Send Message</button>
+                            <button type="submit" name="contactus" class="btn btn1">Send Message <i class="fa fa-paper-plane" aria-hidden="true"></i></button>
                         </div>
                     </div>
                 </div>
