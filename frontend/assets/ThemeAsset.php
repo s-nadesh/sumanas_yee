@@ -140,7 +140,29 @@ class ThemeAsset extends AssetBundle
                 speed: 400,
                 position: 'right'
             });
-            $('#auto-collapse-menu-demo').metisMenu();
+                
+            $('.arrow').click(function(e){
+                $(this).addClass('arrowOpen');
+            });
+            $('#auto-collapse-menu-demo').metisMenu({
+                preventDefault: true
+            }).on('shown.metisMenu', function(event) {
+                var myLink = $('li.active').children('a');
+                var myHref = myLink.attr('href');
+                var iTag = myLink.children('i');
+                var arrowClicked = iTag.hasClass("arrowOpen");
+                if(!arrowClicked){
+                    window.location.href = myHref;
+                }
+            }).on('hidden.metisMenu', function(event) {
+                var liTag = $('li.dropdown');
+                liTag.each(function (){
+                    if(!$(this).hasClass('active')){
+                        var iTag = $(this).find('i');
+                        iTag.removeClass('arrowOpen');
+                    }
+                });
+            });
 JS;
         
         $script = <<< JS
