@@ -37,7 +37,7 @@ use yii\web\User;
  */
 class Portfolio extends ActiveRecord {
 
-    public $portfolioCategories;
+    public $portfolioCategoriesValues;
     public $image1;
     public $image2;
     public $image3;
@@ -60,6 +60,7 @@ class Portfolio extends ActiveRecord {
                 $this->$attr = $image->image;
             }
         }
+        $this->portfolioCategoriesValues = $this->getPortfolioCategoriesValues();
         return parent::afterFind();
     }
 
@@ -110,7 +111,7 @@ class Portfolio extends ActiveRecord {
 //            [['updated_by'], 'exist', 'skipOnError' => true, 'targetClass' => User::className(), 'targetAttribute' => ['updated_by' => 'id']],
             ['portfolio_date', 'date', 'timestampAttribute' => 'portfolio_date', 'format' => 'yyyy-MM-dd'],
                 ['portfolio_date', 'default', 'value' => time()],
-                [['portfolioCategories', 'image1', 'image2', 'image3'], 'safe']
+                [['portfolioCategoriesValues', 'image1', 'image2', 'image3'], 'safe']
         ];
     }
 
@@ -133,7 +134,7 @@ class Portfolio extends ActiveRecord {
             'updated_at' => 'Updated At',
             'created_by' => 'Created By',
             'updated_by' => 'Updated By',
-            'portfolioCategories' => 'Category'
+            'portfolioCategoriesValues' => 'Category'
         ];
     }
 
@@ -175,12 +176,12 @@ class Portfolio extends ActiveRecord {
         $owner = $this->owner;
 
         $post = Yii::$app->getRequest()->post('Post');
-        $portfolioCategories = (isset($owner->portfolioCategories)) ? $owner->portfolioCategories : null;
+        $portfolioCategoriesValues = (isset($owner->portfolioCategoriesValues)) ? $owner->portfolioCategoriesValues : null;
 
-        if (is_array($portfolioCategories)) {
+        if (is_array($portfolioCategoriesValues)) {
             $owner->unlinkAll('portfolioCategories', true);
 
-            foreach ($portfolioCategories as $portfolioCategory) {
+            foreach ($portfolioCategoriesValues as $portfolioCategory) {
                 if (!ctype_digit($portfolioCategory) || !$linkTag = PortfolioCategory::findOne($portfolioCategory)) {
                     //below code doubt
                     $linkTag = new PortfolioCategory(['title' => (string) $portfolioCategory]);
@@ -223,6 +224,17 @@ class Portfolio extends ActiveRecord {
      */
     public static function find() {
         return new PortfolioQuery(get_called_class());
+    }
+    
+    public function getPortfolioCategoriesValues()
+    {
+        $ids = [];
+        $categories = $this->portfolioCategories;
+        foreach ($categories as $category) {
+            $ids[] = $category->id;
+        }
+
+        return json_encode($ids);
     }
 
 }

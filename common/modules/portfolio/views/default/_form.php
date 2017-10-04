@@ -35,7 +35,7 @@ use yii\widgets\ActiveForm;
         </div>
 
         <div class="col-md-3">
-            
+
             <div class="panel panel-default">
                 <div class="panel-body">
                     <div class="record-info">
@@ -44,7 +44,7 @@ use yii\widgets\ActiveForm;
                                 $form->field($model, 'portfolio_date')
                                 ->widget(DatePicker::className(), ['dateFormat' => 'yyyy-MM-dd', 'options' => ['class' => 'form-control']]);
                         ?>
-<?= $form->field($model, 'portfolioCategories')->widget(MagicSuggest::className(), ['items' => PortfolioCategory::getPortfolioCategories()]); ?>
+                        <?= $form->field($model, 'portfolioCategoriesValues')->widget(MagicSuggest::className(), ['items' => PortfolioCategory::getPortfolioCategories()]); ?>
                     </div>
                 </div>
             </div>
@@ -160,7 +160,7 @@ use yii\widgets\ActiveForm;
             </div>
         </div>
     </div>
-<?php ActiveForm::end(); ?>
+    <?php ActiveForm::end(); ?>
 </div>
 <?php
 $css = <<<CSS

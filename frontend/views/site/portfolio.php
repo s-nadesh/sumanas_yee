@@ -1,6 +1,8 @@
 <?php
 
 use yii\helpers\Url;
+
+$this->title = 'Portfolio';
 ?>
 <div class="inner-page-heading ">
     <div class="container-fluid">
@@ -29,28 +31,36 @@ use yii\helpers\Url;
             </div>
 
             <div id="js-grid-awesome-work" class="cbp cbp-l-grid-work">
-                <?php foreach ($portfolio as $port) { ?>
-                    <div class="cbp-item identity">
-                        <a href="<?php echo Url::to($port['portfolio_link']); ?>" class="cbp-caption cbp-singlePage" rel="nofollow">
+                <?php
+                foreach ($portfolio as $port) {
+                    $categories = [];
+                    foreach ($port->portfolioCategories as $portcategories) {
+                        $categories[] = $portcategories->slug;
+                    }
+                    ?>
+                    <div class="cbp-item <?php echo implode(" ", $categories) ?>">
+                        <a href="<?php echo Url::to([$port['slug']]); ?>" class="cbp-caption cbp-singlePage" rel="nofollow">
                             <div class="cbp-caption-defaultWrap">
                                 <img src="<?php echo $port['thumbnail'] ?>" alt="">
                             </div>
                             <div class="cbp-caption-activeWrap"></div>
                         </a>
-                        <a href="ajax-awesome-work/project1.html" class="cbp-l-grid-work-title cbp-singlePage" rel="nofollow"><?php echo $port['title'] ?></a>
-                        <div class="cbp-l-grid-work-desc"><?php echo $port['sub_title'] ?></div>
+                        <a href="<?php echo Url::to([$port['slug']]); ?>" class="cbp-l-grid-work-title cbp-singlePage" rel="nofollow">
+                            <?php echo $port['title'] ?>
+                        </a>
+                        <div class="cbp-l-grid-work-desc">
+                            <?php echo $port['sub_title'] ?>
+                        </div>
                     </div>
                 <?php } ?>
             </div>
 
             <div id="js-loadMore-awesome-work" class="cbp-l-loadMore-button">
-                <a href="/themes/st_theme/ajax-awesome-work/loadMore.html" class="cbp-l-loadMore-link" rel="nofollow">
+                <a href="<?php echo Url::to(['loadmoreportfolio']); ?>" class="cbp-l-loadMore-link" rel="nofollow">
                     <span class="cbp-l-loadMore-defaultText">LOAD MORE</span>
                     <span class="cbp-l-loadMore-loadingText">LOADING...</span>
                     <span class="cbp-l-loadMore-noMoreLoading">NO MORE WORKS</span>
                 </a>
             </div>
-
-
         </div>
     </div>

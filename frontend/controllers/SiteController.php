@@ -5,6 +5,7 @@ namespace frontend\controllers;
 use common\modules\portfolio\models\Portfolio;
 use common\modules\portfolio\models\PortfolioCategory;
 use frontend\actions\PageAction;
+use frontend\actions\PortfolioAction;
 use frontend\actions\PostAction;
 use frontend\models\CareersForm;
 use frontend\models\ContactForm;
@@ -87,6 +88,20 @@ class SiteController extends BaseController {
             return $pageAction->run();
         }
 
+        //try to display Portfolio from datebase
+        $portfolio = Portfolio::getDb()->cache(function ($db) use ($slug) {
+            return Portfolio::findOne(['slug' => $slug, 'visible' => '1']);
+        }, 3600);
+
+        if ($portfolio) {
+            $portfolioAction = new PortfolioAction($slug, $this, [
+                'slug' => $slug,
+                'portfolio' => $portfolio,
+            ]);
+
+            return $portfolioAction->run();
+        }
+
         //try to display post from datebase
         $post = Post::getDb()->cache(function ($db) use ($slug) {
             return Post::findOne(['slug' => $slug, 'status' => Post::STATUS_PUBLISHED]);
@@ -157,10 +172,22 @@ class SiteController extends BaseController {
         $this->layout = "@app/views/layouts/inner_get_in_touch";
         $port_category = PortfolioCategory::find()->where(['visible' => 1])
                 ->all();
-        $portfolio = Portfolio::find()->where(['visible'=>1])
+        $portfolio = Portfolio::find()
+                ->where(['visible' => 1])
+                ->limit(1)
                 ->all();
         return $this->render('portfolio', [
                     'port_category' => $port_category,
+                    'portfolio' => $portfolio,
+        ]);
+    }
+
+    public function actionLoadmoreportfolio() {
+        $portfolio = Portfolio::find()
+                ->where(['visible' => 1])
+                ->offset(1)
+                ->all();
+        return $this->renderPartial('moreportfolio', [
                     'portfolio' => $portfolio,
         ]);
     }
