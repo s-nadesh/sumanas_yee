@@ -9,10 +9,9 @@ $this->title = $page->title;
 $this->params['breadcrumbs'][] = $page->title;
 ?>
 
-    <div class="page">
-        <!--<h1></h1>-->
-        <div><?= $page->content ?></div>
-    </div>
+<?= $page->content ?>
+
+<!-- Below code not needed -->
 <?php if ($page->comment_status == Page::COMMENT_STATUS_OPEN): ?>
     <?php echo Comments::widget(['model' => Page::className(), 'model_id' => $page->id]); ?>
 <?php endif; ?>

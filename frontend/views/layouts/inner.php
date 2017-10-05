@@ -35,7 +35,6 @@ ThemeAsset::register($this);
         <!-- Menu End-->
 
         <!-- Page Wrapper Start -->
-        <!--<div class="innerpage">-->
         <?= $content ?>
         <!-- Footer Start -->
         <footer class="inner-footer">
@@ -44,7 +43,6 @@ ThemeAsset::register($this);
             </div>
         </footer>
         <!-- Footer End -->
-        <!--</div>-->
         <!-- Page Wrapper End -->
 
         <div class="drawermenu-overlay"></div>
