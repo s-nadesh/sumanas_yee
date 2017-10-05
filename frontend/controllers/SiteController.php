@@ -15,6 +15,7 @@ use yeesoft\post\models\Post;
 use Yii;
 use yii\base\InvalidRouteException;
 use yii\data\Pagination;
+use yii\db\Expression;
 use yii\web\NotFoundHttpException;
 use yii\web\UploadedFile;
 use const YII_ENV_TEST;
@@ -93,10 +94,14 @@ class SiteController extends BaseController {
             return Portfolio::findOne(['slug' => $slug, 'visible' => '1']);
         }, 3600);
 
-        if ($portfolio) {
+        $related_projects = Portfolio::getDb()->cache(function ($db) {
+            return Portfolio::find()->where(['visible' => '1'])->limit(3)->orderBy('rand()')->all();
+        }, -1);
+        if ($portfolio && $related_projects) {
             $portfolioAction = new PortfolioAction($slug, $this, [
                 'slug' => $slug,
                 'portfolio' => $portfolio,
+                'related_projects' => $related_projects,
             ]);
 
             return $portfolioAction->run();
@@ -176,6 +181,7 @@ class SiteController extends BaseController {
                 ->where(['visible' => 1])
                 ->limit(1)
                 ->all();
+
         return $this->render('portfolio', [
                     'port_category' => $port_category,
                     'portfolio' => $portfolio,
