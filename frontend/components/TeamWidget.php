@@ -10,7 +10,8 @@ class TeamWidget extends Widget {
     public $team = 'team';
 
     public function run() {
-        $teams = Team::find()->where(['visible' => 1])
+        $teams = Team::find()
+                ->where(['visible' => 1])
                 ->all();
         return $this->render($this->team, [
                     'teams' => $teams,

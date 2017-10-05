@@ -259,8 +259,11 @@ $this->title = 'Homepage';
     </div>
 </div>
 
+<!-- Our Team Section -->
 <div class="section section8" id="section8">
-    <div class="section-arrow1"> <a  href="#" class="arrow2 bounce moveDown"> </a> </div>
+    <div class="section-arrow1"> 
+        <a  href="#" class="arrow2 bounce moveDown"> </a> 
+    </div>
     <div class="container-fluid">
         <div class="col-xs-12 col-sm-12 col-md-4 col-lg-4">
             <h2> <span> OUR </span> Team</h2>
