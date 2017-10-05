@@ -96,10 +96,16 @@ $this->title = 'Homepage';
                     <!-- End of Wrapper For Slides --> 
 
                     <!-- Left Control --> 
-                    <a class="left carousel-control" href="#bootstrap-touch-slider" role="button" data-slide="prev"> <span class="fa fa-angle-left" aria-hidden="true"></span> <span class="sr-only">Previous</span> </a> 
+                    <a class="left carousel-control" href="#bootstrap-touch-slider" role="button" data-slide="prev"> 
+                        <span class="fa fa-angle-left" aria-hidden="true"></span> 
+                        <span class="sr-only">Previous</span> 
+                    </a> 
 
                     <!-- Right Control --> 
-                    <a class="right carousel-control" href="#bootstrap-touch-slider" role="button" data-slide="next"> <span class="fa fa-angle-right" aria-hidden="true"></span> <span class="sr-only">Next</span> </a> 
+                    <a class="right carousel-control" href="#bootstrap-touch-slider" role="button" data-slide="next"> 
+                        <span class="fa fa-angle-right" aria-hidden="true"></span> 
+                        <span class="sr-only">Next</span> 
+                    </a> 
                 </div>
             </div>
         </div>
@@ -133,6 +139,7 @@ $this->title = 'Homepage';
     </div>
 </div>
 
+<!-- Our Services Section -->
 <div class="section section2" id="section2">
     <div class="section-arrow1"> <a  href="#" class="arrow2 bounce moveDown"> </a> </div>
     <div class="container-fluid">
@@ -181,8 +188,11 @@ $this->title = 'Homepage';
     </div>
 </div>
 
+<!-- Our Clients Section -->
 <div class="section section4" id="section4">
-    <div class="section-arrow1"> <a  href="#" class="arrow2 bounce moveDown"> </a> </div>
+    <div class="section-arrow1"> 
+        <a  href="#" class="arrow2 bounce moveDown"> </a> 
+    </div>
     <div class="container-fluid">
         <div class="col-xs-12 col-sm-12 col-lg-12 col-lg-12">
             <h2> <span> OUR </span> Clients</h2>
@@ -204,7 +214,9 @@ $this->title = 'Homepage';
             <span> OUR CLIENTS</span> <br/>
             LOVE US FOR OUR? 
         </div>
-        <div class="arrow1"> <img src="<?php echo Yii::$app->view->theme->baseUrl ?>/images/arrow1.png" alt=""></div>
+        <div class="arrow1"> 
+            <img src="<?php echo Yii::$app->view->theme->baseUrl ?>/images/arrow1.png" alt="">
+        </div>
         <div class="question-cont">
             <div class="question1"> You know what? </div>
         </div>
