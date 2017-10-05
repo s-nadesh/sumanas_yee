@@ -9,7 +9,8 @@ return [
             'class' => 'yeesoft\Yee',
         ],
         'settings' => [
-            'class' => 'yeesoft\components\Settings'
+            'class' => 'yeesoft\components\Settings',
+            'cache' => null // Set this property to null if you do not want to cache the settings.
         ],
         'cache' => [
             'class' => 'yii\caching\FileCache',
