@@ -220,8 +220,11 @@ $this->title = 'Homepage';
     </div>
 </div>
 
+<!-- Our Works Section -->
 <div class="section section6" id="section6">
-    <div class="section-arrow1"> <a  href="#" class="arrow2 bounce moveDown"> </a> </div>
+    <div class="section-arrow1"> 
+        <a  href="#" class="arrow2 bounce moveDown"> </a> 
+    </div>
     <div class="container-fluid">
         <div class="col-xs-12 col-sm-12 col-md-5 col-lg-5">
             <h2> <span> OUR </span> Works</h2>
