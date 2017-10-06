@@ -17,14 +17,14 @@
                     </ol>
                     <div class="carousel-inner">
                         <?php
-                        foreach ($posts as $key => $post) :
+                        foreach ($clients as $key => $client) :
 //                            echo $key;
                             ?>
                             <div class="item <?php echo ($key == 0) ? 'active' : '' ?>">
-                                <div class="profile-circle"> <img src="<?php echo $post['thumbnail']; ?>" alt="Martine Breton"></div>
+                                <div class="profile-circle"> <img src="<?php echo $client['thumbnail']; ?>" alt="<?= $client['title'] ?>"></div>
                                 <blockquote>
-                                    <p><?= $post['description'] ?></p>
-                                    <p> <strong> <?= $post['title'] ?> </strong></p>
+                                    <p><?= $client['description'] ?></p>
+                                    <p> <strong> <?= $client['title'] ?> </strong></p>
                                 </blockquote>
                             </div>
                         <?php endforeach; ?>

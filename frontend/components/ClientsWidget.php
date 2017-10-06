@@ -11,10 +11,10 @@ class ClientsWidget extends Widget {
 //    public $clients = 'clients';
 
     public function run() {
-        $posts = Clients::find()->where(['visible'=>1])
+        $clients = Clients::find()->where(['visible'=>1])
                 ->all();
         return $this->render($this->layout, [
-                    'posts' => $posts,
+                    'clients' => $clients,
 //                    'clients' => $this->clients,
         ]);
     }
