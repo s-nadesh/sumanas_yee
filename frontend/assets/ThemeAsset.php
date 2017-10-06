@@ -1,4 +1,5 @@
 <?php
+
 /**
  * @link http://www.yiiframework.com/
  * @copyright Copyright (c) 2008 Yii Software LLC
@@ -11,11 +12,11 @@ use Yii;
 use yii\web\AssetBundle;
 use yii\web\View;
 
-class ThemeAsset extends AssetBundle
-{
+class ThemeAsset extends AssetBundle {
 
     public $css = [
         'css/bootstrap.min.css',
+        'css/examples.css',
         'css/animate.min.css',
         'css/style.css',
         'css/responsive.css',
@@ -29,6 +30,7 @@ class ThemeAsset extends AssetBundle
     public $js = [
         '//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js',
         'js/bootstrap.min.js',
+        'js/npm.js',
         'js/scrolloverflow.js',
         'js/jquery.fullpage.js',
         'js/examples.js',
@@ -37,6 +39,7 @@ class ThemeAsset extends AssetBundle
         'js/metisMenu.js',
         'js/bootstrapValidator.min.js',
         'js/function.js',
+//        'js/jsfunctions.js',
         'js/jquery.mCustomScrollbar.concat.min.js',
         'js/wow.min.js',
         'js/jquery.cubeportfolio.min.js',
@@ -49,8 +52,7 @@ class ThemeAsset extends AssetBundle
 //        'rmrevin\yii\fontawesome\AssetBundle',
     ];
 
-    public function init()
-    {
+    public function init() {
         parent::init();
         if (isset(Yii::$app->view->theme->basePath)) {
             $this->sourcePath = Yii::$app->view->theme->basePath;
@@ -62,8 +64,7 @@ class ThemeAsset extends AssetBundle
      * @param \yii\web\View $view the view to be registered with
      * @return static the registered asset bundle instance
      */
-    public static function register($view)
-    {
+    public static function register($view) {
         $js = <<<JS
             $('#fullpage').fullpage({
                 scrollBar: true,
@@ -136,6 +137,40 @@ class ThemeAsset extends AssetBundle
                     }
                 }
             })
+                $('#productscreens').owlCarousel({
+                     loop: true,
+                     margin: 15,
+                     responsiveClass: true,
+                     nav: true,
+                     navText: [
+                    "<i class='fa fa-angle-left'> </i>",
+                    "<i class='fa fa-angle-right'> </i>"],
+                responsive: {
+                                 0: {
+                                         items: 1,
+                                         nav: false
+                                    },
+                                600: {
+                                         items: 1,
+                                     },
+                                  1000: {
+                                         items: 1,
+                                        }
+                                    }
+                                })
+
+
+                        $('.drawermenu').drawermenu({
+                            speed: 400,
+                            position: 'right'
+                        });
+
+
+$(function () {
+
+    $('#auto-collapse-menu-demo').metisMenu();
+
+});
             $('.drawermenu').drawermenu({
                 speed: 400,
                 position: 'right'
@@ -164,7 +199,7 @@ class ThemeAsset extends AssetBundle
                 });
             });
 JS;
-        
+
         $script = <<< JS
                 $("#content-1").mCustomScrollbar({
                 /* keyboard default options */
@@ -181,4 +216,5 @@ JS;
 
         return parent::register($view);
     }
+
 }
