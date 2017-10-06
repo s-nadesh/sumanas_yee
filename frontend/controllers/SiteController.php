@@ -191,7 +191,7 @@ class SiteController extends BaseController {
     public function actionLoadmoreportfolio() {
         $portfolio = Portfolio::find()
                 ->where(['visible' => 1])
-                ->offset(1)
+                ->offset(3)
                 ->all();
         return $this->renderPartial('moreportfolio', [
                     'portfolio' => $portfolio,
