@@ -92,7 +92,7 @@ class SiteController extends BaseController {
         //try to display Portfolio from datebase
         $portfolio = Portfolio::getDb()->cache(function ($db) use ($slug) {
             return Portfolio::findOne(['slug' => $slug, 'visible' => '1']);
-        }, 3600);
+        }, -1);
 
         $related_projects = Portfolio::getDb()->cache(function ($db) {
             return Portfolio::find()->where(['visible' => '1'])->limit(3)->orderBy('rand()')->all();
@@ -179,7 +179,7 @@ class SiteController extends BaseController {
                 ->all();
         $portfolio = Portfolio::find()
                 ->where(['visible' => 1])
-                ->limit(1)
+                ->limit(3)
                 ->all();
 
         return $this->render('portfolio', [
