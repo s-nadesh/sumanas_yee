@@ -147,7 +147,7 @@ class ThemeAsset extends AssetBundle
             $('#auto-collapse-menu-demo').metisMenu({
                 preventDefault: true
             }).on('shown.metisMenu', function(event) {
-                var myLink = $('li.active').children('a');
+                var myLink = $('li.dropdown.active').children('a');
                 var myHref = myLink.attr('href');
                 var iTag = myLink.children('i');
                 var arrowClicked = iTag.hasClass("arrowOpen");
