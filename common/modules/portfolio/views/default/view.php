@@ -37,9 +37,9 @@ $this->params['breadcrumbs'][] = $this->title;
             'updated_at',
             'created_by',
             'updated_by',
-            'left_border',
-            'right_border',
-            'depth',
+//            'left_border',
+//            'right_border',
+//            'depth',
         ],
     ]) ?>
 

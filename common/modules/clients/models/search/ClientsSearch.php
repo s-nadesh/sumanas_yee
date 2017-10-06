@@ -47,6 +47,9 @@ class ClientsSearch extends Clients
 
         $dataProvider = new ActiveDataProvider([
             'query' => $query,
+            'pagination' => [
+                'pageSize' => Yii::$app->request->cookies->getValue('_grid_page_size', 20),
+            ],
         ]);
 
         $this->load($params);

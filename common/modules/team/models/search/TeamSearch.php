@@ -3,6 +3,7 @@
 namespace common\modules\team\models\search;
 
 use common\modules\team\models\Team;
+use Yii;
 use yii\base\Model;
 use yii\data\ActiveDataProvider;
 
@@ -43,6 +44,9 @@ class TeamSearch extends Team {
 
         $dataProvider = new ActiveDataProvider([
             'query' => $query,
+            'pagination' => [
+                'pageSize' => Yii::$app->request->cookies->getValue('_grid_page_size', 20),
+            ],
         ]);
 
         $this->load($params);

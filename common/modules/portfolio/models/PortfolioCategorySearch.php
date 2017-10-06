@@ -2,6 +2,7 @@
 
 namespace common\modules\portfolio\models;
 
+use Yii;
 use yii\base\Model;
 use yii\data\ActiveDataProvider;
 
@@ -42,6 +43,9 @@ class PortfolioCategorySearch extends PortfolioCategory {
 
         $dataProvider = new ActiveDataProvider([
             'query' => $query,
+            'pagination' => [
+                'pageSize' => Yii::$app->request->cookies->getValue('_grid_page_size', 20),
+            ],
         ]);
 
         $this->load($params);

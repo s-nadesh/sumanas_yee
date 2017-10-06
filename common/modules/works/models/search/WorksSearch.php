@@ -2,10 +2,10 @@
 
 namespace common\modules\works\models\search;
 
+use common\modules\works\models\Works;
 use Yii;
 use yii\base\Model;
 use yii\data\ActiveDataProvider;
-use common\modules\works\models\Works;
 
 /**
  * WorksSearch represents the model behind the search form about `common\modules\works\models\Works`.
@@ -47,6 +47,9 @@ class WorksSearch extends Works
 
         $dataProvider = new ActiveDataProvider([
             'query' => $query,
+            'pagination' => [
+                'pageSize' => Yii::$app->request->cookies->getValue('_grid_page_size', 20),
+            ],
         ]);
 
         $this->load($params);
