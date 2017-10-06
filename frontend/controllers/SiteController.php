@@ -1,5 +1,7 @@
 <?php
 
+namespace frontend\controllers;
+
 use common\modules\portfolio\models\Portfolio;
 use common\modules\portfolio\models\PortfolioCategory;
 use frontend\actions\PageAction;
@@ -10,12 +12,12 @@ use frontend\models\ContactForm;
 use yeesoft\controllers\BaseController;
 use yeesoft\page\models\Page;
 use yeesoft\post\models\Post;
+use Yii;
 use yii\base\InvalidRouteException;
 use yii\data\Pagination;
 use yii\web\NotFoundHttpException;
 use yii\web\UploadedFile;
-
-namespace frontend\controllers;
+use const YII_ENV_TEST;
 
 /**
  * Site controller
