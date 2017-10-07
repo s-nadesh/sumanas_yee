@@ -1,13 +1,16 @@
 $(document).ready(function () {
     function submitForm(formID, url) {
         // Initiate Variables With Form Content
-        var datastring = $("#"+formID).serialize();
+//        var datastring = $("#"+formID).serialize(); //FILE Not Working.
+        var datastring = new FormData($("#" + formID)[0]);
         formButtonStatus('progress');
         $.ajax({
             type: "POST",
             url: url,
             data: datastring,
             dataType: "json",
+            processData: false,
+            contentType: false,
             success: function (text) {
                 if (text) {
                     formSuccess();
@@ -25,10 +28,10 @@ $(document).ready(function () {
             }
         });
     }
-    
+
     function formClear(formID) {
-        $('#'+formID)[0].reset();
-        $("#"+formID).data('bootstrapValidator').resetForm();
+        $('#' + formID)[0].reset();
+        $("#" + formID).data('bootstrapValidator').resetForm();
     }
 
     function formButtonStatus(status) {
