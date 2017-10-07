@@ -17,7 +17,7 @@ return [
                 'class' => 'Swift_SmtpTransport',
                 'host' => 'smtp.gmail.com',
                 'username' => 'marudhuofficial@gmail.com',
-                'password' => 'ninja12345',
+                'password' => 'ninja1234567',
                 'port' => '587',
                 'encryption' => 'tls',
             ],
