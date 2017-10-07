@@ -1,26 +1,34 @@
 $(document).ready(function () {
-    function submitForm() {
+    function submitForm(formID, url) {
         // Initiate Variables With Form Content
-        var datastring = $("#contact_form").serialize();
+        var datastring = $("#"+formID).serialize();
         formButtonStatus('progress');
         $.ajax({
             type: "POST",
-            url: "contact-sumanas",
+            url: url,
             data: datastring,
             dataType: "json",
             success: function (text) {
                 if (text) {
                     formSuccess();
+                    formClear(formID);
                 } else {
                     formError();
+                    formClear(formID);
                 }
                 formButtonStatus('complete');
             },
             error: function () {
-                formButtonStatus('complete');
                 formError();
+                formClear(formID);
+                formButtonStatus('complete');
             }
         });
+    }
+    
+    function formClear(formID) {
+        $('#'+formID)[0].reset();
+        $("#"+formID).data('bootstrapValidator').resetForm();
     }
 
     function formButtonStatus(status) {
@@ -103,7 +111,7 @@ $(document).ready(function () {
         // Get the BootstrapValidator instance
         var bv = $form.data('bootstrapValidator');
         // Use Ajax to submit form data
-        submitForm();
+        submitForm("contact_form", "contact-sumanas");
     });
 
     $('#contact_form1').bootstrapValidator({
