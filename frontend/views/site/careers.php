@@ -2,7 +2,7 @@
 
 use yii\bootstrap\ActiveForm;
 
-//$title = "Sumanas Tech Career Opportunities";
+$title = "Sumanas Tech Career Opportunities";
 ?>
 <div class="inner-page-heading ">
     <div class="container-fluid">
@@ -60,7 +60,7 @@ use yii\bootstrap\ActiveForm;
                 <p> <strong>Must Be:</strong> Extremely creative in designing. Should be up-to-date with the latest designing trends. Open to adapting to new designing tools and requirements.</p>
                 <h3> Apply Now </h3>
                 <?php
-                $form = ActiveForm::begin(['id' => 'contact_form1', 'enableAjaxValidation' => false, 'enableClientValidation' => false,
+                $form = ActiveForm::begin(['id' => 'career_form1', 'enableAjaxValidation' => false, 'enableClientValidation' => false,
                             'options' => [
                                 'name' => 'myform',
                                 'autocomplete' => 'on',
@@ -97,7 +97,16 @@ use yii\bootstrap\ActiveForm;
                     </div>
                 </div>
                 <div class="modal-footer">
-                    <button class="btn btn1" type="submit" value="submit1" name="submit1"><i class="fa fa-paper-plane" aria-hidden="true"></i> Submit</button>
+                    <button type="submit" id="formComplete" name="submit1" class="btn btn1">
+                        <i class="fa fa-paper-plane" aria-hidden="true"></i> Submit
+                    </button>
+                    <button id="formProgress" class="btn btn1 hide">Sending...</button>
+                    <div id="msgSuccess" class="h4 text-center hide">
+                        Thank you for contacting us. We will respond to you as soon as possible.
+                    </div>
+                    <div id="msgError" class="h4 text-center hide">
+                        There was an error sending email.
+                    </div>
                 </div>
                 <?php ActiveForm::end(); ?>
             </div>
@@ -121,7 +130,7 @@ use yii\bootstrap\ActiveForm;
                 <p> <strong>Must Be:</strong> Proficient in highest coding standards, Code optimization & logical thinking. Should quick adapt to newer technologies.</p>
                 <h3> Apply Now </h3>
                 <?php
-                $form = ActiveForm::begin(['id' => 'contact_form2', 'enableAjaxValidation' => false, 'enableClientValidation' => false,
+                $form = ActiveForm::begin(['id' => 'career_form2', 'enableAjaxValidation' => false, 'enableClientValidation' => false,
                             'options' => [
                                 'name' => 'myform',
                                 'autocomplete' => 'off',
@@ -182,7 +191,7 @@ use yii\bootstrap\ActiveForm;
                 <p> <strong>Must Be:</strong> Proficient in employee payroll management, client co-ordination, project management and  people handling.</p>
                 <h3> Apply Now </h3>
                 <?php
-                $form = ActiveForm::begin(['id' => 'contact_form3', 'enableAjaxValidation' => false, 'enableClientValidation' => false,
+                $form = ActiveForm::begin(['id' => 'career_form3', 'enableAjaxValidation' => false, 'enableClientValidation' => false,
                             'options' => [
                                 'name' => 'myform',
                                 'autocomplete' => 'on',

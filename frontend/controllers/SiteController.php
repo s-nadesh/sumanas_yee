@@ -157,13 +157,12 @@ class SiteController extends BaseController {
                 $path = Yii::getAlias('@frontend') . '/web/uploads/';
                 $model->file->saveAs($path . $model->file);
             }
+            Yii::$app->response->format = \yii\web\Response::FORMAT_JSON;
             if ($model->sendEmail(Yii::$app->settings->get('general.email'))) {
-                Yii::$app->session->setFlash('success', 'Thank you for contacting us. We will respond to you as soon as possible.');
+                return true;
             } else {
-                Yii::$app->session->setFlash('error', 'There was an error sending email.');
+                return false;
             }
-
-            return $this->refresh();
         } else {
             return $this->render('careers', [
                         'model' => $model,
