@@ -135,13 +135,12 @@ class SiteController extends BaseController {
         $this->layout = "@app/views/layouts/inner";
         $model = new ContactForm();
         if ($model->load(Yii::$app->request->post()) && $model->validate()) {
+            Yii::$app->response->format = \yii\web\Response::FORMAT_JSON;
             if ($model->sendEmail(Yii::$app->settings->get('general.email'))) {
-                Yii::$app->session->setFlash('success', 'Thank you for contacting us. We will respond to you as soon as possible.');
+                return true;
             } else {
-                Yii::$app->session->setFlash('error', 'There was an error sending email.');
+                return false;
             }
-
-            return $this->refresh();
         } else {
             return $this->render('contact', [
                         'model' => $model,

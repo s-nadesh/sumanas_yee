@@ -59,7 +59,16 @@ use yii\bootstrap\ActiveForm;
                 <div class="form-group">
                     <div class="row">
                         <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 text-center">
-                            <button type="submit" name="contactus" class="btn btn1">Send Message <i class="fa fa-paper-plane" aria-hidden="true"></i></button>
+                            <button type="submit" id="formComplete" name="contactus" class="btn btn1">
+                                Send Message <i class="fa fa-paper-plane" aria-hidden="true"></i>
+                            </button>
+                            <button id="formProgress" class="btn btn1 hide">Sending...</button>
+                            <div id="msgSuccess" class="h4 text-center hide">
+                                Thank you for contacting us. We will respond to you as soon as possible.
+                            </div>
+                            <div id="msgError" class="h4 text-center hide">
+                                There was an error sending email.
+                            </div>
                         </div>
                     </div>
                 </div>
