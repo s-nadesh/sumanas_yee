@@ -414,6 +414,40 @@ blockquote {
 	padding:10px;
 }
 
+
+.showcase-bg h2 {
+	font-size: 30px;
+}
+
+.showcase-bg h3 {
+	font-size: 22px;
+}
+
+.showcase-row-center .showcase-icon {
+	margin: 15px 10px;
+}
+
+
+.app-details {
+	height:auto;
+	margin-bottom:50px;
+	padding-bottom: 0px;
+	padding:10px;
+}
+
+.app-details ul li {
+	padding: 0px 0px 15px 0px;
+	font-weight: 500;
+	width: 100%;
+	float: left;
+}
+
+.app-slider-cont
+{
+	margin-top:-85px;
+}
+
+
 }
 @media (min-width:768px) and (max-width:991px) {
 .section2, .section7 {
@@ -637,6 +671,30 @@ blockquote {
 	min-height:440px;
 }
 
+.showcase-bg h2 {
+	font-size: 38px;
+}
+
+.showcase-bg h3 {
+	font-size: 30px;
+}
+
+.app-details ul li {
+	padding: 0px 0px 10px 0px;
+	font-size: 15px;
+	width:100%;
+}
+
+.app-slider-cont {
+	margin-top: 0px;
+}
+
+.app-details {
+	height:auto;
+	margin-bottom:50px;
+	padding-bottom: 0px;
+}
+
 
 }
 @media (min-width:992px) and (max-width:1199px) {
@@ -716,6 +774,14 @@ blockquote {
 	min-height:310px;
 }
 
+.showcase-row-center2 .showcase-icon2 {
+	margin: 15px 10px;
+}
+
+.app-details ul li {
+	padding: 0px 0px 10px 0px;
+	font-size: 15px;
+}
 
 }
 @media (min-width:1200px) {
