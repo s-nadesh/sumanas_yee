@@ -36,26 +36,26 @@ $(document).ready(function () {
 
     function formButtonStatus(status) {
         if (status == 'progress') {
-            $("#formProgress").removeClass("hide");
-            $("#formComplete").addClass("hide");
+            $(".formProgress").removeClass("hide");
+            $(".formComplete").addClass("hide");
         }
         if (status == 'complete') {
-            $("#formProgress").addClass("hide");
-            $("#formComplete").removeClass("hide");
+            $(".formProgress").addClass("hide");
+            $(".formComplete").removeClass("hide");
         }
     }
 
     function formSuccess() {
-        $("#msgSuccess").removeClass("hide");
+        $(".msgSuccess").removeClass("hide");
         setTimeout(function () {
-            $('#msgSuccess').addClass('hide');
+            $('.msgSuccess').addClass('hide');
         }, 5000);
     }
 
     function formError() {
-        $("#msgError").removeClass("hide");
+        $(".msgError").removeClass("hide");
         setTimeout(function () {
-            $('#msgError').addClass('hide');
+            $('.msgError').addClass('hide');
         }, 5000);
     }
 
@@ -117,7 +117,7 @@ $(document).ready(function () {
         submitForm("contact_form", "contact-sumanas");
     });
 
-    $('#contact_form1').bootstrapValidator({
+    $('#career_form1').bootstrapValidator({
         // To use feedback icons, ensure that you use Bootstrap v3.1.0 or later
         feedbackIcons: {
             valid: 'glyphicon glyphicon-ok',
@@ -171,17 +171,19 @@ $(document).ready(function () {
                 }
             },
         }
-    }).on('submit1', function (e) {
-        if (e.isDefaultPrevented()) {
-            console.log('error');
-        } else {
-            e.preventDefault();
-//            submitForm();
-        }
+    }).on('success.form.bv', function (e) {
+        // Prevent form submission
+        e.preventDefault();
+        // Get the form instance
+        var $form = $(e.target);
+        // Get the BootstrapValidator instance
+        var bv = $form.data('bootstrapValidator');
+        // Use Ajax to submit form data
+        submitForm("career_form1", "careers");
     });
 
 
-    $('#contact_form2').bootstrapValidator({
+    $('#career_form2').bootstrapValidator({
         // To use feedback icons, ensure that you use Bootstrap v3.1.0 or later
         feedbackIcons: {
             valid: 'glyphicon glyphicon-ok',
@@ -235,16 +237,18 @@ $(document).ready(function () {
                 }
             },
         }
-    }).on('submit2', function (e) {
-        if (e.isDefaultPrevented()) {
-            console.log('error');
-        } else {
-            e.preventDefault();
-//            submitForm();
-        }
+    }).on('success.form.bv', function (e) {
+        // Prevent form submission
+        e.preventDefault();
+        // Get the form instance
+        var $form = $(e.target);
+        // Get the BootstrapValidator instance
+        var bv = $form.data('bootstrapValidator');
+        // Use Ajax to submit form data
+        submitForm("career_form2", "careers");
     });
 
-    $('#contact_form3').bootstrapValidator({
+    $('#career_form3').bootstrapValidator({
         // To use feedback icons, ensure that you use Bootstrap v3.1.0 or later
         feedbackIcons: {
             valid: 'glyphicon glyphicon-ok',
@@ -298,13 +302,15 @@ $(document).ready(function () {
                 }
             },
         }
-    }).on('submit3', function (e) {
-        if (e.isDefaultPrevented()) {
-            console.log('error');
-        } else {
-            e.preventDefault();
-//            submitForm();
-        }
+    }).on('success.form.bv', function (e) {
+        // Prevent form submission
+        e.preventDefault();
+        // Get the form instance
+        var $form = $(e.target);
+        // Get the BootstrapValidator instance
+        var bv = $form.data('bootstrapValidator');
+        // Use Ajax to submit form data
+        submitForm("career_form3", "careers");
     });
 });
 

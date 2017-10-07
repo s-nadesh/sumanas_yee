@@ -63,7 +63,7 @@ $title = "Sumanas Tech Career Opportunities";
                 $form = ActiveForm::begin(['id' => 'career_form1', 'enableAjaxValidation' => false, 'enableClientValidation' => false,
                             'options' => [
                                 'name' => 'myform',
-                                'autocomplete' => 'on',
+                                'autocomplete' => 'off',
                                 'enctype' => 'multipart/form-data',
 //                                    'validationUrl' => Url::toRoute('contact-us/create')
                             ],
@@ -97,14 +97,14 @@ $title = "Sumanas Tech Career Opportunities";
                     </div>
                 </div>
                 <div class="modal-footer">
-                    <button type="submit" id="formComplete" name="submit1" class="btn btn1">
+                    <button type="submit" name="submit1" class="formComplete btn btn1">
                         <i class="fa fa-paper-plane" aria-hidden="true"></i> Submit
                     </button>
-                    <button id="formProgress" class="btn btn1 hide">Sending...</button>
-                    <div id="msgSuccess" class="h4 text-center hide">
+                    <button class="btn btn1 hide formProgress">Sending...</button>
+                    <div class="h4 text-center hide msgSuccess">
                         Thank you for contacting us. We will respond to you as soon as possible.
                     </div>
-                    <div id="msgError" class="h4 text-center hide">
+                    <div class="h4 text-center hide msgError">
                         There was an error sending email.
                     </div>
                 </div>
@@ -167,7 +167,16 @@ $title = "Sumanas Tech Career Opportunities";
                     </div>
                 </div>
                 <div class="modal-footer">
-                    <button class="btn btn1" type="submit" value="submit2" name="submit2"><i class="fa fa-paper-plane" aria-hidden="true"></i> Submit</button>
+                    <button type="submit" name="submit2" class="formComplete btn btn1">
+                        <i class="fa fa-paper-plane" aria-hidden="true"></i> Submit
+                    </button>
+                    <button class="btn btn1 hide formProgress">Sending...</button>
+                    <div class="h4 text-center hide msgSuccess">
+                        Thank you for contacting us. We will respond to you as soon as possible.
+                    </div>
+                    <div class="h4 text-center hide msgError">
+                        There was an error sending email.
+                    </div>
                 </div>
                 <?php ActiveForm::end(); ?>
             </div>
@@ -194,7 +203,7 @@ $title = "Sumanas Tech Career Opportunities";
                 $form = ActiveForm::begin(['id' => 'career_form3', 'enableAjaxValidation' => false, 'enableClientValidation' => false,
                             'options' => [
                                 'name' => 'myform',
-                                'autocomplete' => 'on',
+                                'autocomplete' => 'off',
                                 'enctype' => 'multipart/form-data',
 //                                    'validationUrl' => Url::toRoute('contact-us/create')
                             ],
@@ -228,7 +237,16 @@ $title = "Sumanas Tech Career Opportunities";
                     </div>
                 </div>
                 <div class="modal-footer">
-                    <button class="btn btn1" type="submit" value="submit3" name="submit3"><i class="fa fa-paper-plane" aria-hidden="true"></i> Submit</button>
+                    <button type="submit" name="submit3" class="formComplete btn btn1">
+                        <i class="fa fa-paper-plane" aria-hidden="true"></i> Submit
+                    </button>
+                    <button class="btn btn1 hide formProgress">Sending...</button>
+                    <div class="h4 text-center hide msgSuccess">
+                        Thank you for contacting us. We will respond to you as soon as possible.
+                    </div>
+                    <div class="h4 text-center hide msgError">
+                        There was an error sending email.
+                    </div>
                 </div>
                 <?php ActiveForm::end(); ?>
             </div>
