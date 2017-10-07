@@ -2,7 +2,7 @@
 
 use yii\bootstrap\ActiveForm;
 
-//$this->title = 'Contact-Sumanas';
+$this->title = 'Contact Sumanas';
 ?>
 <div class="inner-page-heading ">
     <div class="container-fluid">
@@ -25,7 +25,11 @@ use yii\bootstrap\ActiveForm;
 
             <div class="col-xs-12 col-sm-7 col-md-6 col-lg-6 contact-right">
                 <?php
-                $form = ActiveForm::begin(['id' => 'contact_form', 'enableAjaxValidation' => false, 'enableClientValidation' => false,
+                $form = ActiveForm::begin([
+                            'id' => 'contact_form',
+                            'enableAjaxValidation' => false,
+                            'enableClientValidation' => false,
+                            'enableClientScript' => false,
                             'options' => [
                                 'name' => 'myform',
                                 'autocomplete' => 'off',
