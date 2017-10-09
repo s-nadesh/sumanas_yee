@@ -1932,14 +1932,14 @@ footer.inner-footer {
     margin-top:40px
 }
 .converstion-bg h2 {
-    font-size:42px;
+    font-size:40px;
     color:#222222;
     text-align:center;
     background:url(../images/inner-line.jpg) center bottom no-repeat;
     padding-bottom:15px;
     font-weight:500;
     margin-bottom:30px;
-    text-transform:uppercase;
+    /*text-transform:uppercase;*/
 }
 .panel {
     box-shadow: 0 2px 0 rgba(0,0,0,0.075);
