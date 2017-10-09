@@ -24,7 +24,7 @@ $footer_platform = Menu::getMenuItems('footer-platform');
                         <li> <a href="<?php echo $row['url']['0'] ?>"><?php echo $row['label'] ?></a></li>
                     <?php } ?>
                 </ul>
-                
+
                 <p> <span> Technologies </span> </p>
                 <ul> 
                     <?php foreach ($footer_tech as $tech) { ?>
@@ -57,14 +57,7 @@ $footer_platform = Menu::getMenuItems('footer-platform');
 
                 <p> <span> <i class="fa fa-envelope" aria-hidden="true"></i> Email </span> </p>
                 <p><a href="mailto:<?php echo Yii::$app->settings->get('general.email') ?>"> <?php echo Yii::$app->settings->get('general.email') ?></a> </p>
-            </div>
 
-            <div class="col-xs-12 col-sm-3 col-md-3 col-lg-3 footer-cont">
-                <p> <span> <i class="fa fa-map-marker" aria-hidden="true"></i> Address </span> </p>
-                <p>  <?php echo nl2br(Yii::$app->settings->get('general.address')) ?> </p>
-            </div>
-
-            <div class="col-xs-12 col-sm-3 col-md-3 col-lg-3 footer-cont">
                 <p> <span> <i class="fa fa-bullhorn" aria-hidden="true"></i> Social Media </span> </p>
                 <?php if (Yii::$app->settings->get('general.facebook')) { ?>
                     <p> 
@@ -105,6 +98,13 @@ $footer_platform = Menu::getMenuItems('footer-platform');
                     <?php } ?>
                 </p>
             </div>
+
+            <div class="col-xs-12 col-sm-3 col-md-3 col-lg-3 footer-cont">
+                <p> <span> <i class="fa fa-map-marker" aria-hidden="true"></i> Address </span> </p>
+                <p>  <?php echo nl2br(Yii::$app->settings->get('general.address')) ?> </p>
+            </div>
+
+
         </div>
     </div>
     <div class="copyrights"> copyrights reserved  &copy; sumanas technologies </div>
