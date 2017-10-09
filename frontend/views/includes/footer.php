@@ -24,6 +24,7 @@ $footer_platform = Menu::getMenuItems('footer-platform');
                         <li> <a href="<?php echo $row['url']['0'] ?>"><?php echo $row['label'] ?></a></li>
                     <?php } ?>
                 </ul>
+                
                 <p> <span> Technologies </span> </p>
                 <ul> 
                     <?php foreach ($footer_tech as $tech) { ?>
@@ -55,7 +56,7 @@ $footer_platform = Menu::getMenuItems('footer-platform');
                 </p>
 
                 <p> <span> <i class="fa fa-envelope" aria-hidden="true"></i> Email </span> </p>
-                <p> <a href="#"> <?php echo Yii::$app->settings->get('general.email') ?> </a> </p>
+                <p><a href="mailto:<?php echo Yii::$app->settings->get('general.email') ?>"> <?php echo Yii::$app->settings->get('general.email') ?></a> </p>
             </div>
 
             <div class="col-xs-12 col-sm-3 col-md-3 col-lg-3 footer-cont">
@@ -67,7 +68,7 @@ $footer_platform = Menu::getMenuItems('footer-platform');
                 <p> <span> <i class="fa fa-bullhorn" aria-hidden="true"></i> Social Media </span> </p>
                 <?php if (Yii::$app->settings->get('general.facebook')) { ?>
                     <p> 
-                        <a href="<?php echo Yii::$app->settings->get('general.facebook') ?>"> 
+                        <a target="_blank" href="<?php echo Yii::$app->settings->get('general.facebook') ?>"> 
                             <i class="fa fa-facebook" aria-hidden="true"></i> - facebook
                         </a> 
                         <br/> 
@@ -75,7 +76,7 @@ $footer_platform = Menu::getMenuItems('footer-platform');
                     }
                     if (Yii::$app->settings->get('general.twitter')) {
                         ?>
-                        <a href="<?php echo Yii::$app->settings->get('general.twitter') ?>">
+                        <a target="_blank" href="<?php echo Yii::$app->settings->get('general.twitter') ?>">
                             <i class="fa fa-twitter" aria-hidden="true"></i>  - twitter
                         </a> 
                         <br/>
@@ -83,7 +84,7 @@ $footer_platform = Menu::getMenuItems('footer-platform');
                     }
                     if (Yii::$app->settings->get('general.gplus')) {
                         ?>
-                        <a href="<?php echo Yii::$app->settings->get('general.gplus') ?>">
+                        <a target="_blank" href="<?php echo Yii::$app->settings->get('general.gplus') ?>">
                             <i class="fa fa-google-plus" aria-hidden="true"></i> -   google plus
                         </a>
                         <br/>
@@ -91,14 +92,14 @@ $footer_platform = Menu::getMenuItems('footer-platform');
                     }
                     if (Yii::$app->settings->get('general.pinterest')) {
                         ?>
-                        <a href="<?php echo Yii::$app->settings->get('general.pinterest') ?>">
+                        <a target="_blank" href="<?php echo Yii::$app->settings->get('general.pinterest') ?>">
                             <i class="fa fa-pinterest-p" aria-hidden="true"></i> -   Pinterest
                         </a><br/>
                         <?php
                     }
                     if (Yii::$app->settings->get('general.linkedin')) {
                         ?>
-                        <a href="<?php echo Yii::$app->settings->get('general.linkedin') ?>">
+                        <a target="_blank" href="<?php echo Yii::$app->settings->get('general.linkedin') ?>">
                             <i class="fa fa-linkedin" aria-hidden="true"></i> -   LinkedIn
                         </a><br/>
                     <?php } ?>

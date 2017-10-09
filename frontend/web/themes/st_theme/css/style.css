@@ -4599,4 +4599,18 @@ width:100%;
 	text-align: center;
 	line-height: 22px !important;
 	color:#222222 !important;
+        margin-top:-2px;
+}
+
+/*7-10-2017*/
+.sdp
+{
+	width:100%;
+	float:left;
+}
+
+.spdpoint img
+{
+	float:none;
+	margin-right:0px;	
 }
