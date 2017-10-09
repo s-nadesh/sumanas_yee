@@ -117,14 +117,14 @@ $this->title = 'Homepage';
         <div class="slogan-img1"> 
             <img src="<?php echo Yii::$app->view->theme->baseUrl ?>/images/slogan-img1.png"  alt="">
         </div>
-        <div class="slogan1"> 
+        <div class="slogan1 wow fadeInDown" data-wow-delay="0.5s"> 
             <span> WHAT </span> <br/>
             MAKES US BETTER? 
         </div>
-        <div class="arrow1"> 
+        <div class="arrow1 wow fadeInLeft" data-wow-delay="1s"> 
             <img src="<?php echo Yii::$app->view->theme->baseUrl ?>/images/arrow1.png" alt="">
         </div>
-        <div class="question-cont">
+        <div class="question-cont wow fadeInLeft" data-wow-delay="1.5s">
             <div class="question1"> Curious to know? !</div>
         </div>
         <a href="#" class="moveDown">
@@ -168,13 +168,15 @@ $this->title = 'Homepage';
 
 <div class="section section3" id="section3">
     <div class="container-fluid">
-        <div class="slogan1 slogan2" > 
+        <div class="slogan1 slogan2 wow fadeInDown" data-wow-delay="0.5s"> 
             <span> WE ARE </span> <br/>
             WHO ARE BECAUSE OF OUR 
         </div>
-        <div class="arrow1"> <img src="<?php echo Yii::$app->view->theme->baseUrl ?>/images/arrow1.png" alt=""></div>
+        <div class="arrow1 wow fadeInLeft" data-wow-delay="1s"> 
+            <img src="<?php echo Yii::$app->view->theme->baseUrl ?>/images/arrow1.png" alt="">
+        </div>
         <div class="question-cont">
-            <div class="question1"> Now you are definitely curious to know! </div>
+            <div class="question1 wow fadeInLeft" data-wow-delay="1.5s"> Now you are definitely curious to know! </div>
         </div>
         <a href="#"  class="moveDown">
             <div class="mouse-scroll">
@@ -210,14 +212,14 @@ $this->title = 'Homepage';
 
 <div class="section section5" id="section5">
     <div class="container-fluid">
-        <div class="slogan1 slogan3" > 
+        <div class="slogan1 slogan3 wow fadeInDown" data-wow-delay="0.5s"> 
             <span> OUR CLIENTS</span> <br/>
             LOVE US FOR OUR? 
         </div>
-        <div class="arrow1"> 
+        <div class="arrow1 wow fadeInLeft" data-wow-delay="1s"> 
             <img src="<?php echo Yii::$app->view->theme->baseUrl ?>/images/arrow1.png" alt="">
         </div>
-        <div class="question-cont">
+        <div class="question-cont wow fadeInLeft" data-wow-delay="1.5s">
             <div class="question1"> You know what? </div>
         </div>
         <a href="#"  class="moveDown">
@@ -254,13 +256,15 @@ $this->title = 'Homepage';
 
 <div class="section section7" id="section7">
     <div class="container-fluid">
-        <div class="slogan1 slogan4" > 
+        <div class="slogan1 slogan4 wow fadeInDown" data-wow-delay="0.5s"> 
             <span> OUR WORK</span> <br/>
             IS SO AWESOME BECAUSE OF OUR 
         </div>
-        <div class="arrow1"> <img src="<?php echo Yii::$app->view->theme->baseUrl ?>/images/arrow1.png" alt=""></div>
+        <div class="arrow1 wow fadeInLeft" data-wow-delay="1s"> 
+            <img src="<?php echo Yii::$app->view->theme->baseUrl ?>/images/arrow1.png" alt="">
+        </div>
         <div class="question-cont">
-            <div class="question1"> You'll be excited to know! </div>
+            <div class="question1 wow fadeInLeft" data-wow-delay="1.5s"> You'll be excited to know! </div>
         </div>
         <a href="#" class="moveDown">
             <div class="mouse-scroll">
@@ -299,13 +303,15 @@ $this->title = 'Homepage';
         <div class="slogan-img1"> 
             <img src="<?php echo Yii::$app->view->theme->baseUrl ?>/images/slogan-img1.png"  alt="">
         </div>
-        <div class="slogan1" > 
+        <div class="slogan1 wow fadeInDown" data-wow-delay="0.5s"> 
             <span> WANT TO </span> <br/>
             KNOW MORE 
         </div>
-        <div class="arrow1"> <img src="<?php echo Yii::$app->view->theme->baseUrl ?>/images/arrow1.png" alt=""></div>
+        <div class="arrow1 wow fadeInLeft" data-wow-delay="1s"> 
+            <img src="<?php echo Yii::$app->view->theme->baseUrl ?>/images/arrow1.png" alt="">
+        </div>
         <div class="question-cont">
-            <div class="question1"> We know that you hadn't had enough! </div>
+            <div class="question1 wow fadeInLeft" data-wow-delay="1.5s"> We know that you hadn't had enough! </div>
         </div>
         <a href="#" class="moveDown">
             <div class="mouse-scroll">
