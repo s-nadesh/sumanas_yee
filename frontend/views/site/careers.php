@@ -61,6 +61,7 @@ $title = "Sumanas Tech Career Opportunities";
                 <h3> Apply Now </h3>
                 <?php
                 $form = ActiveForm::begin(['id' => 'career_form1', 'enableAjaxValidation' => false, 'enableClientValidation' => false,
+                    'enableClientScript' => false,
                             'options' => [
                                 'name' => 'myform',
                                 'autocomplete' => 'off',
@@ -131,6 +132,7 @@ $title = "Sumanas Tech Career Opportunities";
                 <h3> Apply Now </h3>
                 <?php
                 $form = ActiveForm::begin(['id' => 'career_form2', 'enableAjaxValidation' => false, 'enableClientValidation' => false,
+                    'enableClientScript' => false,
                             'options' => [
                                 'name' => 'myform',
                                 'autocomplete' => 'off',
@@ -201,6 +203,7 @@ $title = "Sumanas Tech Career Opportunities";
                 <h3> Apply Now </h3>
                 <?php
                 $form = ActiveForm::begin(['id' => 'career_form3', 'enableAjaxValidation' => false, 'enableClientValidation' => false,
+                    'enableClientScript' => false,
                             'options' => [
                                 'name' => 'myform',
                                 'autocomplete' => 'off',
