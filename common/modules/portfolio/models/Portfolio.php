@@ -102,7 +102,7 @@ class Portfolio extends ActiveRecord {
      */
     public function rules() {
         return [
-                [['slug', 'title', 'sub_title', 'client', 'portfolio_link'], 'required'],
+                [['slug', 'title', 'sub_title', 'client'], 'required'],
                 [['description'], 'string'],
                 [['visible', 'created_at', 'updated_at', 'created_by', 'updated_by'], 'integer'],
                 [['slug', 'title', 'client', 'thumbnail'], 'string', 'max' => 255],

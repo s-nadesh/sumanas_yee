@@ -16,6 +16,7 @@ use Yii;
 use yii\base\InvalidRouteException;
 use yii\data\Pagination;
 use yii\web\NotFoundHttpException;
+use yii\web\Response;
 use yii\web\UploadedFile;
 use const YII_ENV_TEST;
 
@@ -135,8 +136,8 @@ class SiteController extends BaseController {
         $this->layout = "@app/views/layouts/inner";
         $model = new ContactForm();
         if ($model->load(Yii::$app->request->post()) && $model->validate()) {
-            Yii::$app->response->format = \yii\web\Response::FORMAT_JSON;
-            if ($model->sendEmail(Yii::$app->settings->get('general.email'))) {
+            Yii::$app->response->format = Response::FORMAT_JSON;
+            if ($model->sendEmail(Yii::$app->params['adminEmail'])) {
                 return true;
             } else {
                 return false;
@@ -157,8 +158,8 @@ class SiteController extends BaseController {
                 $path = Yii::getAlias('@frontend') . '/web/uploads/';
                 $model->file->saveAs($path . $model->file);
             }
-            Yii::$app->response->format = \yii\web\Response::FORMAT_JSON;
-            if ($model->sendEmail(Yii::$app->settings->get('general.email'))) {
+            Yii::$app->response->format = Response::FORMAT_JSON;
+            if ($model->sendEmail(Yii::$app->params['adminEmail'])) {
                 return true;
             } else {
                 return false;
@@ -172,15 +173,15 @@ class SiteController extends BaseController {
 
     public function actionPortfolio() {
         $this->layout = "@app/views/layouts/inner_clients_layout";
-//        $port_category = PortfolioCategory::find()->where(['visible' => 1])
-//                ->all();
+        $port_category = PortfolioCategory::find()->where(['visible' => 1])
+                ->all();
         $portfolio = Portfolio::find()
                 ->where(['visible' => 1])
 //                ->limit(3)
                 ->all();
 
         return $this->render('portfolio', [
-//                    'port_category' => $port_category,
+                    'port_category' => $port_category,
                     'portfolio' => $portfolio,
         ]);
     }
