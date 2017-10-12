@@ -2,10 +2,10 @@
 
 use yii\helpers\Url;
 
-$categories = [];
-foreach ($portfolio->portfolioCategories as $portcategories) {
-    $categories[] = $portcategories->slug;
-}
+//$categories = [];
+//foreach ($portfolio->portfolioCategories as $portcategories) {
+//    $categories[] = $portcategories->slug;
+//}
 ?>
 <div class="cbp-l-project-title"><?php echo $portfolio['title'] ?></div>
 <div class="cbp-l-project-subtitle"><?php echo $portfolio['sub_title'] ?></div>
@@ -33,7 +33,7 @@ foreach ($portfolio->portfolioCategories as $portcategories) {
         <ul class="cbp-l-project-details-list">
             <li><strong>Client</strong><?php echo $portfolio['client'] ?></li>
             <li><strong>Date</strong><?php echo date("d-m-Y",($portfolio['portfolio_date'])); ?></li>
-            <li><strong>Categories</strong><?php echo implode(', ', $categories) ?></li>
+            <!--<li><strong>Categories</strong> echo implode(', ', $categories) </li>-->
         </ul>
         <a href="<?php echo $portfolio['portfolio_link'] ?>" target="_blank" class="cbp-l-project-details-visit">
             visit the site

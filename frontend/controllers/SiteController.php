@@ -172,28 +172,28 @@ class SiteController extends BaseController {
 
     public function actionPortfolio() {
         $this->layout = "@app/views/layouts/inner_clients_layout";
-        $port_category = PortfolioCategory::find()->where(['visible' => 1])
-                ->all();
+//        $port_category = PortfolioCategory::find()->where(['visible' => 1])
+//                ->all();
         $portfolio = Portfolio::find()
                 ->where(['visible' => 1])
-                ->limit(3)
+//                ->limit(3)
                 ->all();
 
         return $this->render('portfolio', [
-                    'port_category' => $port_category,
+//                    'port_category' => $port_category,
                     'portfolio' => $portfolio,
         ]);
     }
 
-    public function actionLoadmoreportfolio() {
-        $portfolio = Portfolio::find()
-                ->where(['visible' => 1])
-                ->offset(3)
-                ->all();
-        return $this->renderPartial('moreportfolio', [
-                    'portfolio' => $portfolio,
-        ]);
-    }
+//    public function actionLoadmoreportfolio() {
+//        $portfolio = Portfolio::find()
+//                ->where(['visible' => 1])
+//                ->offset(3)
+//                ->all();
+//        return $this->renderPartial('moreportfolio', [
+//                    'portfolio' => $portfolio,
+//        ]);
+//    }
 
     /**
      * Displays about page.

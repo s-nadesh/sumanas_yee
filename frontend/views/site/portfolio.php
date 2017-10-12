@@ -17,28 +17,29 @@ $this->title = 'Portfolio';
     <div class="container-fluid">
         <div class="row">
 
-            <div id="js-filters-awesome-work" class="cbp-l-filters-work">
+<!--            <div id="js-filters-awesome-work" class="cbp-l-filters-work">
                 <div data-filter="*" class="cbp-filter-item-active cbp-filter-item">
                     SHOW ALL
                 </div>
-                <?php
-                foreach ($port_category as $port_cat) :
-                    ?>
-                    <div data-filter=".<?php echo $port_cat['slug'] ?>" class="cbp-filter-item">
-                        <?php echo $port_cat['title']; ?><div class="cbp-filter-counter"></div>
+                
+//                foreach ($port_category as $port_cat) :
+                    
+                    <div data-filter=". echo $port_cat['slug'] " class="cbp-filter-item">
+                         echo $port_cat['title']; <div class="cbp-filter-counter"></div>
                     </div>
-                <?php endforeach; ?>
-            </div>
+                 endforeach; 
+            </div>-->
 
             <div id="js-grid-awesome-work" class="cbp cbp-l-grid-work">
                 <?php
                 foreach ($portfolio as $port) {
-                    $categories = [];
-                    foreach ($port->portfolioCategories as $portcategories) {
-                        $categories[] = $portcategories->slug;
-                    }
+//                    $categories = [];
+//                    foreach ($port->portfolioCategories as $portcategories) {
+//                        $categories[] = $portcategories->slug;
+//                    }
                     ?>
-                    <div class="cbp-item <?php echo implode(" ", $categories) ?>">
+                    <!--<div class="cbp-item  echo implode(" ", $categories) ">-->
+                        <div class="cbp-item">
                         <a href="<?php echo Url::to([$port['slug']]); ?>" class="cbp-caption cbp-singlePage" rel="nofollow">
                             <div class="cbp-caption-defaultWrap">
                                 <img src="<?php echo $port['thumbnail'] ?>" alt="">
@@ -55,12 +56,12 @@ $this->title = 'Portfolio';
                 <?php } ?>
             </div>
 
-            <div id="js-loadMore-awesome-work" class="cbp-l-loadMore-button">
-                <a href="<?php echo Url::to(['loadmoreportfolio']); ?>" class="cbp-l-loadMore-link" rel="nofollow">
+<!--            <div id="js-loadMore-awesome-work" class="cbp-l-loadMore-button">
+                <a href=" echo Url::to(['loadmoreportfolio']); " class="cbp-l-loadMore-link" rel="nofollow">
                     <span class="cbp-l-loadMore-defaultText">LOAD MORE</span>
                     <span class="cbp-l-loadMore-loadingText">LOADING...</span>
                     <span class="cbp-l-loadMore-noMoreLoading">NO MORE WORKS</span>
                 </a>
-            </div>
+            </div>-->
         </div>
     </div>
