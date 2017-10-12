@@ -17,7 +17,6 @@ class CareersForm extends Model {
     public $cover_letter;
     public $file;
     public $hidden1;
-    
 
     /**
      * @inheritdoc
@@ -58,9 +57,10 @@ class CareersForm extends Model {
         $message .= "<strong>Message: </strong> " . $this->cover_letter . "<br><br>";
         return Yii::$app->mailer->compose()
                         ->setTo($email)
+                        ->setReplyTo([$this->email => $this->name])
                         ->setFrom([$this->email => $this->name])
                         ->setSubject('Careers Form')
-                        ->attach(Yii::getAlias('@frontend') . '/web/uploads/'.$this->file)
+                        ->attach(Yii::getAlias('@frontend') . '/web/uploads/' . $this->file)
                         ->setHtmlBody($message)
                         ->send();
     }

@@ -55,6 +55,7 @@ class ContactForm extends Model {
         $message .= "<strong>Message: </strong> " . $this->message . "<br><br>";
         return Yii::$app->mailer->compose()
                         ->setTo($email)
+                        ->setReplyTo([$this->email => $this->name])
                         ->setFrom([$this->email => $this->name])
                         ->setSubject('Contact Form')
                         ->setHtmlBody($message)

@@ -61,7 +61,7 @@ class PortfolioModule extends Module {
      */
     public $categoryUpdateView = 'update';
     public $portfolioUpdateView = 'update';
-    public $thumbnailSize = 'medium';
+    public $thumbnailSize = '';
 
     /**
      * @inheritdoc
