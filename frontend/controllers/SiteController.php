@@ -178,6 +178,7 @@ class SiteController extends BaseController {
         $portfolio = Portfolio::find()
                 ->where(['visible' => 1])
 //                ->limit(3)
+                ->orderBy(['portfolio_order'=>'SORT_ASC'])
                 ->all();
 
         return $this->render('portfolio', [

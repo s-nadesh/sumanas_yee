@@ -56,7 +56,11 @@ $footer_platform = Menu::getMenuItems('footer-platform');
                 </p>
 
                 <p> <span> <i class="fa fa-envelope" aria-hidden="true"></i> Email </span> </p>
-                <p><a href="mailto:<?php echo Yii::$app->settings->get('general.email') ?>"> <?php echo Yii::$app->settings->get('general.email') ?></a> </p>
+                <?php
+                $email = Yii::$app->settings->get('general.email');
+                $a1 = explode("@", $email);
+                ?>
+                <p><a href = "#" class="e-mail" data-user="<?php echo strrev($a1[0]) ?>" data-website="<?php echo strrev($a1[1]) ?>"></a> </p>
 
                 <p> <span> <i class="fa fa-bullhorn" aria-hidden="true"></i> Social Media </span> </p>
                 <?php if (Yii::$app->settings->get('general.facebook')) { ?>

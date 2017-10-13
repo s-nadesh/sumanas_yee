@@ -45,6 +45,7 @@ use yii\widgets\ActiveForm;
                                 ->widget(DatePicker::className(), ['dateFormat' => 'yyyy-MM-dd', 'options' => ['class' => 'form-control']]);
                         ?>
                         <?= $form->field($model, 'portfolioCategoriesValues')->widget(MagicSuggest::className(), ['items' => PortfolioCategory::getPortfolioCategories()]); ?>
+                        <?= $form->field($model, 'portfolio_order')->textInput(['maxlength' => true]) ?>
                     </div>
                 </div>
             </div>

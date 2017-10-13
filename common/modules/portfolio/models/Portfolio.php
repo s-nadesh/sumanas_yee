@@ -25,6 +25,7 @@ use yii\web\User;
  * @property string $portfolio_link
  * @property string $thumbnail
  * @property integer $visible
+ * @property integer $portfolio_order
  * @property integer $created_at
  * @property integer $updated_at
  * @property integer $created_by
@@ -104,7 +105,7 @@ class Portfolio extends ActiveRecord {
         return [
                 [['slug', 'title', 'sub_title', 'client'], 'required'],
                 [['description'], 'string'],
-                [['visible', 'created_at', 'updated_at', 'created_by', 'updated_by'], 'integer'],
+                [['visible', 'created_at', 'updated_at', 'created_by', 'updated_by', 'portfolio_order'], 'integer'],
                 [['slug', 'title', 'client', 'thumbnail'], 'string', 'max' => 255],
                 [['sub_title', 'portfolio_link'], 'string', 'max' => 510],
 //            [['created_by'], 'exist', 'skipOnError' => true, 'targetClass' => User::className(), 'targetAttribute' => ['created_by' => 'id']],
@@ -130,6 +131,7 @@ class Portfolio extends ActiveRecord {
             'portfolio_link' => 'Link',
             'thumbnail' => 'Thumbnail',
             'visible' => 'Visible',
+            'portfolio_order' => 'Portfolio Order',
             'created_at' => 'Created At',
             'updated_at' => 'Updated At',
             'created_by' => 'Created By',
