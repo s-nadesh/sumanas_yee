@@ -14,7 +14,7 @@ use yii\helpers\Url;
         <?php foreach ($values as $work) { ?>
             <div class="project-thumb1">
                 <a target="_blank" rel="noindex,nofollow" href="<?php echo Url::to($work['link']); ?>">
-                    <img src="<?php echo $work['thumbnail']; ?>" >
+                    <img src="<?php echo $work['thumbnail']; ?>" alt="<?php echo $work['title'] ?>" >
                 </a>
             </div>
         <?php } ?>

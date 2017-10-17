@@ -1168,7 +1168,7 @@ header {
     color:#ffffff;
     font-size:13px;
 }
-.sevice-part h3 {
+.sevice-part h1 {
     color:#ffffff;
     font-size:24px;
     font-weight:700;
@@ -4223,13 +4223,13 @@ a:focus
 
 }
 
-.slide-text > h1 {
+.slide-text > h3 {
 
     padding: 0;
     color: #ffffff;
-    font-size: 40px;
+    font-size: 34px;
     font-style: normal;
-    line-height: 60px;
+    line-height: 50px;
     margin-bottom: 30px;
     letter-spacing: 1px;
     display: inline-block;
@@ -4241,7 +4241,7 @@ a:focus
     font-family: 'Roboto Condensed', sans-serif;
 }
 
-.slide-text > h1 span
+.slide-text > h3 span
 {
     color:#f58220;
 }

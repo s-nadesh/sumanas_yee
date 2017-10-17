@@ -32,13 +32,13 @@ foreach ($portfolio->portfolioCategories as $portcategories) {
 
         <ul class="cbp-l-project-details-list">
             <li><strong>Client</strong><?php echo $portfolio['client'] ?></li>
-            <li><strong>Date</strong><?php echo date("d-m-Y",($portfolio['portfolio_date'])); ?></li>
+            <!--<li><strong>Date</strong> echo date("d-m-Y",($portfolio['portfolio_date'])); </li>-->
             <li><strong>Categories</strong><?php echo implode(', ', $categories) ?></li>
         </ul>
         <?php if($portfolio['portfolio_link']) { ?>
-        <a href="<?php echo $portfolio['portfolio_link'] ?>" target="_blank" class="cbp-l-project-details-visit">
+        <p class="text-center"> <a href="<?php echo $portfolio['portfolio_link'] ?>" target="_blank" class="cbp-l-project-details-visit">
             visit the site
-        </a>
+            </a></p>
         <?php } ?>
     </div>
 </div>

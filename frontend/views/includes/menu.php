@@ -10,13 +10,13 @@ use yii\web\View;
 <div class="drawermenu">
     <div class="close-btn"> 
         <a href="javascript:void(0)" class="drawer-toggle"> 
-            <img src="<?php echo Yii::$app->view->theme->baseUrl ?>/images/cross.png"  alt="">
+            <img src="<?php echo Yii::$app->view->theme->baseUrl ?>/images/cross.png"  alt="cross">
         </a>
     </div>
     <div class="clearfix"></div>
     <div class="menu-logo"> 
         <a href="<?php echo Yii::$app->homeUrl ?>"> 
-            <img src="<?php echo Yii::$app->view->theme->baseUrl ?>/images/logo2.png" alt=""> 
+            <img src="<?php echo Yii::$app->view->theme->baseUrl ?>/images/logo2.png" alt="Sumanas Technologies"> 
         </a> 
     </div>
     <div id="content-1" class="content">

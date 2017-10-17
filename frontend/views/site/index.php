@@ -15,10 +15,10 @@ $this->title = 'Homepage';
     <div class="section-arrow1"> <a  href="#" class="arrow2 bounce moveDown"> </a> </div>
     <div class="col-xs-12 col-sm-12 col-lg-12 col-lg-12">
         <div class="slider-cont1">
-            <div class="corner1"> <img src="<?php echo Yii::$app->view->theme->baseUrl ?>/images/corner1.png" alt=""></div>
-            <div class="corner2"> <img src="<?php echo Yii::$app->view->theme->baseUrl ?>/images/corner2.png" alt=""></div>
-            <div class="corner3"> <img src="<?php echo Yii::$app->view->theme->baseUrl ?>/images/corner3.png" alt=""></div>
-            <div class="corner4"> <img src="<?php echo Yii::$app->view->theme->baseUrl ?>/images/corner4.png" alt=""></div>
+            <div class="corner1"> <img src="<?php echo Yii::$app->view->theme->baseUrl ?>/images/corner1.png" alt="corner1"></div>
+            <div class="corner2"> <img src="<?php echo Yii::$app->view->theme->baseUrl ?>/images/corner2.png" alt="corner2"></div>
+            <div class="corner3"> <img src="<?php echo Yii::$app->view->theme->baseUrl ?>/images/corner3.png" alt="corner3"></div>
+            <div class="corner4"> <img src="<?php echo Yii::$app->view->theme->baseUrl ?>/images/corner4.png" alt="corner4"></div>
             <div class="inner-slider">
                 <div id="bootstrap-touch-slider" class="carousel bs-slider fade  control-round indicators-line" data-ride="carousel" data-pause="hover" data-interval="5000" >
                     <!-- Indicators -->
@@ -33,18 +33,18 @@ $this->title = 'Homepage';
                         <!-- First Slide -->
                         <div class="item active"> 
                             <!-- Slide Background --> 
-                            <img src="<?php echo Yii::$app->view->theme->baseUrl ?>/images/slider1.png" alt=""  class="slide-image"/>
+                            <img src="<?php echo Yii::$app->view->theme->baseUrl ?>/images/slider1.png" alt="slider1"  class="slide-image"/>
                             <div class="container">
                                 <div class="row"> 
                                     <!-- Slide Text Layer -->
                                     <div class="slide1"> 
                                         <div class="slide-text slide_style_left">
-                                            <h1 data-animation="animated zoomInRight">
+                                            <h3 data-animation="animated zoomInRight">
                                                 FOCUS ON<br/>
                                                 FUTURE<br/>
                                                 <span> TECHNOLOGY </span><br/> 
-                                                <img src="<?php echo Yii::$app->view->theme->baseUrl ?>/images/line.jpg"  alt="">
-                                            </h1>
+                                                <img src="<?php echo Yii::$app->view->theme->baseUrl ?>/images/line.jpg"  alt="line">
+                                            </h3>
                                         </div>
                                     </div>
                                 </div>
@@ -55,18 +55,18 @@ $this->title = 'Homepage';
                         <!-- Second Slide -->
                         <div class="item "> 
                             <!-- Slide Background --> 
-                            <img src="<?php echo Yii::$app->view->theme->baseUrl ?>/images/slider2.png" alt=""  class="slide-image"/>
+                            <img src="<?php echo Yii::$app->view->theme->baseUrl ?>/images/slider2.png" alt="slider2"  class="slide-image"/>
                             <div class="container">
                                 <div class="row"> 
                                     <!-- Slide Text Layer -->
                                     <div class="slide-text slide_style_left">
-                                        <h1 data-animation="animated zoomInRight">
+                                        <h3 data-animation="animated zoomInRight">
                                             One of the  <br> 
                                             worlds largest
                                             white label <br/> 
                                             <span> IT products & services provider </span><br/> 
-                                            <img src="<?php echo Yii::$app->view->theme->baseUrl ?>/images/line.jpg"  alt="">
-                                        </h1>
+                                            <img src="<?php echo Yii::$app->view->theme->baseUrl ?>/images/line.jpg"  alt="line">
+                                        </h3>
                                     </div>
                                 </div>
                             </div>
@@ -76,17 +76,17 @@ $this->title = 'Homepage';
                         <!-- Third Slide -->
                         <div class="item "> 
                             <!-- Slide Background --> 
-                            <img src="<?php echo Yii::$app->view->theme->baseUrl ?>/images/slider3.png" alt=""  class="slide-image"/>
+                            <img src="<?php echo Yii::$app->view->theme->baseUrl ?>/images/slider3.png" alt="slider3"  class="slide-image"/>
                             <div class="container">
                                 <div class="row"> 
                                     <!-- Slide Text Layer -->
                                     <div class="slide-text slide_style_left">
-                                        <h1 data-animation="animated zoomInRight">
+                                        <h3 data-animation="animated zoomInRight">
                                             600+ satisfied clients with <br/>  
                                             over 2000+ projects & tasks  <br/> 
                                             <span> successfully completed</span><br/> 
-                                            <img src="<?php echo Yii::$app->view->theme->baseUrl ?>/images/line.jpg"  alt="">
-                                        </h1>
+                                            <img src="<?php echo Yii::$app->view->theme->baseUrl ?>/images/line.jpg"  alt="line">
+                                        </h3>
                                     </div>
                                 </div>
                             </div>
@@ -115,14 +115,14 @@ $this->title = 'Homepage';
 <div class="section section1" id="section1">
     <div class="container-fluid">
         <div class="slogan-img1"> 
-            <img src="<?php echo Yii::$app->view->theme->baseUrl ?>/images/slogan-img1.png"  alt="">
+            <img src="<?php echo Yii::$app->view->theme->baseUrl ?>/images/slogan-img1.png"  alt="slogan-img1">
         </div>
         <div class="slogan1 wow fadeInDown" data-wow-delay="0.5s"> 
             <span> WHAT </span> <br/>
             MAKES US BETTER? 
         </div>
         <div class="arrow1 wow fadeInLeft" data-wow-delay="1s"> 
-            <img src="<?php echo Yii::$app->view->theme->baseUrl ?>/images/arrow1.png" alt="">
+            <img src="<?php echo Yii::$app->view->theme->baseUrl ?>/images/arrow1.png" alt="arrow">
         </div>
         <div class="question-cont wow fadeInLeft" data-wow-delay="1.5s">
             <div class="question1"> Curious to know? !</div>
@@ -173,7 +173,7 @@ $this->title = 'Homepage';
             WHO ARE BECAUSE OF OUR 
         </div>
         <div class="arrow1 wow fadeInLeft" data-wow-delay="1s"> 
-            <img src="<?php echo Yii::$app->view->theme->baseUrl ?>/images/arrow1.png" alt="">
+            <img src="<?php echo Yii::$app->view->theme->baseUrl ?>/images/arrow1.png" alt="arrow">
         </div>
         <div class="question-cont">
             <div class="question1 wow fadeInLeft" data-wow-delay="1.5s"> Now you are definitely curious to know! </div>
@@ -261,7 +261,7 @@ $this->title = 'Homepage';
             IS SO AWESOME BECAUSE OF OUR 
         </div>
         <div class="arrow1 wow fadeInLeft" data-wow-delay="1s"> 
-            <img src="<?php echo Yii::$app->view->theme->baseUrl ?>/images/arrow1.png" alt="">
+            <img src="<?php echo Yii::$app->view->theme->baseUrl ?>/images/arrow1.png" alt="arrow">
         </div>
         <div class="question-cont">
             <div class="question1 wow fadeInLeft" data-wow-delay="1.5s"> You'll be excited to know! </div>
@@ -301,14 +301,14 @@ $this->title = 'Homepage';
 <div class="section section9" id="section9">
     <div class="container-fluid">
         <div class="slogan-img1"> 
-            <img src="<?php echo Yii::$app->view->theme->baseUrl ?>/images/slogan-img1.png"  alt="">
+            <img src="<?php echo Yii::$app->view->theme->baseUrl ?>/images/slogan-img1.png"  alt="slogan-img1">
         </div>
         <div class="slogan1 wow fadeInDown" data-wow-delay="0.5s"> 
             <span> WANT TO </span> <br/>
             KNOW MORE 
         </div>
         <div class="arrow1 wow fadeInLeft" data-wow-delay="1s"> 
-            <img src="<?php echo Yii::$app->view->theme->baseUrl ?>/images/arrow1.png" alt="">
+            <img src="<?php echo Yii::$app->view->theme->baseUrl ?>/images/arrow1.png" alt="arrow">
         </div>
         <div class="question-cont">
             <div class="question1 wow fadeInLeft" data-wow-delay="1.5s"> We know that you hadn't had enough! </div>

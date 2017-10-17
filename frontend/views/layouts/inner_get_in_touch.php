@@ -15,13 +15,6 @@ ThemeAsset::register($this);
 <?php $this->beginPage() ?>
 <!DOCTYPE html>
 <html lang="<?= Yii::$app->language ?>">
-    <!-- Google Tag Manager -->
-<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
-new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
-j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
-'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-})(window,document,'script','dataLayer','GTM-TZB9HBQ');</script>
-<!-- End Google Tag Manager -->
 
     <head>
         <meta charset="<?= Yii::$app->charset ?>">
@@ -30,6 +23,13 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
         <?= Html::csrfMetaTags() ?>
         <?= $this->renderMetaTags() ?>
         <?php $this->head() ?>
+        <!-- Google Tag Manager -->
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-TZB9HBQ');</script>
+<!-- End Google Tag Manager -->
         <!-- Facebook Pixel Code -->
 <script>
 !function(f,b,e,v,n,t,s)
@@ -57,6 +57,44 @@ src="https://www.facebook.com/tr?id=1924834804441583&ev=PageView
 <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-TZB9HBQ"
 height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 <!-- End Google Tag Manager (noscript) -->
+<script type="application/ld+json">
+{
+  "@context": "http://schema.org",
+ "@type": "LocalBusiness",     
+ "image": "http://www.sumanastech.com/themes/st_theme/images/logo.png",
+ "url": "http://www.sumanastech.com/",
+ "logo": "http://www.sumanastech.com/themes/st_theme/images/logo.png",
+"hasMap": "https://goo.gl/maps/sa1KZLKB5q32",
+                            
+ "email": "mailto:info@sumanastech.com",
+ "address": {
+ "@type": "PostalAddress",
+ "addressLocality": "Madurai",
+ "addressRegion": "India",
+ "postalCode":"625010",
+  "streetAddress": "Rasi Towers, Velmurugan Nagar, Bypass Road"
+  },
+   "description": "Sumanas Tech is One of The World’s Largest White Label Website Development Company and Digital Marketing Agency in Madurai. With 10+ yrs Experience in Custom Web Application Development",
+   "name": "Sumanas Technologies",
+ "telephone": "989-472-5600",
+  "openingHours": "Mo 09:30-19:00,Tu 09:30-19:00,We 09:30-19:00,Th 09:30-19:00,Fr 09:30-19:00,Sa 09:30-16:00",
+"geo": {
+  "@type": "GeoCoordinates",
+ "latitude": "9.913938",
+ "longitude": "78.0912065"
+     },         
+  "aggregateRating": {
+    "@type": "AggregateRating",
+"ratingValue": "4.3",
+ "reviewCount": "138"
+  },
+  "sameAs" : ["https://www.facebook.com/sumanastechnologies/",
+ "https://www.linkedin.com/company/25067058/",
+ "https://twitter.com/sumanastech",                            
+ "https://plus.google.com/+SumanasTech"]
+   }
+</script>
+
 
         <?php $this->beginBody() ?>
         <!-- Header Start-->

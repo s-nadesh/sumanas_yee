@@ -11,10 +11,10 @@ $footer_platform = Menu::getMenuItems('footer-platform');
 ?>
 <div class="container-fluid">
     <div class="footer-contact-cont">
-        <div class="corner1"> <img src="/themes/st_theme/images/corner1.png"  alt=""></div>
-        <div class="corner2"> <img src="/themes/st_theme/images/corner2.png"  alt=""></div>
-        <div class="corner3"> <img src="/themes/st_theme/images/corner3.png"  alt=""></div>
-        <div class="corner4"> <img src="/themes/st_theme/images/corner4.png"  alt=""></div>
+        <div class="corner1"> <img src="/themes/st_theme/images/corner1.png"  alt="corner1"></div>
+        <div class="corner2"> <img src="/themes/st_theme/images/corner2.png"  alt="corner2"></div>
+        <div class="corner3"> <img src="/themes/st_theme/images/corner3.png"  alt="corner3"></div>
+        <div class="corner4"> <img src="/themes/st_theme/images/corner4.png"  alt="corner4"></div>
 
         <div class="row">
             <div class="col-xs-12 col-sm-3 col-md-3 col-lg-3 footer-cont"> 

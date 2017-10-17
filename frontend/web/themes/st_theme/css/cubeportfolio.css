@@ -2806,7 +2806,9 @@
   /* @editable properties */
   margin: 0;
   padding: 0;
-  list-style: none; }
+  list-style: none;
+  margin-bottom: 15px;
+}
 
 .cbp-l-project-details-list > li, .cbp-l-project-details-list > div {
   /* @editable properties */
@@ -2825,7 +2827,7 @@
 .cbp-l-project-details-visit {
   /* @editable properties */
   color: #FFFFFF;
-  float: right;
+  float: none;
   clear: both;
   text-decoration: none;
   font: 400 14px/18px 'Montserrat', sans-serif;
