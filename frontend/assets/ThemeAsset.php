@@ -40,7 +40,6 @@ class ThemeAsset extends AssetBundle {
 //        'js/bootstrapValidator.min.js',
         '//cdnjs.cloudflare.com/ajax/libs/jquery.bootstrapvalidator/0.5.2/js/bootstrapValidator.min.js',
         'js/function.js',
-//        'js/jsfunctions.js',
         'js/jquery.mCustomScrollbar.concat.min.js',
         'js/wow.min.js',
         'js/jquery.cubeportfolio.min.js',
@@ -198,6 +197,9 @@ $(function () {
                 speed: 400,
                 position: 'right'
             });
+                $(document).on('click', '#submit', function () {
+        $('.post-wrapper .post:first-child .stem-overlay .icon').click();
+    });
                 
 //            $('.arrow').click(function(e){
 //                $(this).addClass('arrowOpen');
