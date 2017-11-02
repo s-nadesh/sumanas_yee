@@ -45,6 +45,8 @@ class ThemeAsset extends AssetBundle {
         'js/wow.min.js',
         'js/jquery.cubeportfolio.min.js',
         'js/main.js',
+        'http://cdnjs.cloudflare.com/ajax/libs/selectivizr/1.0.2/selectivizr-min.js',
+        'js/index.js',
     ];
     public $depends = [
 //        'yii\web\YiiAsset',

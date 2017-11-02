@@ -163,13 +163,13 @@ $(document).ready(function () {
                     }
                 }
             },
-            'CareersForm[file]': {
-                validators: {
-                    notEmpty: {
-                        message: ' '
-                    }
-                }
-            },
+//            'CareersForm[file]': {
+//                validators: {
+//                    notEmpty: {
+//                        message: ' '
+//                    }
+//                }
+//            },
         }
     }).on('success.form.bv', function (e) {
         // Prevent form submission
@@ -229,13 +229,13 @@ $(document).ready(function () {
                     }
                 }
             },
-            'CareersForm[file]': {
-                validators: {
-                    notEmpty: {
-                        message: ' '
-                    }
-                }
-            },
+//            'CareersForm[file]': {
+//                validators: {
+//                    notEmpty: {
+//                        message: ' '
+//                    }
+//                }
+//            },
         }
     }).on('success.form.bv', function (e) {
         // Prevent form submission
@@ -294,13 +294,13 @@ $(document).ready(function () {
                     }
                 }
             },
-            'CareersForm[file]': {
-                validators: {
-                    notEmpty: {
-                        message: ' '
-                    }
-                }
-            },
+//            'CareersForm[file]': {
+//                validators: {
+//                    notEmpty: {
+//                        message: ' '
+//                    }
+//                }
+//            },
         }
     }).on('success.form.bv', function (e) {
         // Prevent form submission
