@@ -4,20 +4,21 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
+    "hash": "0544114fb46a4408b689192e0545b941",
     "content-hash": "4fd56107df6c63f91019e147c4d6e4af",
     "packages": [
         {
             "name": "2amigos/yii2-file-upload-widget",
-            "version": "1.0.7",
+            "version": "1.0.8",
             "source": {
                 "type": "git",
                 "url": "https://github.com/2amigos/yii2-file-upload-widget.git",
-                "reference": "59d7657548711c50282d931fdb125be5b68b5efc"
+                "reference": "2fd078f589d4acdd2cbfb70eea88d526480b0102"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/2amigos/yii2-file-upload-widget/zipball/59d7657548711c50282d931fdb125be5b68b5efc",
-                "reference": "59d7657548711c50282d931fdb125be5b68b5efc",
+                "url": "https://api.github.com/repos/2amigos/yii2-file-upload-widget/zipball/2fd078f589d4acdd2cbfb70eea88d526480b0102",
+                "reference": "2fd078f589d4acdd2cbfb70eea88d526480b0102",
                 "shasum": ""
             },
             "require": {
@@ -62,7 +63,7 @@
                 "yii 2",
                 "yii2"
             ],
-            "time": "2017-07-12T10:58:40+00:00"
+            "time": "2017-10-17 11:18:48"
         },
         {
             "name": "2amigos/yii2-gallery-widget",
@@ -123,7 +124,7 @@
                 "yii 2",
                 "yii2"
             ],
-            "time": "2017-09-09T16:01:44+00:00"
+            "time": "2017-09-09 16:01:44"
         },
         {
             "name": "bower-asset/blueimp-canvas-to-blob",
@@ -560,7 +561,7 @@
             "license": [
                 "MIT"
             ],
-            "time": "2017-10-12T10:12:03+00:00"
+            "time": "2017-10-12 10:12:03"
         },
         {
             "name": "cebe/markdown",
@@ -620,7 +621,7 @@
                 "markdown",
                 "markdown-extra"
             ],
-            "time": "2017-07-16T21:13:23+00:00"
+            "time": "2017-07-16 21:13:23"
         },
         {
             "name": "components/bootstrap",
@@ -688,7 +689,7 @@
                 "responsive",
                 "web"
             ],
-            "time": "2016-07-26T05:59:20+00:00"
+            "time": "2016-07-26 05:59:20"
         },
         {
             "name": "components/jquery",
@@ -730,7 +731,7 @@
             ],
             "description": "jQuery JavaScript Library",
             "homepage": "http://jquery.com",
-            "time": "2017-03-21T07:01:49+00:00"
+            "time": "2017-03-21 07:01:49"
         },
         {
             "name": "ezyang/htmlpurifier",
@@ -777,7 +778,7 @@
             "keywords": [
                 "html"
             ],
-            "time": "2017-06-03T02:28:16+00:00"
+            "time": "2017-06-03 02:28:16"
         },
         {
             "name": "fortawesome/font-awesome",
@@ -825,7 +826,7 @@
                 "font",
                 "icon"
             ],
-            "time": "2016-10-24T15:52:54+00:00"
+            "time": "2016-10-24 15:52:54"
         },
         {
             "name": "ikimea/browser",
@@ -873,7 +874,7 @@
             "keywords": [
                 "browser"
             ],
-            "time": "2017-06-09T09:14:21+00:00"
+            "time": "2017-06-09 09:14:21"
         },
         {
             "name": "imagine/imagine",
@@ -930,7 +931,7 @@
                 "image manipulation",
                 "image processing"
             ],
-            "time": "2015-09-19T16:54:05+00:00"
+            "time": "2015-09-19 16:54:05"
         },
         {
             "name": "nicolasbize/magicsuggest",
@@ -967,7 +968,7 @@
             ],
             "description": "MagicSuggest is a multiple selection auto suggest combo box for Bootstrap 3.",
             "homepage": "http://nicolasbize.com/magicsuggest",
-            "time": "2014-10-16T23:17:26+00:00"
+            "time": "2014-10-16 23:17:26"
         },
         {
             "name": "omgdef/yii2-multilingual-behavior",
@@ -1015,7 +1016,7 @@
                 "extension",
                 "yii2"
             ],
-            "time": "2016-02-12T10:38:57+00:00"
+            "time": "2016-02-12 10:38:57"
         },
         {
             "name": "paulzi/yii2-nested-intervals",
@@ -1061,7 +1062,7 @@
                 "nested sets",
                 "yii2"
             ],
-            "time": "2016-10-13T22:33:11+00:00"
+            "time": "2016-10-13 22:33:11"
         },
         {
             "name": "rmrevin/yii2-fontawesome",
@@ -1113,7 +1114,7 @@
                 "font",
                 "yii"
             ],
-            "time": "2017-01-11T14:05:47+00:00"
+            "time": "2017-01-11 14:05:47"
         },
         {
             "name": "swiftmailer/swiftmailer",
@@ -1167,7 +1168,7 @@
                 "mail",
                 "mailer"
             ],
-            "time": "2017-05-01T15:54:03+00:00"
+            "time": "2017-05-01 15:54:03"
         },
         {
             "name": "tijsverkoyen/akismet",
@@ -1206,7 +1207,7 @@
             ],
             "description": "Akismet is a wrapper-class to communicate with the Akismet API.",
             "homepage": "https://github.com/tijsverkoyen/Akismet",
-            "time": "2016-07-19T13:50:18+00:00"
+            "time": "2016-07-19 13:50:18"
         },
         {
             "name": "tinymce/tinymce",
@@ -1252,7 +1253,7 @@
                 "tinymce",
                 "wysiwyg"
             ],
-            "time": "2017-10-05T11:39:51+00:00"
+            "time": "2017-10-05 11:39:51"
         },
         {
             "name": "webvimark/date-range-picker",
@@ -1276,7 +1277,7 @@
             },
             "notification-url": "https://packagist.org/downloads/",
             "description": "dangrossman daterangepicker yii 2 gridview",
-            "time": "2017-02-27T19:12:56+00:00"
+            "time": "2017-02-27 19:12:56"
         },
         {
             "name": "yeesoft/yii2-comments",
@@ -1314,7 +1315,7 @@
                 }
             ],
             "description": "Comments Module For Yii2 Framework",
-            "time": "2017-04-16T16:27:45+00:00"
+            "time": "2017-04-16 16:27:45"
         },
         {
             "name": "yeesoft/yii2-yee-auth",
@@ -1352,7 +1353,7 @@
                 }
             ],
             "description": "Authorization Module For Yee CMS",
-            "time": "2017-03-01T10:53:02+00:00"
+            "time": "2017-03-01 10:53:02"
         },
         {
             "name": "yeesoft/yii2-yee-block",
@@ -1388,7 +1389,7 @@
                 }
             ],
             "description": "HTML Block Module For Yee CMS",
-            "time": "2017-03-01T11:26:18+00:00"
+            "time": "2017-03-01 11:26:18"
         },
         {
             "name": "yeesoft/yii2-yee-comment",
@@ -1425,7 +1426,7 @@
                 }
             ],
             "description": "Comments Module For Yee CMS",
-            "time": "2017-03-01T10:56:12+00:00"
+            "time": "2017-03-01 10:56:12"
         },
         {
             "name": "yeesoft/yii2-yee-core",
@@ -1466,7 +1467,7 @@
                 }
             ],
             "description": "Core Module For Yee CMS",
-            "time": "2017-03-04T21:03:45+00:00"
+            "time": "2017-03-04 21:03:45"
         },
         {
             "name": "yeesoft/yii2-yee-media",
@@ -1505,7 +1506,7 @@
                 }
             ],
             "description": "Media Module For Yee CMS",
-            "time": "2017-03-01T12:07:50+00:00"
+            "time": "2017-03-01 12:07:50"
         },
         {
             "name": "yeesoft/yii2-yee-menu",
@@ -1541,7 +1542,7 @@
                 }
             ],
             "description": "Menu Module For Yee CMS",
-            "time": "2017-03-01T11:33:34+00:00"
+            "time": "2017-03-01 11:33:34"
         },
         {
             "name": "yeesoft/yii2-yee-page",
@@ -1578,7 +1579,7 @@
                 }
             ],
             "description": "Page Module For Yee CMS",
-            "time": "2017-03-01T11:38:39+00:00"
+            "time": "2017-03-01 11:38:39"
         },
         {
             "name": "yeesoft/yii2-yee-post",
@@ -1617,7 +1618,7 @@
                 }
             ],
             "description": "Post Module For Yee CMS",
-            "time": "2017-04-05T14:36:58+00:00"
+            "time": "2017-04-05 14:36:58"
         },
         {
             "name": "yeesoft/yii2-yee-seo",
@@ -1653,7 +1654,7 @@
                 }
             ],
             "description": "SEO Module For Yee CMS",
-            "time": "2017-03-01T11:23:59+00:00"
+            "time": "2017-03-01 11:23:59"
         },
         {
             "name": "yeesoft/yii2-yee-settings",
@@ -1689,7 +1690,7 @@
                 }
             ],
             "description": "Settings Module For Yee CMS",
-            "time": "2017-03-01T11:20:48+00:00"
+            "time": "2017-03-01 11:20:48"
         },
         {
             "name": "yeesoft/yii2-yee-translation",
@@ -1725,7 +1726,7 @@
                 }
             ],
             "description": "Translation Module For Yee CMS",
-            "time": "2017-03-01T10:59:24+00:00"
+            "time": "2017-03-01 10:59:24"
         },
         {
             "name": "yeesoft/yii2-yee-user",
@@ -1764,7 +1765,7 @@
                 }
             ],
             "description": "User Module For Yee CMS",
-            "time": "2017-03-01T10:18:47+00:00"
+            "time": "2017-03-01 10:18:47"
         },
         {
             "name": "yiidoc/yii2-timeago",
@@ -1806,7 +1807,7 @@
                 "timeago",
                 "yii"
             ],
-            "time": "2015-01-31T12:54:19+00:00"
+            "time": "2015-01-31 12:54:19"
         },
         {
             "name": "yiisoft/yii2",
@@ -1906,7 +1907,7 @@
                 "framework",
                 "yii2"
             ],
-            "time": "2017-06-05T14:33:41+00:00"
+            "time": "2017-06-05 14:33:41"
         },
         {
             "name": "yiisoft/yii2-authclient",
@@ -1958,7 +1959,7 @@
                 "oauth",
                 "yii2"
             ],
-            "time": "2017-06-23T09:45:49+00:00"
+            "time": "2017-06-23 09:45:49"
         },
         {
             "name": "yiisoft/yii2-bootstrap",
@@ -2004,7 +2005,7 @@
                 "bootstrap",
                 "yii2"
             ],
-            "time": "2017-10-09T19:48:22+00:00"
+            "time": "2017-10-09 19:48:22"
         },
         {
             "name": "yiisoft/yii2-composer",
@@ -2054,7 +2055,7 @@
                 "extension installer",
                 "yii2"
             ],
-            "time": "2016-12-20T13:26:02+00:00"
+            "time": "2016-12-20 13:26:02"
         },
         {
             "name": "yiisoft/yii2-httpclient",
@@ -2101,7 +2102,7 @@
                 "httpclient",
                 "yii2"
             ],
-            "time": "2017-06-23T09:36:13+00:00"
+            "time": "2017-06-23 09:36:13"
         },
         {
             "name": "yiisoft/yii2-imagine",
@@ -2149,7 +2150,7 @@
                 "imagine",
                 "yii2"
             ],
-            "time": "2016-11-03T19:28:39+00:00"
+            "time": "2016-11-03 19:28:39"
         },
         {
             "name": "yiisoft/yii2-jui",
@@ -2199,7 +2200,7 @@
                 "jQuery UI",
                 "yii2"
             ],
-            "time": "2016-07-22T22:26:59+00:00"
+            "time": "2016-07-22 22:26:59"
         },
         {
             "name": "yiisoft/yii2-swiftmailer",
@@ -2249,7 +2250,7 @@
                 "swiftmailer",
                 "yii2"
             ],
-            "time": "2017-05-01T08:29:00+00:00"
+            "time": "2017-05-01 08:29:00"
         }
     ],
     "packages-dev": [
@@ -2328,7 +2329,7 @@
                 "faker",
                 "fixtures"
             ],
-            "time": "2017-08-15T16:48:10+00:00"
+            "time": "2017-08-15 16:48:10"
         },
         {
             "name": "phpspec/php-diff",
@@ -2366,7 +2367,7 @@
                 }
             ],
             "description": "A comprehensive library for generating differences between two hashable objects (strings or arrays).",
-            "time": "2016-04-07T12:29:16+00:00"
+            "time": "2016-04-07 12:29:16"
         },
         {
             "name": "yiisoft/yii2-codeception",
@@ -2412,7 +2413,7 @@
                 "yii2"
             ],
             "abandoned": "codeception/codeception",
-            "time": "2017-05-22T12:08:21+00:00"
+            "time": "2017-05-22 12:08:21"
         },
         {
             "name": "yiisoft/yii2-debug",
@@ -2459,7 +2460,7 @@
                 "debugger",
                 "yii2"
             ],
-            "time": "2017-10-09T20:30:01+00:00"
+            "time": "2017-10-09 20:30:01"
         },
         {
             "name": "yiisoft/yii2-faker",
@@ -2506,7 +2507,7 @@
                 "faker",
                 "yii2"
             ],
-            "time": "2015-03-01T06:22:44+00:00"
+            "time": "2015-03-01 06:22:44"
         },
         {
             "name": "yiisoft/yii2-gii",
@@ -2559,7 +2560,7 @@
                 "gii",
                 "yii2"
             ],
-            "time": "2016-03-18T14:09:46+00:00"
+            "time": "2016-03-18 14:09:46"
         }
     ],
     "aliases": [],
