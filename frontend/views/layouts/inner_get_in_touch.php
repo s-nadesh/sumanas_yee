@@ -44,7 +44,8 @@ ThemeAsset::register($this);
                     return;
                 n = f.fbq = function () {
                     n.callMethod ?
-                            n.callMethod.apply(n, arguments) : n.queue.push(arguments)};
+                            n.callMethod.apply(n, arguments) : n.queue.push(arguments)
+                };
                 if (!f._fbq)
                     f._fbq = n;
                 n.push = n;
@@ -128,11 +129,7 @@ ThemeAsset::register($this);
         <?= $content ?>
         <?php echo Block::getHtml('get_in_touch'); ?>
         <!-- Footer Start -->
-        <footer class="inner-footer">
-            <div class="section section10" id="section10">
-                <?php echo $this->render('@frontend/views/includes/footer'); ?>
-            </div>
-        </footer>
+        <?php echo $this->render('@frontend/views/includes/footer'); ?>
         <!-- Footer End -->
     </div>
     <!-- Page Wrapper End -->

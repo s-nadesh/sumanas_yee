@@ -46,7 +46,8 @@ ThemeAsset::register($this);
                     return;
                 n = f.fbq = function () {
                     n.callMethod ?
-                            n.callMethod.apply(n, arguments) : n.queue.push(arguments)};
+                            n.callMethod.apply(n, arguments) : n.queue.push(arguments)
+                };
                 if (!f._fbq)
                     f._fbq = n;
                 n.push = n;
@@ -128,14 +129,22 @@ ThemeAsset::register($this);
     <!-- Page Wrapper Start -->
     <div class="innerpage">
         <?= $content ?>
-        <?= ClientsWidget::widget(); ?>
+        <div class="testimonials-bg">
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+                        <h5> Client Speaks </h5>
+                    </div>
+                    <div class="col-md-8 col-md-offset-2">
+                        <div class="quote"><i class="fa fa-quote-left fa-2x"></i></div>
+                        <?= ClientsWidget::widget(); ?>
+                    </div>
+                </div>
+            </div>
+        </div>
         <?php echo Block::getHtml('get_in_touch'); ?>
         <!-- Footer Start -->
-        <footer class="inner-footer">
-            <div class="section section10" id="section10">
-                <?php echo $this->render('@frontend/views/includes/footer'); ?>
-            </div>
-        </footer>
+        <?php echo $this->render('@frontend/views/includes/footer'); ?>
         <!-- Footer End -->
     </div>
     <!-- Page Wrapper End -->

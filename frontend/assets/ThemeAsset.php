@@ -26,6 +26,7 @@ class ThemeAsset extends AssetBundle {
         'css/metisMenu.min.css',
         'css/jquery.mCustomScrollbar.css',
         'css/cubeportfolio.css',
+        'https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css',
     ];
     public $js = [
         '//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js',
@@ -46,6 +47,7 @@ class ThemeAsset extends AssetBundle {
         'js/main.js',
         'http://cdnjs.cloudflare.com/ajax/libs/selectivizr/1.0.2/selectivizr-min.js',
         'js/index.js',
+        'js/slider.js',
     ];
     public $depends = [
 //        'yii\web\YiiAsset',
@@ -119,6 +121,18 @@ class ThemeAsset extends AssetBundle {
                     }
                 }
             })
+                $(document).on("scroll", function(){
+		if
+      ($(document).scrollTop() > 100){
+		  $("header").addClass("shrink");
+		}
+		else
+		{
+			$("header").removeClass("shrink");
+		}
+		
+		
+	});
             $('#portfolio').owlCarousel({
                 loop: true,
                 margin: 15,
