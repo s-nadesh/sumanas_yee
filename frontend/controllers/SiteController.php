@@ -206,5 +206,10 @@ class SiteController extends BaseController {
         $this->layout = "@app/views/layouts/inner";
         return $this->render('about');
     }
+    
+    public function actionTeam() {
+       $this->layout = "@app/views/layouts/inner_get_in_touch";
+       return $this->render('team');
+    }
 
 }

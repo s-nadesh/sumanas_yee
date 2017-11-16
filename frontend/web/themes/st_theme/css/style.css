@@ -500,13 +500,13 @@ box-shadow: 5px 5px 15px 0px rgba(0, 0, 0, 0.32);*/
     color: #333;
     font-size: 16px;
 }
-.team-title {
+/*.team-title {
     position: static;
     padding: 20px 0;
     display: inline-block;
     letter-spacing: 1px;
     width: 100%;
-}
+}*/
 .team-title h5 {
     margin-bottom: 0px;
     display: block;
@@ -1388,7 +1388,7 @@ header {
     padding:0px 0px 7px 0px;
     color:#a06654;
 }
-.team-name {
+/*.team-name {
     background:#fff000;
     padding:10px;
     font-weight:300;
@@ -1398,10 +1398,10 @@ header {
     right:0px;
     position:absolute;
     text-align:right;
-}
-.team-name span {
+}*/
+/*.team-name span {
     font-size:16px;
-}
+}*/
 .footer-contact-cont {
     width:100%;
     float:left;
