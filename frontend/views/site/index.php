@@ -25,13 +25,14 @@ $this->title = 'Homepage';
             <div class="item active"> 
 
                 <!-- Slide Background --> 
-                <img src="<?php echo Yii::$app->view->theme->baseUrl ?>/images/slider.jpg" alt=""  class="slide-image"/>
+                <img src="<?php echo Yii::$app->view->theme->baseUrl ?>/images/slider1.jpg" alt=""  class="slide-image"/>
                 <div class="container">
                     <div class="row"> 
                         <!-- Slide Text Layer -->
                         <div class="slide1">
                             <div class="slide-text slide_style_left">
-                                <h1 data-animation="animated zoomInRight">It's time to capture the spotlight <br/>
+                                <h1 data-animation="animated zoomInRight">It's time to<br/>
+                                    <span>STAND OUT</span><br/>
                                     <img src="<?php echo Yii::$app->view->theme->baseUrl ?>/images/line.jpg"  alt=""></h1>
                             </div>
                         </div>
@@ -44,15 +45,16 @@ $this->title = 'Homepage';
             <div class="item "> 
 
                 <!-- Slide Background --> 
-                <img src="<?php echo Yii::$app->view->theme->baseUrl ?>/images/slider.jpg" alt=""  class="slide-image"/>
+                <img src="<?php echo Yii::$app->view->theme->baseUrl ?>/images/slider2.jpg" alt=""  class="slide-image"/>
                 <div class="container">
                     <div class="row"> 
                         <!-- Slide Text Layer -->
-                        <div class="slide-text slide_style_left">
-                            <h1 data-animation="animated zoomInRight">It's time to unveil the future<br/>
+                        <div class="slide1"><div class="slide-text slide_style_left">
+                                <h1 data-animation="animated zoomInRight">It’s time to<br/>
+                                    <span>BECOME VISIBLE</span><br/>
 
-                                <img src="<?php echo Yii::$app->view->theme->baseUrl ?>/images/line.jpg"  alt=""></h1>
-                        </div>
+                                    <img src="<?php echo Yii::$app->view->theme->baseUrl ?>/images/line.jpg"  alt=""></h1>
+                            </div></div>
                     </div>
                 </div>
             </div>
@@ -62,14 +64,15 @@ $this->title = 'Homepage';
             <div class="item "> 
 
                 <!-- Slide Background --> 
-                <img src="<?php echo Yii::$app->view->theme->baseUrl ?>/images/slider.jpg" alt=""  class="slide-image"/>
+                <img src="<?php echo Yii::$app->view->theme->baseUrl ?>/images/slider3.jpg" alt=""  class="slide-image"/>
                 <div class="container">
                     <div class="row"> 
                         <!-- Slide Text Layer -->
-                        <div class="slide-text slide_style_left">
-                            <h1 data-animation="animated zoomInRight">It's time to 'become visible<br/>
+                        <div class="slide1"><div class="slide-text slide_style_left">
+                            <h1 data-animation="animated zoomInRight">It's time to<br/>
+                                <span>UNVEIL THE FUTURE</span><br/>
                                 <img src="<?php echo Yii::$app->view->theme->baseUrl ?>/images/line.jpg"  alt=""></h1>
-                        </div>
+                            </div></div>
                     </div>
                 </div>
             </div>

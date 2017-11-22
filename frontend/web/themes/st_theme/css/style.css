@@ -4227,11 +4227,11 @@ a:focus
 
 }
 
-.slide-text > h3 {
+.slide-text > h1 {
 
     padding: 0;
     color: #ffffff;
-    font-size: 34px;
+    font-size: 42px;
     font-style: normal;
     line-height: 50px;
     margin-bottom: 30px;
@@ -4245,7 +4245,7 @@ a:focus
     font-family: 'Roboto Condensed', sans-serif;
 }
 
-.slide-text > h3 span
+.slide-text > h1 span
 {
     color:#f58220;
 }
