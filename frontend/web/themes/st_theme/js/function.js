@@ -49,14 +49,14 @@ $(document).ready(function () {
         $(".msgSuccess").removeClass("hide");
         setTimeout(function () {
             $('.msgSuccess').addClass('hide');
-        }, 5000);
+        }, 7000);
     }
 
     function formError() {
         $(".msgError").removeClass("hide");
         setTimeout(function () {
             $('.msgError').addClass('hide');
-        }, 5000);
+        }, 7000);
     }
 
     $('#contact_form').bootstrapValidator({
@@ -89,6 +89,9 @@ $(document).ready(function () {
                     notEmpty: {
                         message: ' '
                     },
+                    integer: {
+                        message: ' '
+                    }
                 }
             },
             'ContactForm[subject]': {
@@ -116,6 +119,54 @@ $(document).ready(function () {
         // Use Ajax to submit form data
         submitForm("contact_form", "contact-sumanas");
     });
+    
+    $('#quote_form').bootstrapValidator({
+        // To use feedback icons, ensure that you use Bootstrap v3.1.0 or later
+        feedbackIcons: {
+            valid: 'glyphicon glyphicon-ok',
+            invalid: 'glyphicon glyphicon-remove',
+            validating: 'glyphicon glyphicon-refresh'
+        },
+        fields: {
+            'ContactForm[name]': {
+                validators: {
+                    notEmpty: {
+                        message: ' '
+                    }
+                }
+            },
+            'ContactForm[email]': {
+                validators: {
+                    notEmpty: {
+                        message: ' '
+                    },
+                    emailAddress: {
+                        message: ' '
+                    }
+                }
+            },
+            'ContactForm[phone]': {
+                validators: {
+                    notEmpty: {
+                        message: ' '
+                    },
+                    integer: {
+                        message: ' '
+                    }
+                }
+            },
+        }
+    }).on('success.form.bv', function (e) {
+        // Prevent form submission
+        e.preventDefault();
+        // Get the form instance
+        var $form = $(e.target);
+        // Get the BootstrapValidator instance
+        var bv = $form.data('bootstrapValidator');
+        // Use Ajax to submit form data
+        submitForm("quote_form", "index");
+    });
+
 
     $('#career_form1').bootstrapValidator({
         // To use feedback icons, ensure that you use Bootstrap v3.1.0 or later
@@ -147,6 +198,9 @@ $(document).ready(function () {
                     notEmpty: {
                         message: ' '
                     },
+                    integer: {
+                        message: ' '
+                    }
                 }
             },
             'CareersForm[source_to_find]': {
@@ -213,6 +267,9 @@ $(document).ready(function () {
                     notEmpty: {
                         message: ' '
                     },
+                    integer: {
+                        message: ' '
+                    }
                 }
             },
             'CareersForm[source_to_find]': {
@@ -278,6 +335,9 @@ $(document).ready(function () {
                     notEmpty: {
                         message: ' '
                     },
+                    integer: {
+                        message: ' '
+                    }
                 }
             },
             'CareersForm[source_to_find]': {

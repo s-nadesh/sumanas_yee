@@ -42,7 +42,7 @@ use yii\helpers\Html;
                         </div>
                         <div class="team-name">
                             <h6 class="team-title"> Your Name </h6>
-                            <span> Designation</span> </div>
+                            <span> Could be next...</span> </div>
                     </div>
                 </div>
                 <!-- end team member --> 

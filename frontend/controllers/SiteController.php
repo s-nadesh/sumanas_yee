@@ -62,9 +62,21 @@ class SiteController extends BaseController {
                     ->limit($pagination->limit)
                     ->all();
 
+            $model = new ContactForm();
+            $model->scenario = 'quote';
+            if ($model->load(Yii::$app->request->post()) && $model->validate()) {
+                Yii::$app->response->format = Response::FORMAT_JSON;
+                if ($model->sendmail(Yii::$app->params['adminEmail'])) {
+                    return true;
+                } else {
+                    return false;
+                }
+            }
+
             return $this->render('index', [
                         'posts' => $posts,
                         'pagination' => $pagination,
+                        'model' => $model,
             ]);
         }
         //try to display action from controller
@@ -178,7 +190,7 @@ class SiteController extends BaseController {
         $portfolio = Portfolio::find()
                 ->where(['visible' => 1])
 //                ->limit(3)
-                ->orderBy(['portfolio_order'=>'SORT_ASC'])
+                ->orderBy(['portfolio_order' => 'SORT_ASC'])
                 ->all();
 
         return $this->render('portfolio', [
@@ -206,10 +218,10 @@ class SiteController extends BaseController {
         $this->layout = "@app/views/layouts/inner";
         return $this->render('about');
     }
-    
+
     public function actionTeam() {
-       $this->layout = "@app/views/layouts/inner_get_in_touch";
-       return $this->render('team');
+        $this->layout = "@app/views/layouts/inner_get_in_touch";
+        return $this->render('team');
     }
 
 }

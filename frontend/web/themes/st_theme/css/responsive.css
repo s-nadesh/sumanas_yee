@@ -507,7 +507,10 @@ blockquote {
 	line-height:22px;
 }
 
-
+.slider-form
+{
+	display:none;
+}
 
 }
 @media (min-width:768px) and (max-width:991px) {
@@ -805,6 +808,11 @@ blockquote {
 	padding-bottom: 25px;
 }
 
+.slider-form
+{
+	display:none;
+}
+
 }
 @media (min-width:992px) and (max-width:1199px) {
 .section1, .section2, .section7 {
@@ -900,7 +908,19 @@ blockquote {
 	font-size: 14px;
 }
 
+.slider-form h2 {
+	font-size: 34px;
+}
 
+.slider-form {
+	top: 80px;
+	right: 50px;
+}
+
+.md-input {
+	position: relative;
+	margin-bottom: 20px;
+}
 
 }
 @media (min-width:1200px) {
