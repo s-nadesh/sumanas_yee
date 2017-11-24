@@ -13,11 +13,6 @@
 // you may need to adjust this path to the correct Yii framework path
 $frameworkPath = dirname(__FILE__) . '/vendor/yiisoft/yii2';
 
-$testing = 'Vickyfsdfsdfyyyyyyydfdfdfdf';
-$testing = 'Vick';
-
-
-
 if (!is_dir($frameworkPath)) {
     echo '<h1>Error</h1>';
     echo '<p><strong>The path to yii framework seems to be incorrect.</strong></p>';
