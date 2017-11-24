@@ -2,7 +2,7 @@
     <!-- Carousel indicators -->
     <ol class="carousel-indicators">
         <?php foreach ($clients as $key => $client) { ?>
-            <li data-target="#fade-quote-carousel" data-slide-to="<?php echo $key ?>" class="<?= ($key == 0) ? 'active' : '' ?>"></li>
+            <li data-target="#fade-quote-carousel" data-slide-to="<?php echo $key ?>" class="<?= ($key == 3) ? 'active' : '' ?>"></li>
         <?php } ?>
     </ol>
     <div class="carousel-inner">

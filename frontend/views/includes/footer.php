@@ -113,7 +113,7 @@ $footer_platform = Menu::getMenuItems('footer-platform');
 
                 </div>
             </div>
-            <div class="copyrights"> copyrights reserved  &copy; 2017 sumanas technologies </div>
+            <div class="copyrights"> copyrights reserved  &copy; <?php echo date("Y"); ?> sumanas technologies </div>
         </div>
     </div>
 </footer>
