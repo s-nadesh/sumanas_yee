@@ -1,11 +1,9 @@
 <div class="carousel slide" id="fade-quote-carousel" data-ride="carousel" data-interval="7000"> 
     <!-- Carousel indicators -->
     <ol class="carousel-indicators">
-        <li data-target="#fade-quote-carousel" data-slide-to="0"></li>
-        <li data-target="#fade-quote-carousel" data-slide-to="1"></li>
-        <li data-target="#fade-quote-carousel" data-slide-to="2" class="active"></li>
-        <li data-target="#fade-quote-carousel" data-slide-to="3"></li>
-        <li data-target="#fade-quote-carousel" data-slide-to="4"></li>
+        <?php foreach ($clients as $key => $client) { ?>
+            <li data-target="#fade-quote-carousel" data-slide-to="<?php echo $key ?>" class="<?= ($key == 0) ? 'active' : '' ?>"></li>
+        <?php } ?>
     </ol>
     <div class="carousel-inner">
         <?php
