@@ -431,6 +431,9 @@ box-shadow: 5px 5px 15px 0px rgba(0, 0, 0, 0.32);*/
 .team-member, .team-member .team-img {
     position: relative;
 }
+.team-member a {
+    color: #222222;
+}
 .team-hover {
     position: absolute;
     top: 0;
@@ -3607,7 +3610,7 @@ a:focus
 {
     width:100%;
     float:left;
-    padding:40px 0px 0px 0px;
+    padding:40px 0px 40px 0px;
     background:url(../images/bg1.png) center 200px no-repeat;
 }
 

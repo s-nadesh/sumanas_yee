@@ -41,8 +41,8 @@ use yii\helpers\Html;
                             </div>
                         </div>
                         <div class="team-name">
-                            <h6 class="team-title"> Your Name </h6>
-                            <span> Could be next...</span> </div>
+                            <h6 class="team-title"> <?= Html::a('Your name could be next! <br/>
+                                        ', ['careers']) ?> </div>
                     </div>
                 </div>
                 <!-- end team member --> 
@@ -55,7 +55,7 @@ use yii\helpers\Html;
             <div class="container-fluid">
                 <div class="row">
                     <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
-                        <h5> Happy times @ Sumanas </h5>
+                        <h5> Fun times @ Sumanas </h5>
                     </div>
                     <div class="col-md-8 col-md-offset-2"> </div>
                 </div>

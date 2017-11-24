@@ -28,21 +28,21 @@ $this->title = 'Homepage';
                     ],
         ]);
         ?>
-        
+
 
         <div class="md-input">
-            <?= $form->field($model, 'name',['template'=>'{input}<span class="highlight"></span>
-            <span class="bar"></span><label>Full Name *</label>'])->textInput(['class' => 'md-form-control form-control','required'=>''])->label(false) ?>
+            <?= $form->field($model, 'name', ['template' => '{input}<span class="highlight"></span>
+            <span class="bar"></span><label>Full Name *</label>'])->textInput(['class' => 'md-form-control form-control', 'required' => ''])->label(false) ?>
         </div>
 
         <div class="md-input">
-            <?= $form->field($model, 'email',['template'=>'{input}<span class="highlight"></span>
-            <span class="bar"></span><label>Email Address *</label>'])->textInput(['class' => 'md-form-control form-control','required'=>''])->label(false) ?>
+            <?= $form->field($model, 'email', ['template' => '{input}<span class="highlight"></span>
+            <span class="bar"></span><label>Email Address *</label>'])->textInput(['class' => 'md-form-control form-control', 'required' => ''])->label(false) ?>
         </div>
 
         <div class="md-input">
-            <?= $form->field($model, 'phone',['template'=>'{input}<span class="highlight"></span>
-            <span class="bar"></span><label>Phone *</label>'])->textInput(['class' => 'md-form-control form-control','required'=>''])->label(false) ?>
+            <?= $form->field($model, 'phone', ['template' => '{input}<span class="highlight"></span>
+            <span class="bar"></span><label>Phone *</label>'])->textInput(['class' => 'md-form-control form-control', 'required' => ''])->label(false) ?>
         </div>
 
         <div class="md-input"> <button type="submit" class="btn submit-btn1" class="formComplete btn btn1"> Contact Us </button>
@@ -145,13 +145,14 @@ $this->title = 'Homepage';
             <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 services-main-heading ">
                 <h2> Our Services </h2>
             </div>
+            <?php echo Block::getHtml('products'); ?> 
             <?php echo Block::getHtml('website-development'); ?> 
-            <?php echo Block::getHtml('ui-ux-design'); ?> 
             <?php echo Block::getHtml('mobile-app-development'); ?>
             <div class="clearfix"></div>
+            <?php echo Block::getHtml('ui-ux-design'); ?> 
             <?php echo Block::getHtml('digital-marketing'); ?> 
             <?php echo Block::getHtml('dataanalytics'); ?> 
-            <?php echo Block::getHtml('products'); ?> 
+
         </div>
     </div>
 </div>
@@ -165,17 +166,17 @@ $this->title = 'Homepage';
             </div>
             <div class="col-xs-6 col-sm-3 col-md-3 col-lg-3 statistics1">
                 <p> <i class="fa fa-pencil-square-o" aria-hidden="true"></i> </p>
-                <p> <span> 873 </span> </p>
+                <p> <span> 1074 </span> </p>
                 <p> Projects Completed </p>
             </div>
             <div class="col-xs-6 col-sm-3 col-md-3 col-lg-3 statistics1">
                 <p> <i class="fa fa-code" aria-hidden="true"></i> </p>
-                <p> <span> 452 </span> </p>
+                <p> <span> 752 </span> </p>
                 <p>Websites  Launched </p>
             </div>
             <div class="col-xs-6 col-sm-3 col-md-3 col-lg-3 statistics1">
                 <p> <i class="fa fa-users" aria-hidden="true"></i> </p>
-                <p> <span> 200+ </span> </p>
+                <p> <span> 800+ </span> </p>
                 <p>Satisfied Clients </p>
             </div>
         </div>
