@@ -14,6 +14,7 @@
 $frameworkPath = dirname(__FILE__) . '/vendor/yiisoft/yii2';
 
 $testing = 'Vickyyyyyyyydfdfdfdf';
+$testing = 'Vick';
 
 
 
