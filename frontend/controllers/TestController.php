@@ -8,6 +8,10 @@
 
 class TestController extends Controller {
     
-    public $test = 'Testing';
+    public $test = 'Testing121';
+    
+    public function index(){
+        return 'AAAAAAAA';
+    }
     
 }
