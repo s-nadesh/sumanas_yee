@@ -8,6 +8,6 @@
 
 class TestController extends Controller {
     
-    public $test = 'Testing';
+    public $test = 'Testing121';
     
 }
