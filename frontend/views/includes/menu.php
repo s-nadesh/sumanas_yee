@@ -4,6 +4,7 @@
 
 use yeesoft\models\Menu;
 use yeesoft\widgets\Nav;
+use yii\helpers\ArrayHelper;
 use yii\web\View;
 ?>
 
@@ -23,16 +24,29 @@ use yii\web\View;
         <div class="clearfix">
             <aside class="sidebar">
                 <nav class="sidebar-nav">
+                    <?php
+                    $menus = Menu::getMenuItems('main-menu');
+                    foreach ($menus as $key => $menu) {
+                        if ($menu['label'] == 'Contact' && Yii::$app->request->url == '/contact-sumanas') {
+                            $menus[$key]['active'] = 'site/contact';
+                        }
+                    }
+//                     echo '<pre>';
+//                    print_r($menus);
+//                    exit;
+                    ?>
                     <?=
                     Nav::widget([
                         'encodeLabels' => false,
                         'dropDownCaret' => '<i class="fa arrow"></i>',
+                        'activateItems' => true,
+                        'activateParents' => true,
                         'options' => [
                                 ['class' => 'metismenu', 'id' => 'auto-collapse-menu-demo'],
                                 ['class' => ''],
                                 ['class' => '']
                         ],
-                        'items' => Menu::getMenuItems('main-menu'),
+                        'items' => $menus,
                     ])
                     ?>
                 </nav>

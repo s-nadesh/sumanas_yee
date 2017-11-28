@@ -4811,12 +4811,12 @@ a:focus
     text-transform:uppercase;
     margin-top:10px;
     text-align:center;
-    margin-bottom:40px;
-    background:url(../images/service-heading-bg.png) center top no-repeat;
-    padding-bottom:40px;
+    margin-bottom:25px;
+/*    background:url(../images/service-heading-bg.png) center top no-repeat;*/
+   
 }
 .services-main-heading h2 {
-    font-size:55px;
+    font-size:48px;
     font-weight:400;
     background:url(../images/ui-line.jpg) center bottom no-repeat;
     padding-bottom:10px;
@@ -5048,4 +5048,43 @@ a:focus
     font-size: 12px;
     text-transform:capitalize;
     margin-top: 10px;
+}
+
+.sidebar-nav > ul > li.active>a {
+    color: #ffffff;
+    text-decoration: none;
+    background: #35bf98;
+}
+
+.sidebar-nav > ul > li.active>a {
+    color: #ffffff;
+    text-decoration: none;
+    background: #35bf98;
+}
+
+.sidebar-nav ul li ul li.active>a {
+    color: #ffffff;
+    text-decoration: none;
+    background: #f58220;
+}
+
+.home-services-txt
+{
+    width: 100%;
+    float: left;
+    margin-bottom: 25px;
+}
+
+.statistics-heading
+{width: 100%;
+ float:left;
+    margin-top: 40px;
+    margin-bottom: 40px;
+}
+.statistics-heading h4{
+    text-align:center;
+        font-size: 50px;
+    font-weight: 100;
+    
+  
 }
