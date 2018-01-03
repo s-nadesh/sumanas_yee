@@ -31,7 +31,11 @@ $(document).ready(function () {
 
     function formClear(formID) {
         $('#' + formID)[0].reset();
-        $("#" + formID).data('bootstrapValidator').resetForm();
+        $("#" + formID).formValidation('resetForm', true);
+        FormValidation.AddOn.reCaptcha2.reset('captchaContainer');
+        FormValidation.AddOn.reCaptcha2.reset('captchaContainer1');
+        FormValidation.AddOn.reCaptcha2.reset('captchaContainer2');
+        FormValidation.AddOn.reCaptcha2.reset('captchaContainer3');
     }
 
     function formButtonStatus(status) {
@@ -59,19 +63,27 @@ $(document).ready(function () {
         }, 7000);
     }
 
-    $('#contact_form').bootstrapValidator({
-        // To use feedback icons, ensure that you use Bootstrap v3.1.0 or later
-        feedbackIcons: {
+    $('#contact_form').formValidation({
+        framework: 'bootstrap',
+        icon: {
             valid: 'glyphicon glyphicon-ok',
             invalid: 'glyphicon glyphicon-remove',
             validating: 'glyphicon glyphicon-refresh'
+        },
+        addOns: {
+            reCaptcha2: {
+                element: 'captchaContainer',
+                theme: 'light',
+                siteKey: '6LfBBz8UAAAAAJrVDRQflJn2SXH71C5ceOmEKS4B',
+                message: ' '
+            }
         },
         fields: {
             'ContactForm[name]': {
                 validators: {
                     notEmpty: {
                         message: ' '
-                    }
+                    },
                 }
             },
             'ContactForm[email]': {
@@ -109,20 +121,20 @@ $(document).ready(function () {
                 }
             },
         }
-    }).on('success.form.bv', function (e) {
+    }).on('success.form.fv', function (e) {
         // Prevent form submission
         e.preventDefault();
         // Get the form instance
         var $form = $(e.target);
-        // Get the BootstrapValidator instance
-        var bv = $form.data('bootstrapValidator');
+        // Get the formValidation instance
+        var fv = $form.data('formValidation');
         // Use Ajax to submit form data
         submitForm("contact_form", "contact-sumanas");
     });
-    
-    $('#quote_form').bootstrapValidator({
+
+    $('#quote_form').formValidation({
         // To use feedback icons, ensure that you use Bootstrap v3.1.0 or later
-        feedbackIcons: {
+        icon: {
             valid: 'glyphicon glyphicon-ok',
             invalid: 'glyphicon glyphicon-remove',
             validating: 'glyphicon glyphicon-refresh'
@@ -156,24 +168,32 @@ $(document).ready(function () {
                 }
             },
         }
-    }).on('success.form.bv', function (e) {
+    }).on('success.form.fv', function (e) {
         // Prevent form submission
         e.preventDefault();
         // Get the form instance
         var $form = $(e.target);
-        // Get the BootstrapValidator instance
-        var bv = $form.data('bootstrapValidator');
+        // Get the formValidation instance
+        var fv = $form.data('formValidation');
         // Use Ajax to submit form data
         submitForm("quote_form", "index");
     });
 
 
-    $('#career_form1').bootstrapValidator({
+    $('#career_form1').formValidation({
         // To use feedback icons, ensure that you use Bootstrap v3.1.0 or later
-        feedbackIcons: {
+        icon: {
             valid: 'glyphicon glyphicon-ok',
             invalid: 'glyphicon glyphicon-remove',
             validating: 'glyphicon glyphicon-refresh'
+        },
+        addOns: {
+            reCaptcha2: {
+                element: 'captchaContainer1',
+                theme: 'light',
+                siteKey: '6LfBBz8UAAAAAJrVDRQflJn2SXH71C5ceOmEKS4B',
+                message: ' '
+            }
         },
         fields: {
             'CareersForm[name]': {
@@ -221,28 +241,36 @@ $(document).ready(function () {
 //                validators: {
 //                    notEmpty: {
 //                        message: ' '
-//                    }
+//                    },
 //                }
 //            },
         }
-    }).on('success.form.bv', function (e) {
+    }).on('success.form.fv', function (e) {
         // Prevent form submission
         e.preventDefault();
         // Get the form instance
         var $form = $(e.target);
-        // Get the BootstrapValidator instance
-        var bv = $form.data('bootstrapValidator');
+        // Get the formValidation instance
+        var fv = $form.data('formValidation');
         // Use Ajax to submit form data
         submitForm("career_form1", "careers");
     });
 
 
-    $('#career_form2').bootstrapValidator({
+    $('#career_form2').formValidation({
         // To use feedback icons, ensure that you use Bootstrap v3.1.0 or later
-        feedbackIcons: {
+        icon: {
             valid: 'glyphicon glyphicon-ok',
             invalid: 'glyphicon glyphicon-remove',
             validating: 'glyphicon glyphicon-refresh'
+        },
+        addOns: {
+            reCaptcha2: {
+                element: 'captchaContainer2',
+                theme: 'light',
+                siteKey: '6LfBBz8UAAAAAJrVDRQflJn2SXH71C5ceOmEKS4B',
+                message: ' '
+            }
         },
         fields: {
             'CareersForm[name]': {
@@ -294,23 +322,31 @@ $(document).ready(function () {
 //                }
 //            },
         }
-    }).on('success.form.bv', function (e) {
+    }).on('success.form.fv', function (e) {
         // Prevent form submission
         e.preventDefault();
         // Get the form instance
         var $form = $(e.target);
-        // Get the BootstrapValidator instance
-        var bv = $form.data('bootstrapValidator');
+        // Get the formValidation instance
+        var fv = $form.data('formValidation');
         // Use Ajax to submit form data
         submitForm("career_form2", "careers");
     });
 
-    $('#career_form3').bootstrapValidator({
+    $('#career_form3').formValidation({
         // To use feedback icons, ensure that you use Bootstrap v3.1.0 or later
-        feedbackIcons: {
+        icon: {
             valid: 'glyphicon glyphicon-ok',
             invalid: 'glyphicon glyphicon-remove',
             validating: 'glyphicon glyphicon-refresh'
+        },
+        addOns: {
+            reCaptcha2: {
+                element: 'captchaContainer3',
+                theme: 'light',
+                siteKey: '6LfBBz8UAAAAAJrVDRQflJn2SXH71C5ceOmEKS4B',
+                message: ' '
+            }
         },
         fields: {
             'CareersForm[name]': {
@@ -362,13 +398,13 @@ $(document).ready(function () {
 //                }
 //            },
         }
-    }).on('success.form.bv', function (e) {
+    }).on('success.form.fv', function (e) {
         // Prevent form submission
         e.preventDefault();
         // Get the form instance
         var $form = $(e.target);
-        // Get the BootstrapValidator instance
-        var bv = $form.data('bootstrapValidator');
+        // Get the formValidation instance
+        var fv = $form.data('formValidation');
         // Use Ajax to submit form data
         submitForm("career_form3", "careers");
     });

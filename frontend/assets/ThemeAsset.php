@@ -48,6 +48,9 @@ class ThemeAsset extends AssetBundle {
         'http://cdnjs.cloudflare.com/ajax/libs/selectivizr/1.0.2/selectivizr-min.js',
         'js/index.js',
         'js/slider.js',
+        'http://formvalidation.io/vendor/formvalidation/js/formValidation.min.js',
+        'http://formvalidation.io/vendor/formvalidation/js/framework/bootstrap.min.js',
+        'js/reCaptcha2.min.js',
     ];
     public $depends = [
 //        'yii\web\YiiAsset',

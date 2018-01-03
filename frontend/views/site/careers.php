@@ -61,7 +61,7 @@ $title = "Sumanas Tech Career Opportunities";
                 <h3> Apply Now </h3>
                 <?php
                 $form = ActiveForm::begin(['id' => 'career_form1', 'enableAjaxValidation' => false, 'enableClientValidation' => false,
-                    'enableClientScript' => false,
+                            'enableClientScript' => false,
                             'options' => [
                                 'name' => 'myform',
                                 'autocomplete' => 'off',
@@ -94,6 +94,11 @@ $title = "Sumanas Tech Career Opportunities";
                         </div>
                         <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
                             <?= $form->field($model, 'file')->fileInput(['class' => 'form-control file'])->label(false) ?>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+                            <div id="captchaContainer1"></div>
                         </div>
                     </div>
                 </div>
@@ -132,7 +137,7 @@ $title = "Sumanas Tech Career Opportunities";
                 <h3> Apply Now </h3>
                 <?php
                 $form = ActiveForm::begin(['id' => 'career_form2', 'enableAjaxValidation' => false, 'enableClientValidation' => false,
-                    'enableClientScript' => false,
+                            'enableClientScript' => false,
                             'options' => [
                                 'name' => 'myform',
                                 'autocomplete' => 'off',
@@ -165,6 +170,11 @@ $title = "Sumanas Tech Career Opportunities";
                         </div>
                         <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
                             <?= $form->field($model, 'file')->fileInput(['class' => 'form-control file'])->label(false) ?>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+                            <div id="captchaContainer2"></div>
                         </div>
                     </div>
                 </div>
@@ -203,7 +213,7 @@ $title = "Sumanas Tech Career Opportunities";
                 <h3> Apply Now </h3>
                 <?php
                 $form = ActiveForm::begin(['id' => 'career_form3', 'enableAjaxValidation' => false, 'enableClientValidation' => false,
-                    'enableClientScript' => false,
+                            'enableClientScript' => false,
                             'options' => [
                                 'name' => 'myform',
                                 'autocomplete' => 'off',
@@ -236,6 +246,11 @@ $title = "Sumanas Tech Career Opportunities";
                         </div>
                         <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
                             <?= $form->field($model, 'file')->fileInput(['class' => 'form-control file'])->label(false) ?>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+                            <div id="captchaContainer3"></div>
                         </div>
                     </div>
                 </div>

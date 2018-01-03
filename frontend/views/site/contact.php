@@ -1,6 +1,7 @@
 <?php
 
 use yii\bootstrap\ActiveForm;
+use yii\captcha\Captcha;
 
 $this->title = 'Contact Sumanas';
 ?>
@@ -58,6 +59,11 @@ $this->title = 'Contact Sumanas';
                         <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
                             <?= $form->field($model, 'message')->textarea(['placeholder' => 'Message', 'class' => 'form-control msg-filed', 'rows' => '6'])->label(false) ?>
                         </div>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <div class="row">
+                        <div id="captchaContainer"></div>
                     </div>
                 </div>
                 <div class="form-group">
