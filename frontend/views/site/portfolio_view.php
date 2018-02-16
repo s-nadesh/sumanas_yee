@@ -26,20 +26,21 @@ foreach ($portfolio->portfolioCategories as $portcategories) {
         <div class="cbp-l-project-desc-text">
             <?php echo $portfolio['description'] ?>
         </div>
-    </div>
-    <div class="cbp-l-project-details">
-        <div class="cbp-l-project-details-title"><span>Project Details</span></div>
-
-        <ul class="cbp-l-project-details-list">
-            <li><strong>Client</strong><?php echo $portfolio['client'] ?></li>
-            <!--<li><strong>Date</strong> echo date("d-m-Y",($portfolio['portfolio_date'])); </li>-->
-            <li><strong>Categories</strong><?php echo implode(', ', $categories) ?></li>
-        </ul>
-        <?php if($portfolio['portfolio_link']) { ?>
-        <p class="text-center"> <a href="<?php echo $portfolio['portfolio_link'] ?>" target="_blank" class="cbp-l-project-details-visit">
+         <?php if($portfolio['portfolio_link']) { ?>
+        <p class="text-left"> <a href="<?php echo $portfolio['portfolio_link'] ?>" target="_blank" class="cbp-l-project-details-visit">
             visit the site
             </a></p>
         <?php } ?>
+    </div>
+    <div class="cbp-l-project-details">
+        <!--<div class="cbp-l-project-details-title"><span>Project Details</span></div>-->
+
+<!--        <ul class="cbp-l-project-details-list">
+            <li><strong>Client</strong> echo $portfolio['client'] </li>
+            <li><strong>Date</strong> echo date("d-m-Y",($portfolio['portfolio_date'])); </li>
+            <li><strong>Categories</strong> echo implode(', ', $categories) </li>
+        </ul>-->
+       
     </div>
 </div>
 
