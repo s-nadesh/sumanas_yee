@@ -2,7 +2,8 @@
     <div class="container-fluid">
         <div class="logo"> 
             <a href="<?php echo Yii::$app->homeUrl ?>">
-                <img src="<?php echo Yii::$app->view->theme->baseUrl ?>/images/logo.png"  alt="Sumanas Technologies">
+                <img src="<?php echo Yii::$app->view->theme->baseUrl ?>/images/logo2.png"  alt="Sumanas Technologies" class="logo1">
+                <img src="<?php echo Yii::$app->view->theme->baseUrl ?>/images/logo.png"  alt="Sumanas Technologies" class="logo2">
             </a>
         </div>
     </div>
