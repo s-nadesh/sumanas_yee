@@ -1,158 +1,104 @@
 <?php
 
 use frontend\components\ClientsWidget;
-use yeesoft\block\models\Block;
+use yii\helpers\Url;
 use yii\web\View;
-use yii\widgets\ActiveForm;
+use yeesoft\block\models\Block;
 
 /* @var $this View */
 
 $this->title = 'Homepage';
 ?>
-<div class="home-slider">
+<div class="home-slider text-center">
+  
+  <div class="container-fluid">
+  <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 services-main-heading">
+        <h2 class="bg-n"> Your business needs an upgrade. 
+Lets make your Digital Sales Funnel Awesome! </h2>
 
-    <div class="slider-form"> 
+<a href="<?php echo Url::toRoute('/contact-sumanas') ?>" class="btn btn2"> Request Quote <i class="fa fa-angle-right"></i> </a>
+      </div>
 
-        <h2> Get In 
-            Touch</h2>
-
-        <?php
-        $form = ActiveForm::begin([
-                    'id' => 'quote_form',
-                    'enableAjaxValidation' => false,
-                    'enableClientValidation' => false,
-                    'enableClientScript' => false,
-                    'options' => [
-                        'name' => 'myform',
-                        'autocomplete' => 'off',
-                    ],
-        ]);
-        ?>
-
-
-        <div class="md-input">
-            <?= $form->field($model, 'name', ['template' => '{input}<span class="highlight"></span>
-            <span class="bar"></span><label>Full Name *</label>'])->textInput(['class' => 'md-form-control form-control', 'required' => ''])->label(false) ?>
-        </div>
-
-        <div class="md-input">
-            <?= $form->field($model, 'email', ['template' => '{input}<span class="highlight"></span>
-            <span class="bar"></span><label>Email Address *</label>'])->textInput(['class' => 'md-form-control form-control', 'required' => ''])->label(false) ?>
-        </div>
-
-        <div class="md-input">
-            <?= $form->field($model, 'phone', ['template' => '{input}<span class="highlight"></span>
-            <span class="bar"></span><label>Phone *</label>'])->textInput(['class' => 'md-form-control form-control', 'required' => ''])->label(false) ?>
-        </div>
-
-        <div class="md-input"> <button type="submit" class="btn submit-btn1" class="formComplete btn btn1"> Contact Us </button>
-            <div class="msgSuccess h4 text-center hide thankyou-msg">
-                Thank you for choosing us! One of our representatives will get in touch with you in the next 24hrs.
-            </div>
-            <div class="msgError h4 text-center hide thankyou-msg">
-                There was an error sending email.
-            </div>
-        </div>
-
-
-        <?php ActiveForm::end(); ?>
-
-
-
-
-    </div>
-    <div id="bootstrap-touch-slider" class="carousel bs-slider fade  control-round indicators-line" data-ride="carousel" data-pause="hover" data-interval="5000" > 
-
-        <!-- Indicators -->
-        <ol class="carousel-indicators">
-            <li data-target="#bootstrap-touch-slider" data-slide-to="0" class="active"></li>
-            <li data-target="#bootstrap-touch-slider" data-slide-to="1"></li>
-            <li data-target="#bootstrap-touch-slider" data-slide-to="2"></li>
-        </ol>
-
-        <!-- Wrapper For Slides -->
-        <div class="carousel-inner" role="listbox"> 
-
-            <!-- Third Slide -->
-            <div class="item active"> 
-
-                <!-- Slide Background --> 
-                <img src="<?php echo Yii::$app->view->theme->baseUrl ?>/images/slider1.jpg" alt=""  class="slide-image"/>
-                <div class="container">
-                    <div class="row"> 
-                        <!-- Slide Text Layer -->
-                        <div class="slide1">
-                            <div class="slide-text slide_style_left">
-                                <h1 data-animation="animated zoomInRight">It's time to<br/>
-                                    <span>STAND OUT</span><br/>
-                                    <img src="<?php echo Yii::$app->view->theme->baseUrl ?>/images/line.jpg"  alt=""></h1>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <!-- End of Slide --> 
-
-            <!-- Third Slide -->
-            <div class="item "> 
-
-                <!-- Slide Background --> 
-                <img src="<?php echo Yii::$app->view->theme->baseUrl ?>/images/slider3.jpg" alt=""  class="slide-image"/>
-                <div class="container">
-                    <div class="row"> 
-                        <!-- Slide Text Layer -->
-                        <div class="slide1"><div class="slide-text slide_style_left">
-                                <h1 data-animation="animated zoomInRight">It's time to<br/>
-                                    <span>UNVEIL THE FUTURE</span><br/>
-                                    <img src="<?php echo Yii::$app->view->theme->baseUrl ?>/images/line.jpg"  alt=""></h1>
-                            </div></div>
-                    </div>
-                </div>
-            </div>
-            <!-- End of Slide --> 
-
-            <!-- Third Slide -->
-            <div class="item "> 
-
-                <!-- Slide Background --> 
-                <img src="<?php echo Yii::$app->view->theme->baseUrl ?>/images/slider2.jpg" alt=""  class="slide-image"/>
-                <div class="container">
-                    <div class="row"> 
-                        <!-- Slide Text Layer -->
-                        <div class="slide1"><div class="slide-text slide_style_left">
-                                <h1 data-animation="animated zoomInRight">It’s time to<br/>
-                                    <span>BECOME VISIBLE</span><br/>
-
-                                    <img src="<?php echo Yii::$app->view->theme->baseUrl ?>/images/line.jpg"  alt=""></h1>
-                            </div></div>
-                    </div>
-                </div>
-            </div>
-            <!-- End of Slide --> 
-
-        </div>
-        <!-- End of Wrapper For Slides --> 
-
-        <!-- Left Control --> 
-        <a class="left carousel-control" href="#bootstrap-touch-slider" role="button" data-slide="prev"> <span class="fa fa-angle-left" aria-hidden="true"></span> <span class="sr-only">Previous</span> </a> 
-
-        <!-- Right Control --> 
-        <a class="right carousel-control" href="#bootstrap-touch-slider" role="button" data-slide="next"> <span class="fa fa-angle-right" aria-hidden="true"></span> <span class="sr-only">Next</span> </a> </div>
+  
+  <div class="banner-image"><img src="<?php echo Yii::$app->view->theme->baseUrl ?>/images/banner.png"   alt=""> </div>
+  
+  </div>
+  
+  
 </div>
-<div class="home-servicec-cont">
-    <div class="container-fluid">
-        <div class="row">
-            <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 services-main-heading ">
-                <h2> Our Services </h2>
-            </div>
-            <?php echo Block::getHtml('products'); ?> 
-            <?php echo Block::getHtml('website-development'); ?> 
-            <?php echo Block::getHtml('mobile-app-development'); ?>
-            <div class="clearfix"></div>
-            <?php echo Block::getHtml('ui-ux-design'); ?> 
-            <?php echo Block::getHtml('digital-marketing'); ?> 
-            <?php echo Block::getHtml('dataanalytics'); ?> 
 
+<div class="home-servicec-cont">
+  <div class="container-fluid">
+    <div class="row">
+      <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 services-main-heading ">
+        <h2> Delivering Fresh Digital Experiences </h2>
+      </div>
+      <div class="col-xs-12 col-sm-12 col-md-8 col-lg-8 col-md-offset-2 col-lg-offset-2 text-center"> We are one of the worlds largest white label IT products and services company in India with 10+ years of experience in product development</div>
+      
+      
+      <div class="col-xs-12 col-sm-6 col-md-3 col-lg-3 services ">
+      
+        <p> <a href="#"><img src="<?php echo Yii::$app->view->theme->baseUrl ?>/images/hicon1.png" alt=""></a></p>
+          <p class="services-heading">Developement</p>
+        <p class="services-txt">Open source custom development services, Android 
+& iOS development, We are experts in custom Web app development over PHP frameworks </p>
+        <!--<p class="arrow"> <a href="#" class="btn explore-btn"> Explore  <i class="fa fa-arrow-right"></i> </a></p>-->
+      </div>
+      
+      
+      <div class="col-xs-12 col-sm-6 col-md-3 col-lg-3 services ">
+      
+        <p> <a href="#"><img src="<?php echo Yii::$app->view->theme->baseUrl ?>/images/hicon2.png" alt=""></a></p>
+          <p class="services-heading">Networking</p>
+        <p class="services-txt">AWS , Azure, Rackspace, Google cloud, Digital ocean & other cloud services. Shared & dedicated hosting, Migration & Support, Network virtualization </p>
+        <!--<p class="arrow"> <a href="#" class="btn explore-btn"> Explore  <i class="fa fa-arrow-right"></i>  </a></p>-->
+      </div>
+      
+      
+      
+      
+      <div class="col-xs-12 col-sm-6 col-md-3 col-lg-3 services ">
+      
+        <p> <a href="#"><img src="<?php echo Yii::$app->view->theme->baseUrl ?>/images/hicon3.png" alt=""></a></p>
+          <p class="services-heading">Implementation</p>
+        <p class="services-txt">Salesforce, CRM, ERP on cloud, Custom back-end functions, Analytics tools integration, Tracking and monitoring code implementation</p>
+        <!--<p class="arrow"> <a href="#" class="btn explore-btn"> Explore  <i class="fa fa-arrow-right"></i>  </a></p>-->
+      </div>
+      
+      
+      
+      <div class="col-xs-12 col-sm-6 col-md-3 col-lg-3 services ">
+      
+        <p> <a href="#"><img src="<?php echo Yii::$app->view->theme->baseUrl ?>/images/hicon4.png" alt=""></a></p>
+          <p class="services-heading">Automation</p>
+        <p class="services-txt">Business automation, Testing automation, Remote access setup, Automated threat detection & malware removal, Custom Add-on's, plugins, extensions</p>
+        <!--<p class="arrow"> <a href="#" class="btn explore-btn"> Explore  <i class="fa fa-arrow-right"></i>  </a></p>-->
+      </div>
+      
+      
+    </div>
+  </div>
+</div>
+
+<div class="home-testimonial-cont">
+
+
+    <div class="container-fluid"> 
+
+        <div class="hometestimonial-bg"> 
+
+            <div class="row">
+
+                <div class="col-xs-12 col-sm-12 col-md-5 col-lg-5 hometesti-heading">  
+                    <p> Happy Clients <span> About Us </span>  </p>  
+                    <img src="<?php echo Yii::$app->view->theme->baseUrl ?>/images/testimonial-bg.png"  alt="">
+                </div>
+                <div class="col-xs-12 col-sm-7 col-md-7 col-lg-7">
+                    <div class="home-testimonail-slider"> 
+                        <?= ClientsWidget::widget(); ?>
+                    </div>
+                </div>
+            </div>
         </div>
     </div>
 </div>
@@ -178,28 +124,6 @@ $this->title = 'Homepage';
                 <p> <i class="fa fa-users" aria-hidden="true"></i> </p>
                 <p> <span> 800+ </span> </p>
                 <p>Satisfied Clients </p>
-            </div>
-        </div>
-    </div>
-</div>
-<div class="home-testimonial-cont">
-
-
-    <div class="container-fluid"> 
-
-        <div class="hometestimonial-bg"> 
-
-            <div class="row">
-
-                <div class="col-xs-12 col-sm-12 col-md-5 col-lg-5 hometesti-heading">  
-                    <p> Happy Clients <span> About Us </span>  </p>  
-                    <img src="<?php echo Yii::$app->view->theme->baseUrl ?>/images/testimonial-bg.png"  alt="">
-                </div>
-                <div class="col-xs-12 col-sm-7 col-md-7 col-lg-7">
-                    <div class="home-testimonail-slider"> 
-                        <?= ClientsWidget::widget(); ?>
-                    </div>
-                </div>
             </div>
         </div>
     </div>
