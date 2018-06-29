@@ -98,12 +98,16 @@ $this->title = 'Contact Sumanas';
             <div class="col-xs-12 col-sm-4 col-md-4 col-lg-4 contact-details1">
                 <p> <img src="/themes/st_theme/images/contact-icon2.png"  alt="Phone"></p>
                 <p> <span> Phone </span> </p>
-                <p> <?php echo Yii::$app->settings->get('general.mobile') ?>  / <?php echo Yii::$app->settings->get('general.alt_phone') ?> </p>
-            </div>
-            <div class="col-xs-12 col-sm-4 col-md-4 col-lg-4 contact-details1">
-                <p> <img src="/themes/st_theme/images/contact-icon3.png"  alt="Email"></p>
-                <p> <span> Email </span> </p>
-                <p><a href="mailto:<?php echo Yii::$app->settings->get('general.email') ?>"> <?php echo Yii::$app->settings->get('general.email') ?></a> </p>
+                <p> <?php echo Yii::$app->settings->get('general.mobile'); ?>
+                    <?php if (!empty(Yii::$app->settings->get('general.alt_phone'))) { ?> /
+                        <?php echo Yii::$app->settings->get('general.alt_phone');
+                        }
+                        ?> </p>
+                </div>
+                <div class="col-xs-12 col-sm-4 col-md-4 col-lg-4 contact-details1">
+                    <p> <img src="/themes/st_theme/images/contact-icon3.png"  alt="Email"></p>
+                    <p> <span> Email </span> </p>
+                    <p><a href="mailto:<?php echo Yii::$app->settings->get('general.email') ?>"> <?php echo Yii::$app->settings->get('general.email') ?></a> </p>
             </div>
         </div>
         <div class="contact-us3">
