@@ -115,11 +115,16 @@ ThemeAsset::register($this);
         "https://plus.google.com/+SumanasTech"]
         },
         {
-        "@context": "http://schema.org/",
-        "@type": "WebSite",
-        "name": "Sumanas Technologies",
-        "alternateName": "Sumanas Technologies",
-        "url": "http://www.sumanastech.com"
+        "@context" : "http://schema.org",
+        "@type" : "WebSite",
+        "name" : "Sumanas Technologies - Website Development Company",
+        "alternateName" : "Sumanas Technologies",
+        "url" : "http://sumanastech.com/",
+        "potentialAction": {
+        "@type": "SearchAction",
+        "target": "http://sumanastech.com/?s={search_term_string}",
+        "query-input": "required name=search_term_string"
+        }
         }
     </script>
 
