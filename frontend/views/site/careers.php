@@ -28,18 +28,20 @@ $title = "Sumanas Tech Career Opportunities";
                     <h3> What are we looking for? </h3>
                     <p> If you are an Individual with passion for technologies and building something new, then Sumanas is just the right place for you!</p>
                 </div>
-                <div class="col-xs-12 col-sm-6 col-md-4 col-lg-4 job1 floating buttons">
-                    <div class="job1-cont"> <span class="job-count"> 2 </span> <a href="" class="" data-toggle="modal" data-target="#myModal">UI/UX DESIGNERS</a> </div>
-                    <div class="job1-outter"> <img src="/themes/st_theme/images/flame.png" alt="UI/UX DESIGNERS"></div>
+                <div class="jobs">
+                    <div class="col-xs-12 col-sm-6 col-md-4 col-lg-4 job1 floating buttons">
+                        <div class="job1-cont"> <span class="job-count"> 2 </span> <a href="" class="" data-toggle="modal" data-target="#myModal">UI/UX DESIGNERS</a> </div>
+                        <div class="job1-outter"> <img src="/themes/st_theme/images/flame.png" alt="UI/UX DESIGNERS"></div>
+                    </div>
+                    <div class="col-xs-12 col-sm-6 col-md-4 col-lg-4 job1 job2 floating2">
+                        <div class="job1-cont"> <span class="job-count"> 4 </span> <a href="" data-toggle="modal" data-target="#myModal2">PHP DEVELOPER</a> </div>
+                        <div class="job1-outter"> <img src="/themes/st_theme/images/flame.png" alt="PHP DEVELOPER"></div>
+                    </div>
                 </div>
-                <div class="col-xs-12 col-sm-6 col-md-4 col-lg-4 job1 job2 floating2">
-                    <div class="job1-cont"> <span class="job-count"> 4 </span> <a href="" data-toggle="modal" data-target="#myModal2">PHP DEVELOPER</a> </div>
-                    <div class="job1-outter"> <img src="/themes/st_theme/images/flame.png" alt="PHP DEVELOPER"></div>
-                </div>
-                <div class="col-xs-12 col-sm-6 col-md-4 col-lg-4 job1 job3 floating">
-                    <div class="job1-cont"> <span class="job-count"> 1 </span> <a href="" data-toggle="modal" data-target="#myModal3"> HR GENERALIST </a> </div>
-                    <div class="job1-outter"> <img src="/themes/st_theme/images/flame.png" alt="HR GENERALIST"></div>
-                </div>
+                <!--                <div class="col-xs-12 col-sm-6 col-md-4 col-lg-4 job1 job3 floating">
+                                    <div class="job1-cont"> <span class="job-count"> 1 </span> <a href="" data-toggle="modal" data-target="#myModal3"> HR GENERALIST </a> </div>
+                                    <div class="job1-outter"> <img src="/themes/st_theme/images/flame.png" alt="HR GENERALIST"></div>
+                                </div>-->
                 <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12"> <img src="/themes/st_theme/images/join.png" alt="Join us at Sumanas"></div>
             </div>
         </div>
