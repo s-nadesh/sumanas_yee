@@ -36,6 +36,8 @@ $(document).ready(function () {
         FormValidation.AddOn.reCaptcha2.reset('captchaContainer1');
         FormValidation.AddOn.reCaptcha2.reset('captchaContainer2');
         FormValidation.AddOn.reCaptcha2.reset('captchaContainer3');
+        FormValidation.AddOn.reCaptcha2.reset('captchaContainer4');
+        FormValidation.AddOn.reCaptcha2.reset('captchaContainer5');
     }
 
     function formButtonStatus(status) {
@@ -407,6 +409,158 @@ $(document).ready(function () {
         var fv = $form.data('formValidation');
         // Use Ajax to submit form data
         submitForm("career_form3", "careers");
+    });
+    
+    $('#career_form4').formValidation({
+        // To use feedback icons, ensure that you use Bootstrap v3.1.0 or later
+        icon: {
+            valid: 'glyphicon glyphicon-ok',
+            invalid: 'glyphicon glyphicon-remove',
+            validating: 'glyphicon glyphicon-refresh'
+        },
+        addOns: {
+            reCaptcha2: {
+                element: 'captchaContainer4',
+                theme: 'light',
+                siteKey: '6LfBBz8UAAAAAJrVDRQflJn2SXH71C5ceOmEKS4B',
+                message: ' '
+            }
+        },
+        fields: {
+            'CareersForm[name]': {
+                validators: {
+                    notEmpty: {
+                        message: ' '
+                    }
+                }
+            },
+            'CareersForm[email]': {
+                validators: {
+                    notEmpty: {
+                        message: ' '
+                    },
+                    emailAddress: {
+                        message: ' '
+                    }
+                }
+            },
+            'CareersForm[phone]': {
+                validators: {
+                    notEmpty: {
+                        message: ' '
+                    },
+                    integer: {
+                        message: ' '
+                    }
+                }
+            },
+            'CareersForm[source_to_find]': {
+                validators: {
+                    notEmpty: {
+                        message: ' '
+                    }
+                }
+            },
+            'CareersForm[cover_letter]': {
+                validators: {
+                    notEmpty: {
+                        message: ' '
+                    }
+                }
+            },
+//            'CareersForm[file]': {
+//                validators: {
+//                    notEmpty: {
+//                        message: ' '
+//                    }
+//                }
+//            },
+        }
+    }).on('success.form.fv', function (e) {
+        // Prevent form submission
+        e.preventDefault();
+        // Get the form instance
+        var $form = $(e.target);
+        // Get the formValidation instance
+        var fv = $form.data('formValidation');
+        // Use Ajax to submit form data
+        submitForm("career_form4", "careers");
+    });
+    
+    $('#career_form5').formValidation({
+        // To use feedback icons, ensure that you use Bootstrap v3.1.0 or later
+        icon: {
+            valid: 'glyphicon glyphicon-ok',
+            invalid: 'glyphicon glyphicon-remove',
+            validating: 'glyphicon glyphicon-refresh'
+        },
+        addOns: {
+            reCaptcha2: {
+                element: 'captchaContainer5',
+                theme: 'light',
+                siteKey: '6LfBBz8UAAAAAJrVDRQflJn2SXH71C5ceOmEKS4B',
+                message: ' '
+            }
+        },
+        fields: {
+            'CareersForm[name]': {
+                validators: {
+                    notEmpty: {
+                        message: ' '
+                    }
+                }
+            },
+            'CareersForm[email]': {
+                validators: {
+                    notEmpty: {
+                        message: ' '
+                    },
+                    emailAddress: {
+                        message: ' '
+                    }
+                }
+            },
+            'CareersForm[phone]': {
+                validators: {
+                    notEmpty: {
+                        message: ' '
+                    },
+                    integer: {
+                        message: ' '
+                    }
+                }
+            },
+            'CareersForm[source_to_find]': {
+                validators: {
+                    notEmpty: {
+                        message: ' '
+                    }
+                }
+            },
+            'CareersForm[cover_letter]': {
+                validators: {
+                    notEmpty: {
+                        message: ' '
+                    }
+                }
+            },
+//            'CareersForm[file]': {
+//                validators: {
+//                    notEmpty: {
+//                        message: ' '
+//                    }
+//                }
+//            },
+        }
+    }).on('success.form.fv', function (e) {
+        // Prevent form submission
+        e.preventDefault();
+        // Get the form instance
+        var $form = $(e.target);
+        // Get the formValidation instance
+        var fv = $form.data('formValidation');
+        // Use Ajax to submit form data
+        submitForm("career_form5", "careers");
     });
 });
 
